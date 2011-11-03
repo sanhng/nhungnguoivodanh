@@ -1,8 +1,8 @@
 If you're Maven user, just use our maven repository(http://code.alibabatech.com/mvn/releases/) with folloging dependency
-<syntaxhighlight lang="xml">
+<pre>
 <dependency>
      <groupId>com.alibaba</groupId>
      <artifactId>fastjson</artifactId>
      <version>1.1.9</version>
 </dependency>
-</syntaxhighlight>
+</pre>
