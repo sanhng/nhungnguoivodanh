@@ -12,6 +12,7 @@ Fastjson is a JSON processor (JSON parser + JSON generator) written in Java:
     </dependency>
 
 # Benchmark
+Times are in nanoseconds, sizes are in bytes.
 
                                      create     ser   +same   deser   +shal   +deep   total   size  +dfl
     java-manual                         121    2134    2049    1010    1036    1106    3240    255   147
@@ -24,4 +25,13 @@ Fastjson is a JSON processor (JSON parser + JSON generator) written in Java:
     json/jackson/databind               123    2745    2619    4234    4325    4486    7231    485   261
     json/fastjson/databind              122    1841    1698    1608    1672    1730    3571    486   262
 
-
+Columns: <br/>
+* create: create an object (using the classes specified by the serialization tool)
+* ser: create an object and serialize it
+* +same: serialize the same object (i.e. doesn’t include creation time)
+* deser: deserialize an object
+* +shal: deserialize an object and access the top-level fields
+* +deep: deserialize an object and access all the fields
+* total: create + serialize + deserialize and access all fields
+* size: the size of the serialized data
+* +dfl: the size of the serialized data compressed with Java’s built-in implementation of DEFLATE (zlib)
