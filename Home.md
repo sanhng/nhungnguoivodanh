@@ -8,7 +8,8 @@ Fastjson is a JSON processor (JSON parser + JSON generator) written in Java:
 * Open Source (Apache License 2.0)
 
 # Download
-http://repo1.maven.org/maven2/com/alibaba/fastjson/
+* Maven Central Repository : http://repo1.maven.org/maven2/com/alibaba/fastjson/
+* Github Download : https://github.com/AlibabaTech/fastjson/downloads
 
 # Maven dependency
     <dependency>
