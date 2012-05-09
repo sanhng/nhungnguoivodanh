@@ -22,16 +22,17 @@ Fastjson is a JSON processor (JSON parser + JSON generator) written in Java:
 Times are in nanoseconds, sizes are in bytes.
 
                                      create     ser   +same   deser   +shal   +deep   total   size  +dfl
-    kryo                                122    1353    1283    1625    1643    1722    3074    223   140
-    java-manual                         121    2134    2049    1010    1036    1106    3240    255   147
-    json/fastjson/databind              122    1841    1698    1608    1672    1730    3571    486   262
-    json/jackson/manual                 122    1588    1502    2186    2252    2299    3886    468   253
-    msgpack                             123    1874    1609    1990    2048    2020    3893    233   146
-    protobuf                            241    2902    1396    1622    1690    1953    4854    239   149
-    thrift                              251    3236    2987    2057    2124    2153    5389    349   197
-    json/jackson/databind               123    2745    2619    4234    4325    4486    7231    485   261
-    hessian                             120    6208    5681    9310    9477    9616   15824    501   313
-
+    kryo                                119    1335    1273    1562    1709    1689    3024    223   140
+    java-manual                         119    2129    2055    1005    1031    1062    3191    255   147
+    json/fastjson/databind              117    1809    1687    1741    1786    1907    3715    486   262
+    msgpack                             117    1827    1582    1985    2020    2118    3945    233   146
+    json/jackson/manual                 118    1672    1501    2235    2232    2365    4037    468   253
+    protobuf                            227    2939    1362    1626    1661    1965    4904    239   149
+    thrift                              242    3157    2898    2031    2116    2194    5351    349   197
+    json/jackson/databind               119    2851    2726    3941    4008    4154    7005    485   261
+    hessian                             117    6135    5513   10082   10204   10311   16446    501   313
+    json/google-gson/databind           117   11309   11304    7913    7967    8076   19385    486   259
+    json/json-lib-databind              119   45547   45114  145951  145866  146582  192129    485   263
 
 Columns: <br/>
 * create: create an object (using the classes specified by the serialization tool)
