@@ -2,6 +2,8 @@ Fastjson full support databind, it's simple to use.
 
 # Encode
 
+    import com.alibaba.fastjson.JSON;
+
     Group group = new Group();
     group.setId(0L);
     group.setName("admin");
@@ -20,6 +22,13 @@ Fastjson full support databind, it's simple to use.
     String jsonString = JSON.toJSONString(group);
 
     System.out.println(jsonString);
+
+# Output
+    {"id":0,"name":"admin","users":[{"id":2,"name":"guest"},{"id":3,"name":"root"}]}
+
+# Decode
+    String jsonString = ...;
+    Group group = JSON.parseObject(jsonString, Group.class);
 
 # Group.java
 	public class Group {
