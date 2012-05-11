@@ -49,3 +49,5 @@ Columns: <br/>
 * total: create + serialize + deserialize and access all fields
 * size: the size of the serialized data
 * +dfl: the size of the serialized data compressed with Java’s built-in implementation of DEFLATE (zlib)
+
+test code : https://github.com/wenshao/jvm-serializers
