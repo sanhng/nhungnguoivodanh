@@ -8,8 +8,8 @@ Fastjson是一个Java语言编写的高性能功能完善的JSON库。它采用�
 # 下载
 你可以从以下地址中下载fastjson: 
 
-Maven中央仓库 http://repo1.maven.org/maven2/com/alibaba/fastjson/
-Alibaba OpenSesame开源平台 http://code.alibabatech.com/mvn/releases/com/alibaba/fastjson/
+* Maven中央仓库 http://repo1.maven.org/maven2/com/alibaba/fastjson/
+* Alibaba OpenSesame开源平台 http://code.alibabatech.com/mvn/releases/com/alibaba/fastjson/
 
 # Maven
 配置pom.xml文件，在dependencies中加入：
