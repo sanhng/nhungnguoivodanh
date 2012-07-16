@@ -11,3 +11,7 @@ Android上的Dalvik虚拟机不支持awt，所以去掉标准版本的awt相关�
 AtomicXXX不应该作为POJO的属性，不常用，所以在Android版本中去掉了。
 
 4. 不支持Clob对象序列化。
+
+# 下载
+目前只有快照版本：
+http://code.alibabatech.com/mvn/snapshots/com/alibaba/fastjson/1.1.22-android-SNAPSHOT/
