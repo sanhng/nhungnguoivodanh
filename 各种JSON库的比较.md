@@ -6,3 +6,5 @@
 <tr><td>gson</td><td>7421</td><td>5065</td><td>gson-2.2.2.jar(189k)</td></tr>
 <tr><td>json-lib</td><td> 27555 </td><td> 87292 </td><td>json-lib-2.4-jdk15.jar(159k)</td></tr>
 </table>
+
+性能数据有第三方独立提供：https://github.com/eishay/jvm-serializers/wiki/Staging-Results
