@@ -1,4 +1,4 @@
-English | [中文] (https://github.com/AlibabaTech/fastjson/wiki/%E9%A6%96%E9%A1%B5)
+English | [中文] (https://github.com/Alibaba/fastjson/wiki/%E9%A6%96%E9%A1%B5)
 
 # What is fastjson?
 Fastjson is a JSON processor (JSON parser + JSON generator) written in Java:
