@@ -7,3 +7,4 @@ ASMDeserializerFactory是用来动态使用ASM生成JavaBean的Deserializer，�
 <tr><td>dalvik</td><td>不支持</td></tr>
 <tr><td>lemur</td><td>不支持</td></tr>
 </table>
+
