@@ -1,0 +1,1 @@
+这个类是用来动态使用ASM生成JavaBean的Deserializer，针对每个类的特点进行特别优化，以获得最快的性能。
