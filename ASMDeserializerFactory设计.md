@@ -29,4 +29,4 @@ ASMDeserializerFactory是用来动态使用ASM生成JavaBean的Deserializer，�
 
 # 2 实现
 ## 2.1 创建实例
-如果类有缺省public的构造函数，直接调用new，保存到instance变量中。
+如果类有缺省public的构造函数，直接使用new来创建实例；否则使用JavaBeanDeserializer.createInstance(DefaultJSONParser, Type)来创建实例。
