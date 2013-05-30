@@ -9,5 +9,14 @@ ASMDeserializerFactory是用来动态使用ASM生成JavaBean的Deserializer，�
 <tr><td>lemur</td><td>不支持</td></tr>
 </table>
 
+>     public class ASMUtils {
+>          public static boolean isAndroid(String vmName) {
+>          	String lowerVMName = vmName.toLowerCase();
+>              return lowerVMName.contains("dalvik") 
+>                      || lowerVMName.contains("lemur") // aliyun-vm name
+>                      ;
+>          }
+>     }
+
 ## 1.2 超多字段类
 目前ASMDeserializerFactory不支持超过200个字段JavaBean。
