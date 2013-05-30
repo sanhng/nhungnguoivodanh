@@ -30,3 +30,6 @@ ASMDeserializerFactory是用来动态使用ASM生成JavaBean的Deserializer，�
 # 2 实现
 ## 2.1 创建实例
 如果类有缺省public的构造函数，直接使用new来创建实例；否则使用JavaBeanDeserializer.createInstance(DefaultJSONParser, Type)来创建实例。
+
+## 2.2 定义字段是否已经被parse的标识变量
+每32个变量的flag保存在一个int类型的变量中，_setFlag和_isFlag分别用于设置和读取其是否被parse。
