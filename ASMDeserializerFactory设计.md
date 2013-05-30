@@ -19,4 +19,9 @@ ASMDeserializerFactory是用来动态使用ASM生成JavaBean的Deserializer，�
 >     }
 
 ## 1.2 超多字段类
-目前ASMDeserializerFactory不支持超过200个字段JavaBean。
+目前ASMDeserializerFactory不支持超过200个字段JavaBean。做反序列化的时候，需要定义局部变量保存parse的结果，目前的asm框架不能定义超过256个变量，目前保守的做法是，如果字段数量超过200个，则不使用ASMDeserializerFactory。
+
+            DeserializeBeanInfo beanInfo = DeserializeBeanInfo.computeSetters(clazz, type);
+            if (beanInfo.getFieldList().size() > 200) {
+                asmEnable = false;
+            }   
