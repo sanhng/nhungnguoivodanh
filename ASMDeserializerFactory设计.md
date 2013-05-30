@@ -1,1 +1,1 @@
-这个类是用来动态使用ASM生成JavaBean的Deserializer，针对每个类的特点进行特别优化，以获得最快的性能。
+ASMDeserializerFactory是用来动态使用ASM生成JavaBean的Deserializer，针对每个类的特点进行特别优化，以获得最快的性能。目前ASMDeserializerFactory不能在android的dalvik虚拟机以及阿里云OS的lemur虚拟机上运行。
