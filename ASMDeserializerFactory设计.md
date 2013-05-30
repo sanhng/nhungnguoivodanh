@@ -25,3 +25,6 @@ ASMDeserializerFactory是用来动态使用ASM生成JavaBean的Deserializer，�
             if (beanInfo.getFieldList().size() > 200) {
                 asmEnable = false;
             }   
+
+
+# 2. 实现
