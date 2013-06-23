@@ -1,1 +1,1 @@
-当需要处理超大JSON文本时，需要Stream API，在fastjson-1.1.32版本中，已经提供完善的stream API。
+当需要处理超大JSON文本时，需要Stream API，在fastjson-1.1.32版本中开始提供Stream API。
