@@ -16,7 +16,7 @@ Fastjson is a JSON processor (JSON parser + JSON generator) written in Java:
     <dependency>
          <groupId>com.alibaba</groupId>
          <artifactId>fastjson</artifactId>
-         <version>1.1.31</version>
+         <version>1.1.32</version>
     </dependency>
 
 # Getting started
