@@ -4,6 +4,7 @@
 ## 超大JSON数组序列化
 如果你的JSON格式是一个巨大的JSON数组，有很多元素，则先调用startArray，然后挨个写入对象，然后调用endArray。
 * 例1
+
       JSONWriter writer = new JSONWriter(new FileWriter("/tmp/huge.json"));
       writer.startArray();
       for (int i = 0; i < 1000 * 1000; ++i) {
@@ -15,6 +16,7 @@
 ## 超大JSON对象序列化
 如果你的JSON格式是一个巨大的JSONObject，有很多Key/Value对，则先调用startObject，然后挨个写入Key和Value，然后调用endObject。
 * 例2
+
       JSONWriter writer = new JSONWriter(new FileWriter("/tmp/huge.json"));
       writer.startObject();
       for (int i = 0; i < 1000 * 1000; ++i) {
