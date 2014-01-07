@@ -1,6 +1,6 @@
 English | [中文] (https://github.com/Alibaba/fastjson/wiki/%E9%A6%96%E9%A1%B5)
 
-# 常见问题解答
+# Frequently Asked Questions
 https://github.com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98
 
 # ChangeLog
