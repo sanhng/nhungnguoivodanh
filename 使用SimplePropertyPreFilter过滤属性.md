@@ -22,7 +22,7 @@ SimplePropertyPreFilter的代码接口如下：
       ...
       }
 
-你可以配置includes、excludes。当clazz不为null时，针对特定类型；当class为null时，针对所有类型。
+你可以配置includes、excludes。当class不为null时，针对特定类型；当class为null时，针对所有类型。
 
 当includes的size > 0时，属性必须在includes中才会被序列化，excludes优先于includes。
 
