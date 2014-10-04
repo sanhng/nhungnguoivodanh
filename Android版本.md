@@ -39,6 +39,21 @@ AtomicXXX不应该作为POJO的属性，不常用，所以在Android版本中去
     com.alibaba.fastjson.serializer.JSONSerializerMap  使用com.alibaba.fastjson.serializer.SerializeConfig代替
     com.alibaba.fastjson.parser.DefaultExtJSONParser 使用com.alibaba.fastjson.parser.DefaultJSONParser代替
 
+### 8. 一些废弃方法不支持
+    
+    class com.alibaba.fastjson.JSONWriter {
+        @Deprecated
+        public void writeStartObject();
+        
+        @Deprecated
+        public void writeEndObject();
+    
+        @Deprecated
+        public void writeStartArray();
+        
+        @Deprecated
+        public void writeEndArray();
+    }
 
 # 下载
 目前只有快照版本：
