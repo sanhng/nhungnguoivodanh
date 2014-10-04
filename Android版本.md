@@ -12,6 +12,8 @@ AtomicXXX不应该作为POJO的属性，不常用，所以在Android版本中去
 
 ### 4. 不支持Clob对象序列化。
 
+### 5. 不支持Reference字段类型序列化和反序列化，比如WeakReference/SoftReference/AtomicReference，这些类型不常用用作POJO的属性，所以去掉了。
+
 # 下载
 目前只有快照版本：
 http://repo1.maven.org/maven2/com/alibaba/fastjson/1.1.33.android/
