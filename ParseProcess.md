@@ -52,4 +52,4 @@ ParseProcess是编程扩展定制反序列化的接口。fastjson支持如下Par
         
     VO vo = JSON.parseObject("{\"id\":123,\"value\":\"123456\"}", VO.class, processor);
     Assert.assertEquals(123, vo.getId());
-    Assert.assertEquals(123456, vo.getAttributes().get("value"));
+    Assert.assertEquals(123456, vo.getAttributes().get("value")); // value本应该是字符串类型的，通过getExtraType的处理变成Integer类型了。
