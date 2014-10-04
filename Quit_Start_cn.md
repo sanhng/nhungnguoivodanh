@@ -18,3 +18,16 @@ fastjson的API十分简洁。
 
     String text = JSON.toJSONString(obj); //序列化
     VO vo = JSON.parseObject("{...}", VO.class); //反序列化
+
+## 3. 下载和使用
+你可以在maven中央仓库中直接下载：
+
+    http://repo1.maven.org/maven2/com/alibaba/fastjson/
+
+或者配置maven依赖
+
+    <dependency>
+        <groupId>com.alibaba</groupId>
+        <artifactId>fastjson</artifactId>
+        <version>1.1.42-SNAPSHOT</version>
+    </dependency>
