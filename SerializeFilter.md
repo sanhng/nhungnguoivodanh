@@ -1,0 +1,1 @@
+SerializeFilter是通过编程扩展的方式定制序列化。
