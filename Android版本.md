@@ -14,6 +14,13 @@ AtomicXXX不应该作为POJO的属性，不常用，所以在Android版本中去
 
 ### 5. 不支持Reference字段类型序列化和反序列化，比如WeakReference/SoftReference/AtomicReference，这些类型不常用用作POJO的属性，所以去掉了。
 
+### 6. 以下方法不常用，不支持
+
+    public abstract class JSON {
+        parseObject(byte[] input, int off, int len, CharsetDecoder charsetDecoder, Type clazz,
+                                          Feature... features) { ... }
+    }
+
 # 下载
 目前只有快照版本：
 http://repo1.maven.org/maven2/com/alibaba/fastjson/1.1.33.android/
