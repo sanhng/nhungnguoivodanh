@@ -37,3 +37,32 @@ SerializeFilter是通过编程扩展的方式定制序列化。fastjson支持6�
           boolean apply(JSONSerializer serializer, Object object, String name);
       }
 
+
+# NameFilter 序列化时修改Key
+如果需要修改Key,process返回值则可
+
+      public interface NameFilter extends SerializeFilter {
+          String process(Object object, String propertyName, Object propertyValue);
+      }
+
+# ValueFilter 序列化是修改Value
+
+      public interface ValueFilter extends SerializeFilter {
+          Object process(Object object, String propertyName, Object propertyValue);
+      }
+
+# BeforeFilter 序列化时在最前添加内容
+
+      public abstract class BeforeFilter implements SerializeFilter {
+          protected final void writeKeyValue(String key, Object value) { ... }
+          // 需要实现的抽象方法，在实现中调用writeKeyValue添加内容
+          public abstract void writeBefore(Object object);
+      }
+
+# AfterFilter 序列化时在最前添加内容
+
+      public abstract class AfterFilter implements SerializeFilter {
+          protected final void writeKeyValue(String key, Object value) { ... }
+          // 需要实现的抽象方法，在实现中调用writeKeyValue添加内容
+          public abstract void writeAfter(Object object);
+      }
