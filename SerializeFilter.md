@@ -1,4 +1,5 @@
 SerializeFilter是通过编程扩展的方式定制序列化。fastjson支持6中SerializeFilter，用于不同场景的定制序列化。
+
 1. PropertyPreFilter 根据PropertyName判断是否序列化
 2. PropertyFilter 根据PropertyName和PropertyValue来判断是否序列化
 3. NameFilter 修改Key，如果需要修改Key,process返回值则可
