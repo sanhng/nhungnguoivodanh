@@ -17,9 +17,28 @@ AtomicXXX不应该作为POJO的属性，不常用，所以在Android版本中去
 ### 6. 以下方法不常用，不支持
 
     public abstract class JSON {
-        parseObject(byte[] input, int off, int len, CharsetDecoder charsetDecoder, Type clazz,
+        public static parseObject(byte[] input, int off, int len, CharsetDecoder charsetDecoder, Type clazz,
                                           Feature... features) { ... }
+    
+        public static Object parse(byte[] input, int off, int len, CharsetDecoder charsetDecoder, 
+                                          int features) {}
+
+        public static Object parse(byte[] input, int off, int len, CharsetDecoder charsetDecoder, 
+                                          Feature...features) {}
+    
+        public static Object parse(byte[] input, int off, int len, CharsetDecoder charsetDecoder, 
+                                          int features) {}
     }
+
+    // JSONSerializerMap已废弃，不支持
+    com.alibaba.fastjson.serializer.JSONSerializer.JSONSerializer(JSONSerializerMap)
+
+### 7. 一些废弃的类不支持
+
+    com.alibaba.fastjson.parser.JavaBeanMapping 使用com.alibaba.fastjson.parser.ParserConfig代替
+    com.alibaba.fastjson.serializer.JSONSerializerMap  使用com.alibaba.fastjson.serializer.SerializeConfig代替
+    com.alibaba.fastjson.parser.DefaultExtJSONParser 使用com.alibaba.fastjson.parser.DefaultJSONParser代替
+
 
 # 下载
 目前只有快照版本：
