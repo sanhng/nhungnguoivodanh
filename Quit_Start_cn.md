@@ -29,5 +29,15 @@ fastjson的API十分简洁。
     <dependency>
         <groupId>com.alibaba</groupId>
         <artifactId>fastjson</artifactId>
-        <version>1.1.42-SNAPSHOT</version>
+        <version>x.x.x</version>
     </dependency>
+
+其中x.x.x是版本号，跟进需要使用特定版本，建议使用最新版本。
+
+## 4. android版本
+fastjson会不定期发布针对android版本优化的版本，android优化版本是去掉不必要的代码，减少体积，功能和标准版本基本一样。
+已发布的android版本包括：
+
+    http://repo1.maven.org/maven2/com/alibaba/fastjson/1.1.33.android/
+    http://repo1.maven.org/maven2/com/alibaba/fastjson/1.1.34.android/
+
