@@ -7,7 +7,7 @@ ParseProcess是编程扩展定制反序列化的接口。fastjson支持如下Par
 # 2. 使用ExtraProcessor 处理多余字段
 
     public static class VO {
-        private int                 id;
+        private int id;
         private Map<String, Object> attributes = new HashMap<String, Object>();
         public int getId() { return id; }
         public void setId(int id) { this.id = id;}
@@ -28,7 +28,7 @@ ParseProcess是编程扩展定制反序列化的接口。fastjson支持如下Par
 # 3. 使用ExtraTypeProvider 为多余的字段提供类型
 
     public static class VO {
-        private int                 id;
+        private int id;
         private Map<String, Object> attributes = new HashMap<String, Object>();
         public int getId() { return id; }
         public void setId(int id) { this.id = id;}
