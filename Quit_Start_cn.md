@@ -19,6 +19,9 @@ fastjson的API十分简洁。
     String text = JSON.toJSONString(obj); //序列化
     VO vo = JSON.parseObject("{...}", VO.class); //反序列化
 
+### 2.5 功能完备
+支持泛型，支持流处理超大文本，支持枚举，支持序列化和反序列化扩展。
+
 ## 3. 下载和使用
 你可以在maven中央仓库中直接下载：
 
