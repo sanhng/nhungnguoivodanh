@@ -12,9 +12,12 @@ AtomicXXX不应该作为POJO的属性，不常用，所以在Android版本中去
 
 ### 4. 不支持Clob对象序列化。
 
-### 5. 不支持Reference字段类型序列化和反序列化，比如WeakReference/SoftReference/AtomicReference，这些类型不常用用作POJO的属性，所以去掉了。
+### 5. JSONPObject
+这个功能用于web jsonp数据生成，不常用于android客户端，所以去掉。
 
-### 6. 以下方法不常用，不支持
+### 6. 不支持Reference字段类型序列化和反序列化，比如WeakReference/SoftReference/AtomicReference，这些类型不常用用作POJO的属性，所以去掉了。
+
+### 7. 以下方法不常用，不支持
 
     public abstract class JSON {
         public static parseObject(byte[] input, int off, int len, CharsetDecoder charsetDecoder, Type clazz,
@@ -33,13 +36,13 @@ AtomicXXX不应该作为POJO的属性，不常用，所以在Android版本中去
     // JSONSerializerMap已废弃，不支持
     com.alibaba.fastjson.serializer.JSONSerializer.JSONSerializer(JSONSerializerMap)
 
-### 7. 一些废弃的类不支持
+### 8. 一些废弃的类不支持
 
     com.alibaba.fastjson.parser.JavaBeanMapping 使用com.alibaba.fastjson.parser.ParserConfig代替
     com.alibaba.fastjson.serializer.JSONSerializerMap  使用com.alibaba.fastjson.serializer.SerializeConfig代替
     com.alibaba.fastjson.parser.DefaultExtJSONParser 使用com.alibaba.fastjson.parser.DefaultJSONParser代替
 
-### 8. 一些废弃方法不支持
+### 9. 一些废弃方法不支持
     
     class com.alibaba.fastjson.JSONWriter {
         @Deprecated
