@@ -49,9 +49,11 @@ fastjson 1.2.0之后的版本支持JSONPath。
 # 5. API 示例
 
     public void test_entity() throws Exception {
+        JSONPath path = new JSONPath("$.value"); // 在实际使用中，建议缓存path对象，避免重复创建，这样性能更好
+
         Entity entity = new Entity();
         entity.setValue(new Object());
-        Assert.assertSame(entity.getValue(), new JSONPath("$.value").eval(entity));
+        Assert.assertSame(entity.getValue(), path.eval(entity));
     }
     
     public static class Entity {
