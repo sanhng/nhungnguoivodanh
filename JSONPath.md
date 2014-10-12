@@ -25,6 +25,8 @@ fastjson 1.2.0之后的版本支持JSONPath。
 <tr><td>length() 或者 size()</td><td>数组长度。例如$.values.size()，支持类型java.util.Map和java.util.Collection和数组</td></tr>
 <tr><td>.</td><td>属性访问，例如$.name</td></tr>
 <tr><td>*</td><td>对象的所有属性，例如$.leader.*</td></tr>
+<tr><td>['key']</td><td>属性访问。例如$['name']</td></tr>
+<tr><td>['key0','key1']</td><td>多个属性访问。例如$['id','name']</td></tr>
 </table>
 
 # 4. 示例
