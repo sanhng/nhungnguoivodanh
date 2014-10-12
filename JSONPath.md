@@ -42,6 +42,8 @@ fastjson 1.2.0之后的版本支持JSONPath。
 <tr><td>JSONPath</td><td>语义</td></tr>
 <tr><td>$</td><td>根对象</td></tr>
 <tr><td>$[-1]</td><td>最后元素</td></tr>
+<tr><td>$[:-2]</td><td>第1个至倒数第2个</td></tr>
+<tr><td>$[1:]</td><td>第2个之后所有元素</td></tr>
 <tr><td>$[1,2,3]</td><td>集合中1,2,3个元素</td></tr>
 </td>
 </table>
