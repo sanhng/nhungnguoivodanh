@@ -23,7 +23,7 @@ fastjson 1.2.0之后的版本支持JSONPath。
 <tr><td>[start:end]</td><td>数组范围访问，其中start和end是开始小表和结束下标，可以是负数，返回数组中的多个元素。例如$[0:5]</td></tr>
 <tr><td>[start:end :step]</td><td>数组范围访问，其中start和end是开始小表和结束下标，可以是负数；step是步长，返回数组中的多个元素。例如$[0:5:2]</td></tr>
 <tr><td>[?(@.key)]</td><td>对象属性非空过滤，例如$.departs[?(@.name)]</td></tr>
-<tr><td>[?(@.key > 123)]</td><td>数值对象属性，例如$.departs[?(@.id >= 123)]，比较操作符支持=,!=,>,>=,<,<= </td></tr>
+<tr><td>[?(@.key > 123)]</td><td>数值对象属性，例如$.departs[?(@.id >= 123)]，比较操作符支持=,!=,>,>=,&lt;,&lt;= </td></tr>
 <tr><td>length() 或者 size()</td><td>数组长度。例如$.values.size()，支持类型java.util.Map和java.util.Collection和数组</td></tr>
 <tr><td>.</td><td>属性访问，例如$.name</td></tr>
 <tr><td>*</td><td>对象的所有属性，例如$.leader.*</td></tr>
