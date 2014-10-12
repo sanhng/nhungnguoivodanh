@@ -29,6 +29,15 @@ fastjson 1.2.0之后的版本支持JSONPath。
 <tr><td>['key0','key1']</td><td>多个属性访问。例如$['id','name']</td></tr>
 </table>
 
+以下两种写法的语义是相同的：
+
+    $.store.book[0].title
+和
+
+    $['store']['book'][0]['title']
+
+
+
 # 4. 示例
 
     public void test_entity() throws Exception {
