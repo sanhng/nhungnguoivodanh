@@ -21,7 +21,7 @@ fastjson 1.2.0之后的版本支持JSONPath。
 <tr><td>[num]</td><td>数组访问，其中num是数字，可以是负数。例如$[0].leader.departments[-1].name</td></tr>
 <tr><td>[num0,num1,num2...]</td><td>数组多个元素访问，其中num是数字，可以是负数，返回数组中的多个元素。例如$[0,3,-2,5]</td></tr>
 <tr><td>[start:end]</td><td>数组范围访问，其中start和end是开始小表和结束下标，可以是负数，返回数组中的多个元素。例如$[0:5]</td></tr>
-<tr><td>[start:end:step]</td><td>数组范围访问，其中start和end是开始小表和结束下标，可以是负数；step是步长，返回数组中的多个元素。例如$[0:5]</td></tr>
+<tr><td>[start:end :step]</td><td>数组范围访问，其中start和end是开始小表和结束下标，可以是负数；step是步长，返回数组中的多个元素。例如$[0:5:2]</td></tr>
 <tr><td>.</td><td>属性访问，例如$.name</td></tr>
 <tr><td>*</td><td>对象的所有属性，例如$.leader.*</td></tr>
 </table>
