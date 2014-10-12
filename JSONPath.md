@@ -2,7 +2,8 @@
 fastjson 1.2.0之后的版本支持JSONPath。
 
 # 2. API
-
+     package com.alibaba.fastjson;
+     
      public class JSONPath {
           // 构造函数
           public JSONPath(String path) {} 
