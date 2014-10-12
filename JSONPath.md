@@ -20,6 +20,7 @@ fastjson 1.2.0之后的版本支持JSONPath。
 <tr><td>@</td><td>当前对象</td></tr>
 <tr><td>[]</td><td>数组访问，例如$[0].leader.departments[1].name</td></tr>
 <tr><td>.</td><td>属性访问，例如$.name</td></tr>
+<tr><td>*</td><td>对象的所有属性，例如$.leader.*</td></tr>
 </table>
 
 # 4. 示例
