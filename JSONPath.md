@@ -11,6 +11,8 @@ fastjson 1.2.0之后的版本支持JSONPath。
           public Object eval(Object rootObject) { }
      }
 
+建议缓存JSONPath对象，这样能够提高求值的性能。
+
 # 3. 支持语法
 <table>
 <tr><td>JSONPATH</td><td>描述</td></tr>
