@@ -37,8 +37,14 @@ fastjson 1.2.0之后的版本支持JSONPath。
     $['store']['book'][0]['title']
 
 
-
-# 4. 示例
+# 4. 语法示例
+<table>
+<tr><td>JSONPath</td><td>语义</td></tr>
+<tr><td>$</td><td>根对象</td></tr>
+<tr><td>$[-1]</td><td>最后元素</td></tr>
+<tr><td>$[1,2,3]</td><td>集合中1,2,3个元素</td></tr>
+</td>
+# 5. API 示例
 
     public void test_entity() throws Exception {
         Entity entity = new Entity();
