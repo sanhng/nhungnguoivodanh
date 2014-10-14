@@ -64,18 +64,22 @@ fastjson 1.2.0之后的版本支持JSONPath。
 # 5. API 示例
 
     public void test_entity() throws Exception {
-        // 在实际使用中，建议缓存path对象，避免重复创建，这样性能更好
-        JSONPath path = new JSONPath("value"); 
-
-        Entity entity = new Entity();
-        entity.setValue(new Object());
-        Assert.assertSame(entity.getValue(), path.eval(entity));
+        Entity entity = new Entity(123, new Object());
+        
+       Assert.assertSame(entity.getValue(), JSON.eval(entity, "$.value")); 
+       Assert.assertTrue(JSON.contains(entity, "$.value"));
+       Assert.assertTrue(JSON.containsValue(entity, "$.id", 123));
+       Assert.assertTrue(JSON.containsValue(entity, "$.value", entity.getValue())); 
+       Assert.assertEquals(2, JSON.size(entity, "$"));
+       Assert.assertEquals(0, JSON.size(new Object[], "$")); 
     }
     
     public static class Entity {
+        private Integer id;
         private Object value;
+        public Entity(Integer id, Object value { this.id = id; this.value = value; }
+        public Integer getId() { return value; }
         public Object getValue() { return value; }
-        public void setValue(Object value) { this.value = value; }
     }
 
 # 6. ODPS UDF
