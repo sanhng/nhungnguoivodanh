@@ -89,3 +89,6 @@ fastjson 1.2.0之后的版本支持JSONPath。
 
 # 6. ODPS UDF
 fastjson直接内置提供了可以注册到阿里ODPS的UDF函数。
+## 6.1 json_extract
+## 6.2 json_contains
+## 6.3 json_size
