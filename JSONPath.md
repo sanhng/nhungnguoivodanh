@@ -1,5 +1,5 @@
 # 1. JSONPath介绍
-fastjson 1.2.0之后的版本支持JSONPath。
+fastjson 1.2.0之后的版本支持JSONPath。这是一个很强大的功能，可以在java框架中当作对象查询语言（OQL）来使用。
 
 # 2. API
      package com.alibaba.fastjson;
