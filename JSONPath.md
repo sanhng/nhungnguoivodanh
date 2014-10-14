@@ -86,4 +86,11 @@ fastjson 1.2.0之后的版本支持JSONPath。
 fastjson直接内置提供了可以注册到阿里ODPS的UDF函数。
 ## 6.1 json_extract
 ## 6.2 json_contains
-## 6.3 json_size
+## 6.3 json_contains_value
+    
+    BOOLEAN json_contains(STRING jsonStr, STRING jsonPath, BIGINT value);
+    BOOLEAN json_contains(STRING jsonStr, STRING jsonPath, DOUBLE value);
+    BOOLEAN json_contains(STRING jsonStr, STRING jsonPath, STRING value);
+    BOOLEAN json_contains(STRING jsonStr, STRING jsonPath, BOOLEAN value);
+
+## 6.4 json_size
