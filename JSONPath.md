@@ -7,8 +7,12 @@ fastjson 1.2.0之后的版本支持JSONPath。
      public class JSONPath {
           // 构造函数
           public JSONPath(String path) {} 
+
           // 求值方法
           public Object eval(Object rootObject) { }
+
+          // 计算对象的Size
+          public int size(Object rootObject) { }
      }
 
 建议缓存JSONPath对象，这样能够提高求值的性能。
