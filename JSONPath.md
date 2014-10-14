@@ -13,12 +13,18 @@ fastjson 1.2.0之后的版本支持JSONPath。
 
           // 计算Size，Map非空元素个数，对象非空元素个数，Collection的Size，数组的长度。其他无法求值返回-1
           public int size(Object rootObject) { }
+
+          // 是否包含，path中是否存在对象
+          public boolean contains(Object rootObject) { }
           
           //  求值，静态方法
           public static Object eval(Object rootObject, String path);
           
           // 计算Size，Map非空元素个数，对象非空元素个数，Collection的Size，数组的长度。其他无法求值返回-1
           public static int size(Object rootObject, String path);
+          
+          // 是否包含，path中是否存在对象
+          public static boolean contains(Object rootObject, String path) { }
      }
 
 建议缓存JSONPath对象，这样能够提高求值的性能。
