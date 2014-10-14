@@ -86,3 +86,6 @@ fastjson 1.2.0之后的版本支持JSONPath。
         public Object getValue() { return value; }
         public void setValue(Object value) { this.value = value; }
     }
+
+# 6. ODPS UDF
+fastjson直接内置提供了可以注册到阿里ODPS的UDF函数。
