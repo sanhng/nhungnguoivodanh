@@ -110,7 +110,7 @@ fastjson 1.2.0之后的版本支持JSONPath。这是一个很强大的功能，�
         Assert.assertSame(entities.get(0).getName(), names.get(0));
         Assert.assertSame(entities.get(1).getName(), names.get(1));
 
-### 5.3 例子3
+### 5.3 例3
 返回集合中多个元素
 
         List<Entity> entities = new ArrayList<Entity>();
@@ -118,9 +118,23 @@ fastjson 1.2.0之后的版本支持JSONPath。这是一个很强大的功能，�
         entities.add(new Entity("ljw2083"));
         entities.add(new Entity("Yako"));
 
-        List<Entity> result = (List<Entity>)JSONPath.eval("[1,2]", entities); // 返回enties的所有名称
+        List<Entity> result = (List<Entity>)JSONPath.eval("[1,2]", entities); // 返回下标为1和2的元素
         Assert.assertEquals(2, result.size());
         Assert.assertSame(entities.get(1), result.get(0));
+        Assert.assertSame(entities.get(2), result.get(1));
+
+### 5.4 例4
+按范围返回集合的子集
+
+        List<Entity> entities = new ArrayList<Entity>();
+        entities.add(new Entity("wenshao"));
+        entities.add(new Entity("ljw2083"));
+        entities.add(new Entity("Yako"));
+
+        List<Entity> result = (List<Entity>)JSONPath.eval("[0:2]", entities); // 返回下标从0到2的元素
+        Assert.assertEquals(3, result.size());
+        Assert.assertSame(entities.get(0), result.get(0));
+        Assert.assertSame(entities.get(1), result.get(1));
         Assert.assertSame(entities.get(2), result.get(1));
 
 # 6. ODPS UDF
