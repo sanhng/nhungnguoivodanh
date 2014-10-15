@@ -59,6 +59,7 @@ AtomicXXX不应该作为POJO的属性，不常用，所以在Android版本中去
     }
 
 # 下载
-目前只有快照版本：
 http://repo1.maven.org/maven2/com/alibaba/fastjson/1.1.33.android/
 http://repo1.maven.org/maven2/com/alibaba/fastjson/1.1.34.android/
+http://repo1.maven.org/maven2/com/alibaba/fastjson/1.1.42.android/
+http://repo1.maven.org/maven2/com/alibaba/fastjson/1.1.43.android/
