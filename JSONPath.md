@@ -101,4 +101,4 @@ fastjson直接内置提供了可以注册到阿里ODPS的UDF函数。
 
 ## 6.4 json_size
     
-    BIGINTjson_size(STRING jsonStr, STRING jsonPath);
+    BIGINT json_size(STRING jsonStr, STRING jsonPath);
