@@ -153,7 +153,7 @@ fastjson 1.2.0之后的版本支持JSONPath。这是一个很强大的功能，�
         Assert.assertSame(entities.get(0), result.get(0));
 
 ### 5.6 例6
-根据属性值过滤条件判断是否返回对象
+根据属性值过滤条件判断是否返回对象，修改对象，数组属性添加元素
 
         Entity entity = new Entity(1001, "ljw2083");
         Assert.assertSame(entity , JSONPath.eval(entity, "[id = 1001]"));
