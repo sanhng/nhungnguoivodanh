@@ -87,6 +87,7 @@ fastjson 1.2.0之后的版本支持JSONPath。这是一个很强大的功能，�
         private String name;
         private Object value;
 
+        public Entity() {}
         public Entity(Integer id, Object value) { this.id = id; this.value = value; }
         public Entity(Integer id, String name) { this.id = id; this.name = name; }
         public Entity(String name) { this.name = name; }
