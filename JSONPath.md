@@ -35,7 +35,7 @@ fastjson 1.2.0之后的版本支持JSONPath。这是一个很强大的功能，�
 <tr><td>[key like 'aa%']</td><td>字符串类型like过滤，<br/>例如$.departs[name like 'sz*']，通配符只支持% <br/>支持not like</td></tr>
 <tr><td>[key rlike 'regexpr']</td><td>字符串类型正则匹配过滤，<br/>例如departs[name like 'aa(.)*']，<br/>正则语法为jdk的正则语法，支持not rlike </td></tr>
 <tr><td>[key in ('v0', 'v1')]</td><td>IN过滤, 支持字符串和数值类型 <br>例如: <br/>$.departs[name in ('wenshao','Yako')] <br/>$.departs[id not in (101,102)]</td></tr>
-<tr><td>[key between 234 and 456]</td><td>BETWEEN过滤, 支持数值类型 <br>例如: <br/>$.departs[id between 101 and 201]<br/>$.departs[id not between 101 and 201]</td></tr>
+<tr><td>[key between 234 and 456]</td><td>BETWEEN过滤, 支持数值类型，支持not between <br>例如: <br/>$.departs[id between 101 and 201]<br/>$.departs[id not between 101 and 201]</td></tr>
 <tr><td>length() 或者 size()</td><td>数组长度。例如$.values.size() <br/>支持类型java.util.Map和java.util.Collection和数组</td></tr>
 <tr><td>.</td><td>属性访问，例如$.name</td></tr>
 <tr><td>*</td><td>对象的所有属性，例如$.leader.*</td></tr>
