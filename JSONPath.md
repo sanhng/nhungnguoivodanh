@@ -88,6 +88,7 @@ fastjson 1.2.0之后的版本支持JSONPath。这是一个很强大的功能，�
         private Object value;
 
         public Entity(Integer id, Object value) { this.id = id; this.value = value; }
+        public Entity(Integer id, String name) { this.id = id; this.name = name; }
         public Entity(String name) { this.name = name; }
 
         public Integer getId() { return id; }
@@ -136,6 +137,26 @@ fastjson 1.2.0之后的版本支持JSONPath。这是一个很强大的功能，�
         Assert.assertSame(entities.get(0), result.get(0));
         Assert.assertSame(entities.get(1), result.get(1));
         Assert.assertSame(entities.get(2), result.get(1));
+
+### 5.5 例5
+通过条件过滤，返回集合的子集
+
+        List<Entity> entities = new ArrayList<Entity>();
+        entities.add(new Entity(1001, "ljw2083"));
+        entities.add(new Entity(1002, "wenshao"));
+        entities.add(new Entity(1003, "yakolee"));
+        entities.add(new Entity(1004, null));
+
+        List<Object> result = (List<Object>) JSONPath.eval(entities, "[id in (1001)]");
+        Assert.assertEquals(1, result.size());
+        Assert.assertSame(entities.get(0), result.get(0));
+
+### 5.6 例6
+根据属性值过滤条件判断是否返回对象
+
+        Entity entity = new Entity(1001, "ljw2083");
+        Assert.assertSame(entity , JSONPath.eval(entity, "[id = 1001]"));
+        Assert.assertNull(JSONPath.eval(entity, "[id = 1002]"));
 
 # 6. ODPS UDF
 fastjson直接内置提供了可以注册到阿里ODPS的UDF函数。
