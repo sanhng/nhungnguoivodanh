@@ -119,7 +119,7 @@ fastjson直接内置提供了可以注册到阿里ODPS的UDF函数。
 
 ## 6.6 json_array_add
 
-    STRING json_add(STRING jsonStr, STRING jsonPath, BIGINT... values);
-    STRING json_add(STRING jsonStr, STRING jsonPath, DOUBLE... values);
-    STRING json_add(STRING jsonStr, STRING jsonPath, STRING... values);
-    STRING json_add(STRING jsonStr, STRING jsonPath, BOOLEAN... values);
+    STRING json_array_add(STRING jsonStr, STRING jsonPath, BIGINT... values);
+    STRING json_array_add(STRING jsonStr, STRING jsonPath, DOUBLE... values);
+    STRING json_array_add(STRING jsonStr, STRING jsonPath, STRING... values);
+    STRING json_array_add(STRING jsonStr, STRING jsonPath, BOOLEAN... values);
