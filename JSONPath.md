@@ -16,6 +16,12 @@ fastjson 1.2.0之后的版本支持JSONPath。这是一个很强大的功能，�
           
           // 是否包含，path中是否存在指定值，如果是集合或者数组，在集合中查找value是否存在
           public static boolean containsValue(Object rootObject, String path, Object value) { }
+          
+          // 修改制定路径的值，如果修改成功，返回true，否则返回false
+          public static boolean set(Object rootObject, String path, Object value) {}
+
+          // 在数组或者集合中添加元素
+          public static boolean array_add(Object rootObject, String path, Object... values);
      }
 
 建议缓存JSONPath对象，这样能够提高求值的性能。
@@ -103,3 +109,17 @@ fastjson直接内置提供了可以注册到阿里ODPS的UDF函数。
 ## 6.4 json_size
     
     BIGINT json_size(STRING jsonStr, STRING jsonPath);
+
+## 6.5 json_set
+    
+    STRING json_set(STRING jsonStr, STRING jsonPath, BIGINT value);
+    STRING json_set(STRING jsonStr, STRING jsonPath, DOUBLE value);
+    STRING json_set(STRING jsonStr, STRING jsonPath, STRING value);
+    STRING json_set(STRING jsonStr, STRING jsonPath, BOOLEAN value);
+
+## 6.6 json_array_add
+
+    STRING json_add(STRING jsonStr, STRING jsonPath, BIGINT... values);
+    STRING json_add(STRING jsonStr, STRING jsonPath, DOUBLE... values);
+    STRING json_add(STRING jsonStr, STRING jsonPath, STRING... values);
+    STRING json_add(STRING jsonStr, STRING jsonPath, BOOLEAN... values);
