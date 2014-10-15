@@ -107,7 +107,7 @@ fastjson 1.2.0之后的版本支持JSONPath。这是一个很强大的功能，�
         entities.add(new Entity("wenshao"));
         entities.add(new Entity("ljw2083"));
 
-        List<String> names = (List<String>)JSONPath.eval("$.name", entities); // 返回enties的所有名称
+        List<String> names = (List<String>)JSONPath.eval(entities, "$.name"); // 返回enties的所有名称
         Assert.assertSame(entities.get(0).getName(), names.get(0));
         Assert.assertSame(entities.get(1).getName(), names.get(1));
 
@@ -119,7 +119,7 @@ fastjson 1.2.0之后的版本支持JSONPath。这是一个很强大的功能，�
         entities.add(new Entity("ljw2083"));
         entities.add(new Entity("Yako"));
 
-        List<Entity> result = (List<Entity>)JSONPath.eval("[1,2]", entities); // 返回下标为1和2的元素
+        List<Entity> result = (List<Entity>)JSONPath.eval(entities, "[1,2]"); // 返回下标为1和2的元素
         Assert.assertEquals(2, result.size());
         Assert.assertSame(entities.get(1), result.get(0));
         Assert.assertSame(entities.get(2), result.get(1));
@@ -132,7 +132,7 @@ fastjson 1.2.0之后的版本支持JSONPath。这是一个很强大的功能，�
         entities.add(new Entity("ljw2083"));
         entities.add(new Entity("Yako"));
 
-        List<Entity> result = (List<Entity>)JSONPath.eval("[0:2]", entities); // 返回下标从0到2的元素
+        List<Entity> result = (List<Entity>)JSONPath.eval(entities, "[0:2]"); // 返回下标从0到2的元素
         Assert.assertEquals(3, result.size());
         Assert.assertSame(entities.get(0), result.get(0));
         Assert.assertSame(entities.get(1), result.get(1));
@@ -157,6 +157,9 @@ fastjson 1.2.0之后的版本支持JSONPath。这是一个很强大的功能，�
         Entity entity = new Entity(1001, "ljw2083");
         Assert.assertSame(entity , JSONPath.eval(entity, "[id = 1001]"));
         Assert.assertNull(JSONPath.eval(entity, "[id = 1002]"));
+        
+        JSONPath.set(entity, "id", 123456); //将id字段修改为123456
+        Assert.assertEquals(123456, entity.getId().intValue());
 
 # 6. ODPS UDF
 fastjson直接内置提供了可以注册到阿里ODPS的UDF函数。
