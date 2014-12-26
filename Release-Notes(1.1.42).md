@@ -12,3 +12,4 @@
 12. 修复ListSerializer在LinkedList拥有大量item的情况下性能严重下降的问题；
 13. 修复spring3代理对象序列化失败的bug。
 14. 兼容odps环境JDK
+15. 修复SymbolTable>=2048后无法通过@type类型反序列化失败的问题。
