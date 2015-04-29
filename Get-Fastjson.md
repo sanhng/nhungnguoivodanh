@@ -1,4 +1,4 @@
-If you're Maven user, just use our maven repository(http://code.alibabatech.com/mvn/releases/) with folloging dependency
+If you're Maven user, just use our maven repository(http://code.alibabatech.com/mvn/releases/) with following dependency
 
 > <dependency>
 >      <groupId>com.alibaba</groupId>
