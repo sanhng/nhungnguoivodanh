@@ -16,8 +16,8 @@ Fastjson full support databind, it's simple to use.
     rootUser.setId(3L);
     rootUser.setName("root");
 
-    group.getUsers().add(guestUser);
-    group.getUsers().add(rootUser);
+    group.add(guestUser);
+    group.add(rootUser);
 
     String jsonString = JSON.toJSONString(group);
 
@@ -60,6 +60,10 @@ Fastjson full support databind, it's simple to use.
 	    public void setUsers(List<User> users) {
 	        this.users = users;
 	    }
+
+            public void addUser(User user) {
+                users.add(user);
+            }
 	}
 
 # User.java
