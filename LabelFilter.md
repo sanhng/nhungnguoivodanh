@@ -7,6 +7,7 @@
         private int    id;
         private String name;
         private String password;
+        private String info;
     
         @JSONField(label = "normal")
         public int getId() {
@@ -34,6 +35,26 @@
         public void setPassword(String password) {
             this.password = password;
         }
-    
+        
+        public String getInfo() {
+            return info;
+        }
+        
+        public void setInfo(String info) {
+            this.info = info;
+        }
+    }
 
-}
+根据不同场景过滤，如下：
+
+    VO vo = new VO();
+    vo.setId(123);
+    vo.setName("wenshao");
+    vo.setPassword("ooxxx");
+    vo.setPassword("ooxxx");
+
+    String text1 = JSON.toJSONString(vo, Labels.includes("normal"));
+    Assert.assertEquals("{\"id\":123,\"name\":\"wenshao\"}", text1);
+
+    String text2 = JSON.toJSONString(vo, Labels.excludes("secret"));
+    Assert.assertEquals("{\"id\":123,\"info\":\"fofo\",\"name\":\"wenshao\"}", text2);
