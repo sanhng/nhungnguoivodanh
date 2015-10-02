@@ -26,8 +26,7 @@ Fastjson is a JSON processor (JSON parser + JSON generator) written in Java:
     </dependency>
 
 # Getting started
-Samples : https://github.com/AlibabaTech/fastjson/wiki/Samples
-
+Samples : https://github.com/alibaba/fastjson/wiki/Samples-DataBind
 
 # Benchmark
 Times are in nanoseconds, sizes are in bytes.
