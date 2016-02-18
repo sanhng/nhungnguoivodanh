@@ -1,5 +1,26 @@
 Fastjson提供Android版本，和标准版本相比，Android版本去掉一些Android虚拟机dalvik不支持的功能，使得jar更小。
 
+# 下载
+通过 Maven:
+```xml
+<dependency>
+    <groupId>com.alibaba</groupId>
+    <artifactId>fastjson</artifactId>
+    <version>版本号.android</version>
+</dependency>
+```
+
+
+或者 Gradle:
+```groovy
+compile 'com.alibaba:fastjson:版本号.android'
+```
+
+版本号 请在 [这里][1] 或者 [这里][2] 寻找, 例如 ```1.1.46```
+
+[1]: http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.alibaba%22%20AND%20a%3A%22fastjson%22
+[2]: http://repo1.maven.org/maven2/com/alibaba/fastjson/
+
 # Android版本中去掉的功能
 ### 1. ASM
 Dalvik虚拟机的字节码格式和Java SE不一样，目前的ASM动态优化无法在Android上实现。
@@ -57,9 +78,3 @@ AtomicXXX不应该作为POJO的属性，不常用，所以在Android版本中去
         @Deprecated
         public void writeEndArray();
     }
-
-# 下载
-http://repo1.maven.org/maven2/com/alibaba/fastjson/1.1.33.android/
-http://repo1.maven.org/maven2/com/alibaba/fastjson/1.1.34.android/
-http://repo1.maven.org/maven2/com/alibaba/fastjson/1.1.42.android/
-http://repo1.maven.org/maven2/com/alibaba/fastjson/1.1.43.android/
