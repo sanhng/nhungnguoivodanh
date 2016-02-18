@@ -14,16 +14,30 @@ Fastjson is a JSON processor (JSON parser + JSON generator) written in Java:
 * Open Source (Apache License 2.0)
 
 # Download
-* Maven Central Repository : http://repo1.maven.org/maven2/com/alibaba/fastjson/
-* Github Download : https://github.com/AlibabaTech/fastjson/downloads
-* Alibaba OpenSesame : http://code.alibabatech.com/mvn/releases/com/alibaba/fastjson/
+### android developer plz see [Here][0]
 
-# Maven dependency
-    <dependency>
-         <groupId>com.alibaba</groupId>
-         <artifactId>fastjson</artifactId>
-         <version>1.1.41</version>
-    </dependency>
+[the latest JAR][1] 
+
+or via Maven:
+```xml
+<dependency>
+    <groupId>com.alibaba</groupId>
+    <artifactId>fastjson</artifactId>
+    <version>VERSION_CODE</version>
+</dependency>
+```
+
+or via Gradle:
+```groovy
+compile 'com.alibaba:fastjson:VERSION_CODE'
+```
+
+replace `VERSION_CODE` with real version name such as `1.2.7` released in [Here][2] or [Here][3]
+
+[0]: https://github.com/alibaba/fastjson/wiki/Android%E7%89%88%E6%9C%AC
+[1]: https://search.maven.org/remote_content?g=com.alibaba&a=fastjson&v=LATEST
+[2]: http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.alibaba%22%20AND%20a%3A%22fastjson%22
+[3]: http://repo1.maven.org/maven2/com/alibaba/fastjson/
 
 # Getting started
 Samples : https://github.com/alibaba/fastjson/wiki/Samples-DataBind
