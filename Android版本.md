@@ -6,17 +6,17 @@ Fastjson提供Android版本，和标准版本相比，Android版本去掉一些A
 <dependency>
     <groupId>com.alibaba</groupId>
     <artifactId>fastjson</artifactId>
-    <version>版本号.android</version>
+    <version>版本号</version>
 </dependency>
 ```
 
 
 或者 Gradle:
 ```groovy
-compile 'com.alibaba:fastjson:版本号.android'
+compile 'com.alibaba:fastjson:版本号'
 ```
 
-版本号 请在 [这里][1] 或者 [这里][2] 寻找, 例如 ```1.1.46```
+版本号 请在 [这里][1] 或者 [这里][2] 寻找, 例如 ```1.1.46.android```
 
 [1]: http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.alibaba%22%20AND%20a%3A%22fastjson%22
 [2]: http://repo1.maven.org/maven2/com/alibaba/fastjson/
