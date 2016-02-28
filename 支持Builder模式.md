@@ -1,4 +1,4 @@
-这个功能参考自jackson。
+这个功能参考自jackson。 POJO的Builder通过@JSONType来配置，如下：
 
 ````
 VO vo = JSON.parseObject("{\"id\":12304,\"name\":\"ljw\"}", VO.class);
@@ -22,6 +22,7 @@ public static class VO {
     }
 }
 
+// 如果builder方法是build或者create，能自动识别
 @JSONPOJOBuilder(buildMethod="xxx")
 public static class VOBuilder {
 
