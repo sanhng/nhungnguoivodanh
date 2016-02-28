@@ -165,37 +165,3 @@ fastjson 1.2.0之后的版本支持JSONPath。这是一个很强大的功能，�
         JSONPath.set(entity, "value", new int[0]); //将value字段赋值为长度为0的数组
         JSONPath.arrayAdd(entity, "value", 1, 2, 3); //将value字段的数组添加元素1,2,3
 
-# 6. ODPS UDF
-fastjson直接内置提供了可以注册到阿里ODPS的UDF函数。
-## 6.1 json_extract
-    
-    STRING json_extract(STRING jsonStr, STRING jsonPath);
-
-## 6.2 json_contains
-    
-    BOOLEAN json_contains(STRING jsonStr, STRING jsonPath);
-
-## 6.3 json_contains_value
-    
-    BOOLEAN json_contains_value(STRING jsonStr, STRING jsonPath, BIGINT value);
-    BOOLEAN json_contains_value(STRING jsonStr, STRING jsonPath, DOUBLE value);
-    BOOLEAN json_contains_value(STRING jsonStr, STRING jsonPath, STRING value);
-    BOOLEAN json_contains_value(STRING jsonStr, STRING jsonPath, BOOLEAN value);
-
-## 6.4 json_size
-    
-    BIGINT json_size(STRING jsonStr, STRING jsonPath);
-
-## 6.5 json_set
-    
-    STRING json_set(STRING jsonStr, STRING jsonPath, BIGINT value);
-    STRING json_set(STRING jsonStr, STRING jsonPath, DOUBLE value);
-    STRING json_set(STRING jsonStr, STRING jsonPath, STRING value);
-    STRING json_set(STRING jsonStr, STRING jsonPath, BOOLEAN value);
-
-## 6.6 json_array_add
-
-    STRING json_array_add(STRING jsonStr, STRING jsonPath, BIGINT... values);
-    STRING json_array_add(STRING jsonStr, STRING jsonPath, DOUBLE... values);
-    STRING json_array_add(STRING jsonStr, STRING jsonPath, STRING... values);
-    STRING json_array_add(STRING jsonStr, STRING jsonPath, BOOLEAN... values);
