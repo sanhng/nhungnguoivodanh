@@ -40,10 +40,20 @@ SerializeFilter是通过编程扩展的方式定制序列化。fastjson支持6�
 
 # NameFilter 序列化时修改Key
 如果需要修改Key,process返回值则可
+```java
+public interface NameFilter extends SerializeFilter {
+    String process(Object object, String propertyName, Object propertyValue);
+}
+```
 
-      public interface NameFilter extends SerializeFilter {
-          String process(Object object, String propertyName, Object propertyValue);
-      }
+fastjson内置一个PascalNameFilter，用于输出将首字符大写的Pascal风格。
+例如：
+```
+import com.alibaba.fastjson.serializer.PascalNameFilter;
+
+Object obj = ...;
+String jsonStr = JSON.toJSONString(obj, new PascalNameFilter());
+```
 
 # ValueFilter 序列化是修改Value
 
