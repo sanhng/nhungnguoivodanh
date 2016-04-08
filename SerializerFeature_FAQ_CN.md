@@ -9,6 +9,7 @@ public class VO {
 VO vo = new VO();
 vo.id = true;
 
-Assert.assertEquals("{\"id\":\"true\"}", JSON.toJSONString(vo, SerializerFeature.WriteNonStringValueAsString));
+Assert.assertEquals("{\"id\":\"true\"}"
+        , JSON.toJSONString(vo, SerializerFeature.WriteNonStringValueAsString));
 Assert.assertEquals("{\"id\":true}", JSON.toJSONString(vo));
 ```
