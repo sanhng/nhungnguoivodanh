@@ -21,6 +21,6 @@ String text = "{\"item_0\":{},\"item_1\":{},\"item_2\":1001}";
 JSONObject o = JSON.parseObject(text, JSONObject.class, fieldResolver);
 Assert.assertTrue(o.get("item_0") instanceof Item);
 Assert.assertTrue(o.get("item_1") instanceof Item);
-Assert.assertTrue(o.get("item_2") instanceof Integer); // 类型还是Integer，因为value是Integer，而不是Object。
+Assert.assertTrue(o.get("item_2") instanceof Integer);//还是Integer，因为value不是Object。
 ```
 例子中可以看出，item_2的value没有被FieldTypeResolver影响，类型还是Integer，因为value是Integer，而不是Object。
