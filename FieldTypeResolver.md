@@ -18,9 +18,9 @@ FieldTypeResolver fieldResolver = new FieldTypeResolver() {
 };
 
 String text = "{\"item_0\":{},\"item_1\":{},\"item_2\":1001}";
-JSONObject jsonObject = JSON.parseObject(text, JSONObject.class, fieldResolver);
-Assert.assertTrue(jsonObject.get("item_0") instanceof Item);
-Assert.assertTrue(jsonObject.get("item_1") instanceof Item);
-Assert.assertTrue(jsonObject.get("item_2") instanceof Integer); // 类型还是Integer，因为value是Integer，而不是Object。
+JSONObject object = JSON.parseObject(text, JSONObject.class, fieldResolver);
+Assert.assertTrue(object.get("item_0") instanceof Item);
+Assert.assertTrue(object.get("item_1") instanceof Item);
+Assert.assertTrue(object.get("item_2") instanceof Integer); // 类型还是Integer，因为value是Integer，而不是Object。
 ```
 例子中可以看出，item_2的value没有被FieldTypeResolver影响，类型还是Integer，因为value是Integer，而不是Object。
