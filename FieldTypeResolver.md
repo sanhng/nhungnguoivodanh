@@ -1,4 +1,4 @@
-FieldTypeResolver是1.2.9 & 1.1.49.android中引入的新功能，用于解析嵌套对象时，自动识别子对象的类型信息。
+FieldTypeResolver是1.2.9 & 1.1.49.android中引入的新功能，用于解析嵌套对象时，自动识别子对象的类型信息。FieldTypeResolver只会作用于value类型为json object的字段。
 
 例如：
 
