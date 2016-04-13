@@ -23,4 +23,4 @@ Assert.assertTrue(jsonObject.get("item_0") instanceof Item);
 Assert.assertTrue(jsonObject.get("item_1") instanceof Item);
 Assert.assertTrue(jsonObject.get("item_2") instanceof Integer);
 ```
-例子中可以看出，item_2的value没有被FieldTypeResolver影响，类型还是Integer。
+例子中可以看出，item_2的value没有被FieldTypeResolver影响，类型还是Integer，因为value是Integer，而不是Object。
