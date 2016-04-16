@@ -8,7 +8,7 @@ List<VO> list = JSON.parseObject("...", new TypeReference<List<VO>>() {});
 
 在这里例子中，通过TypeReference能够解决List<T>中T的类型问题。
 
-在1.2.9 & 1.1.49.android版本中，TypeReference支持泛型参数，用法如下：
+在1.2.9 & 1.1.49.android版本中，TypeReference支持泛型参数，方便一些框架实现通用的反序列化类。用法如下：
 
 ```java
 public static <K, V> Map<K, V> getJsonToMap(String json, Class<K> keyType, Class<V> valueType) {
