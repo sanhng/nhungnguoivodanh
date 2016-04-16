@@ -10,11 +10,23 @@ List<VO> list = JSON.parseObject("...", new TypeReference<List<VO>>() {});
 
 在1.2.9 & 1.1.49.android版本中，TypeReference支持泛型参数，方便一些框架实现通用的反序列化类。用法如下：
 
+### 单参数例子
 ```java
-public static <K, V> Map<K, V> parseToMap(String json, //
-                                            Class<K> keyType, //
+public class Response<T> {
+     public T data;
+}
+public static <T> Response<T> parseToMap(String json, Class<T> type) {
+     return JSON.parseObject(json, 
+                            new TypeReference<Response<T>(type) {});
+}
+```
+
+### 双参数例子
+```java
+public static <K, V> Map<K, V> parseToMap(String json, 
+                                            Class<K> keyType, 
                                             Class<V> valueType) {
-     return JSON.parseObject(json, //
+     return JSON.parseObject(json, 
                             new TypeReference<Map<K, V>>(keyType, valueType) {
                             });
 }
