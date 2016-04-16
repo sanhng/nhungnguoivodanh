@@ -11,14 +11,17 @@ List<VO> list = JSON.parseObject("...", new TypeReference<List<VO>>() {});
 在1.2.9 & 1.1.49.android版本中，TypeReference支持泛型参数，方便一些框架实现通用的反序列化类。用法如下：
 
 ```java
-public static <K, V> Map<K, V> getJsonToMap(String json, Class<K> keyType, Class<V> valueType) {
-    return JSON.parseObject(json, new TypeReference<Map<K, V>>(keyType, valueType) {});
+public static <K, V> Map<K, V> parseToMap(String json, //
+                                            Class<K> keyType, //
+                                            Class<V> valueType) {
+     return JSON.parseObject(json, //
+                            new TypeReference<Map<K, V>>(keyType, valueType) {
+                            });
 }
 
-public void test_for_issue_2() throws Exception {
-    String json = "{1:{name:\"ddd\"},2:{name:\"zzz\"}}";
-    Map<Integer, Model> map = getJsonToMap(json, Integer.class, Model.class);
-    Assert.assertEquals("ddd", map.get(1).name);
-    Assert.assertEquals("zzz", map.get(2).name);
-}
+// 可以这样使用
+String json = "{1:{name:\"ddd\"},2:{name:\"zzz\"}}";
+Map<Integer, Model> map = parseToMap(json, Integer.class, Model.class);
+Assert.assertEquals("ddd", map.get(1).name);
+Assert.assertEquals("zzz", map.get(2).name);
 ```
