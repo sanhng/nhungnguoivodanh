@@ -56,14 +56,16 @@ public class Bug_for_issue_265 extends TestCase {
         }
 
         @Override
-        public void write(JSONSerializer serializer, Object fieldName, Type fieldType,
+        public void write(JSONSerializer serializer, 
+                          Object fieldName, 
+                          Type fieldType,
                           int features) throws IOException {
-            serializer.write(attributes);
+            serializer.write(attributes); // 定制序列化
         }
 
         @Override
         public void processExtra(String key, Object value) {
-            attributes.put(key, value);
+            attributes.put(key, value); // 定制反序列化
         }
     }
 
