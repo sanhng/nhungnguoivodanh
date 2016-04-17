@@ -25,7 +25,9 @@ public class ParserConfig {
 
 例如：
 ```java
-ParserConfig.getGlobalInstance().registerIfNotExists(MediaContent.class, Modifier.PUBLIC, true, false, false, false);
+ParserConfig.getGlobalInstance()
+       .registerIfNotExists(MediaContent.class, Modifier.PUBLIC, true, false, false, false);
 
-SerializeConfig.getGlobalInstance().registerIfNotExists(MediaContent.class, Modifier.PUBLIC, true, false, false, false);
+SerializeConfig.getGlobalInstance()
+       .registerIfNotExists(MediaContent.class, Modifier.PUBLIC, true, false, false, false);
 ```
