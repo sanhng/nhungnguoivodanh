@@ -2,22 +2,22 @@
 
 ```java
 public class SerializeConfig {
-   public ObjectSerializer registerIfNotExists(Class<?> clazz, // 类型
-                                                int classModifers, // 如果类型为public，使用Modifier.PUBLIC
-                                                boolean fieldOnly, // 是否只有field，没有getter/setter
-                                                boolean jsonTypeSupport, // 是否有@JSONType配置
-                                                boolean jsonFieldSupport, // 是否有@JSONField配置
-                                                boolean fieldGenericSupport // 是否有泛型信息
+   ObjectSerializer registerIfNotExists(Class<?> clazz, // 类型
+                                             int classModifers, // 如果类型为public，使用Modifier.PUBLIC
+                                         boolean fieldOnly, // 是否只有field，没有getter/setter
+                                         boolean jsonTypeSupport, // 是否有@JSONType配置
+                                         boolean jsonFieldSupport, // 是否有@JSONField配置
+                                         boolean fieldGenericSupport // 是否有泛型信息
                                                 );
 }
 
 public class ParserConfig {
-    public ObjectDeserializer registerIfNotExists(Class<?> clazz, // 类
-                                                  int classModifiers, // 如果类型为public，使用Modifier.PUBLIC
-                                                  boolean fieldOnly, // 是否只有field，没有getter/setter
-                                                  boolean jsonTypeSupport, // 是否有@JSONType配置
-                                                  boolean jsonFieldSupport, // 是否有@JSONField配置
-                                                  boolean fieldGenericSupport // 是否有泛型信息
+    ObjectDeserializer registerIfNotExists(Class<?> clazz, // 类
+                                                int classModifiers, // 如果类型为public，使用Modifier.PUBLIC
+                                            boolean fieldOnly, // 是否只有field，没有getter/setter
+                                            boolean jsonTypeSupport, // 是否有@JSONType配置
+                                            boolean jsonFieldSupport, // 是否有@JSONField配置
+                                            boolean fieldGenericSupport // 是否有泛型信息
                                                 );
 }
 ```
