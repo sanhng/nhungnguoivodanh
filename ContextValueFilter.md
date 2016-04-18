@@ -27,3 +27,22 @@ public final class SerializeContext {
     public String getLabel();
 }
 ```
+
+### 例子
+```java
+ContextValueFilter valueFilter = new ContextValueFilter() {
+    public Object process(SerializeContext context, 
+                          Object object, 
+                          String name, 
+                          Object value) {
+        Class<?> objectClass = context.getBeanClass();
+        UrlIdentify annotation = context.getAnnation(UrlIdentify.class);
+        
+        // ....
+        
+        return value;
+    }
+};
+
+JSON.toJSONString(model, valueFilter);
+```
