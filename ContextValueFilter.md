@@ -1,10 +1,10 @@
-在某些场景下，对Value做过滤，需要获得所属JavaBean的信息，包括类型、字段、方法等。在fastjson-1.2.9中，提供了ContextValueFilter，类似于之前版本提供的ValueFilter，只是多了SeriliazeContext参数可用。
+在某些场景下，对Value做过滤，需要获得所属JavaBean的信息，包括类型、字段、方法等。在fastjson-1.2.9中，提供了ContextValueFilter，类似于之前版本提供的ValueFilter，只是多了BeanContext参数可用。
 
 ```java
 package com.alibaba.fastjson.serializer;
 
 public interface ContextValueFilter extends SerializeFilter {
-    Object process(SerializeContext context, 
+    Object process(BeanContext context, 
                    Object object, 
                    String name, 
                    Object value);
@@ -15,7 +15,7 @@ public interface ContextValueFilter extends SerializeFilter {
 ```java
 package com.alibaba.fastjson.serializer;
 
-public final class SerializeContext {
+public final class BeanContext {
     public Class<?> getBeanClass();
 
     public Method getMethod();
