@@ -25,6 +25,8 @@ public final class SerializeContext {
     public String getName();
 
     public String getLabel();
+
+    public <T extends Annotation> T getAnnation(Class<T> annotationClass);
 }
 ```
 
