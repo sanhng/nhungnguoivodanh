@@ -30,7 +30,7 @@ public final class BeanContext {
 }
 ```
 
-### 例子
+### Sample
 ```java
 ContextValueFilter valueFilter = new ContextValueFilter() {
     public Object process(SerializeContext context, 
