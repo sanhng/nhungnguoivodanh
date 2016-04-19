@@ -9,15 +9,16 @@ ASMDeserializerFactory是用来动态使用ASM生成JavaBean的Deserializer，�
 <tr><td>lemur</td><td>不支持</td></tr>
 </table>
 
->     public class ASMUtils {
->          public static boolean isAndroid(String vmName) {
->          	String lowerVMName = vmName.toLowerCase();
->              return lowerVMName.contains("dalvik") 
->                      || lowerVMName.contains("lemur") // aliyun-vm name
->                      ;
->          }
->     }
-
+```java
+public class ASMUtils {
+     public static boolean isAndroid(String vmName) {
+     	String lowerVMName = vmName.toLowerCase();
+        return lowerVMName.contains("dalvik") 
+                 || lowerVMName.contains("lemur") // aliyun-vm name
+                 ;
+     }
+}
+```
 ## 1.2 超多字段类
 目前ASMDeserializerFactory不支持超过200个字段JavaBean。做反序列化的时候，需要定义局部变量保存parse的结果，目前的asm框架不能定义超过256个变量，目前保守的做法是，如果字段数量超过200个，则不使用ASMDeserializerFactory。
 
