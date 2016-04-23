@@ -3,15 +3,16 @@ English | [中文] (https://github.com/Alibaba/fastjson/wiki/%E9%A6%96%E9%A1%B5)
 # Frequently Asked Questions
 https://github.com/alibaba/fastjson/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98
 
-# ChangeLog
-http://code.alibabatech.com/jira/browse/fastjson#selectedTab=com.atlassian.jira.plugin.system.project%3Achangelog-panel
+Fastjson is a Java library that can be used to convert Java Objects into their JSON representation. It can also be used to convert a JSON string to an equivalent Java object. Fastjson can work with arbitrary Java objects including pre-existing objects that you do not have source-code of.
 
-# What is fastjson?
-Fastjson is a JSON processor (JSON parser + JSON generator) written in Java:
-* FAST (measured to be faster than any other Java parser and databinder, includes jackson. )
-* Powerful (full data binding for common JDK classes as well as any Java Bean class, Collection, Map, Date or enum)
-* Zero-dependency (does not rely on other packages beyond JDK)
-* Open Source (Apache License 2.0)
+### Fastjson Goals
+ * Provide best performance in server side and android client.
+ * Provide simple toJSONString() and parseObject() methods to convert Java objects to JSON and vice-versa
+ * Allow pre-existing unmodifiable objects to be converted to and from JSON
+ * Extensive support of Java Generics
+ * Allow custom representations for objects
+ * Support arbitrarily complex objects (with deep inheritance hierarchies and extensive use of generic types)
+
 
 # Download
 ### android developer plz see [Here][0]
