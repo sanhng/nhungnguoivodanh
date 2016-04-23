@@ -11,4 +11,4 @@ fastjson如其名，号称拥有最好的性能，从2012年开始，在pc上从
 gson-2.6.2                               | 229650
 jackson-2.7.3(core+databind+annotations) | 252518 + 1202276 + 50897 = 1 505 691
 
-fastjson在pc版本上369k，在android版本上194k，都是全功能的实现，支持直接序列化和反序列化JavaBean
+fastjson在pc版本上369k，在android版本上194k，都是全功能的实现，支持直接序列化和反序列化JavaBean，jackson明显不适合android版本使用，体积巨大1.5M。
