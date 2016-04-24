@@ -2,28 +2,29 @@
 fastjson 1.2.0之后的版本支持JSONPath。这是一个很强大的功能，可以在java框架中当作对象查询语言（OQL）来使用。
 
 # 2. API
-     package com.alibaba.fastjson;
+```java
+package com.alibaba.fastjson;
+
+public class JSONPath {          
+     //  求值，静态方法
+     public static Object eval(Object rootObject, String path);
      
-     public class JSONPath {          
-          //  求值，静态方法
-          public static Object eval(Object rootObject, String path);
-          
-          // 计算Size，Map非空元素个数，对象非空元素个数，Collection的Size，数组的长度。其他无法求值返回-1
-          public static int size(Object rootObject, String path);
-          
-          // 是否包含，path中是否存在对象
-          public static boolean contains(Object rootObject, String path) { }
-          
-          // 是否包含，path中是否存在指定值，如果是集合或者数组，在集合中查找value是否存在
-          public static boolean containsValue(Object rootObject, String path, Object value) { }
-          
-          // 修改制定路径的值，如果修改成功，返回true，否则返回false
-          public static boolean set(Object rootObject, String path, Object value) {}
+     // 计算Size，Map非空元素个数，对象非空元素个数，Collection的Size，数组的长度。其他无法求值返回-1
+     public static int size(Object rootObject, String path);
+     
+     // 是否包含，path中是否存在对象
+     public static boolean contains(Object rootObject, String path) { }
+     
+     // 是否包含，path中是否存在指定值，如果是集合或者数组，在集合中查找value是否存在
+     public static boolean containsValue(Object rootObject, String path, Object value) { }
+     
+     // 修改制定路径的值，如果修改成功，返回true，否则返回false
+     public static boolean set(Object rootObject, String path, Object value) {}
 
-          // 在数组或者集合中添加元素
-          public static boolean array_add(Object rootObject, String path, Object... values);
-     }
-
+     // 在数组或者集合中添加元素
+     public static boolean array_add(Object rootObject, String path, Object... values);
+}
+```
 建议缓存JSONPath对象，这样能够提高求值的性能。
 
 # 3. 支持语法
