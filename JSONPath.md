@@ -51,12 +51,13 @@ public class JSONPath {
 </table>
 
 以下两种写法的语义是相同的：
-
-    $.store.book[0].title
+```
+$.store.book[0].title
+```
 和
-
-    $['store']['book'][0]['title']
-
+```
+$['store']['book'][0]['title']
+```
 
 # 4. 语法示例
 <table>
@@ -72,97 +73,99 @@ public class JSONPath {
 # 5. API 示例
 
 ### 5.1 例1
-    public void test_entity() throws Exception {
-        Entity entity = new Entity(123, new Object());
-        
-       Assert.assertSame(entity.getValue(), JSONPath.eval(entity, "$.value")); 
-       Assert.assertTrue(JSONPath.contains(entity, "$.value"));
-       Assert.assertTrue(JSONPath.containsValue(entity, "$.id", 123));
-       Assert.assertTrue(JSONPath.containsValue(entity, "$.value", entity.getValue())); 
-       Assert.assertEquals(2, JSONPath.size(entity, "$"));
-       Assert.assertEquals(0, JSONPath.size(new Object[], "$")); 
-    }
-    
-    public static class Entity {
-        private Integer id;
-        private String name;
-        private Object value;
+```java
+public void test_entity() throws Exception {
+   Entity entity = new Entity(123, new Object());
+   
+  Assert.assertSame(entity.getValue(), JSONPath.eval(entity, "$.value")); 
+  Assert.assertTrue(JSONPath.contains(entity, "$.value"));
+  Assert.assertTrue(JSONPath.containsValue(entity, "$.id", 123));
+  Assert.assertTrue(JSONPath.containsValue(entity, "$.value", entity.getValue())); 
+  Assert.assertEquals(2, JSONPath.size(entity, "$"));
+  Assert.assertEquals(0, JSONPath.size(new Object[], "$")); 
+}
 
-        public Entity() {}
-        public Entity(Integer id, Object value) { this.id = id; this.value = value; }
-        public Entity(Integer id, String name) { this.id = id; this.name = name; }
-        public Entity(String name) { this.name = name; }
+public static class Entity {
+   private Integer id;
+   private String name;
+   private Object value;
 
-        public Integer getId() { return id; }
-        public Object getValue() { return value; }        
-        public String getName() { return name; }
-        
-        public void setId(Integer id) { this.id = id; }
-        public void setName(String name) { this.name = name; }
-        public void setValue(Object value) { this.value = value; }
-    }
+   public Entity() {}
+   public Entity(Integer id, Object value) { this.id = id; this.value = value; }
+   public Entity(Integer id, String name) { this.id = id; this.name = name; }
+   public Entity(String name) { this.name = name; }
+
+   public Integer getId() { return id; }
+   public Object getValue() { return value; }        
+   public String getName() { return name; }
+   
+   public void setId(Integer id) { this.id = id; }
+   public void setName(String name) { this.name = name; }
+   public void setValue(Object value) { this.value = value; }
+}
+```
 
 ### 5.2 例2
 读取集合多个元素的某个属性
+```java
+List<Entity> entities = new ArrayList<Entity>();
+entities.add(new Entity("wenshao"));
+entities.add(new Entity("ljw2083"));
 
-        List<Entity> entities = new ArrayList<Entity>();
-        entities.add(new Entity("wenshao"));
-        entities.add(new Entity("ljw2083"));
-
-        List<String> names = (List<String>)JSONPath.eval(entities, "$.name"); // 返回enties的所有名称
-        Assert.assertSame(entities.get(0).getName(), names.get(0));
-        Assert.assertSame(entities.get(1).getName(), names.get(1));
-
+List<String> names = (List<String>)JSONPath.eval(entities, "$.name"); // 返回enties的所有名称
+Assert.assertSame(entities.get(0).getName(), names.get(0));
+Assert.assertSame(entities.get(1).getName(), names.get(1));
+```
 ### 5.3 例3
 返回集合中多个元素
+```java
+List<Entity> entities = new ArrayList<Entity>();
+entities.add(new Entity("wenshao"));
+entities.add(new Entity("ljw2083"));
+entities.add(new Entity("Yako"));
 
-        List<Entity> entities = new ArrayList<Entity>();
-        entities.add(new Entity("wenshao"));
-        entities.add(new Entity("ljw2083"));
-        entities.add(new Entity("Yako"));
-
-        List<Entity> result = (List<Entity>)JSONPath.eval(entities, "[1,2]"); // 返回下标为1和2的元素
-        Assert.assertEquals(2, result.size());
-        Assert.assertSame(entities.get(1), result.get(0));
-        Assert.assertSame(entities.get(2), result.get(1));
-
+List<Entity> result = (List<Entity>)JSONPath.eval(entities, "[1,2]"); // 返回下标为1和2的元素
+Assert.assertEquals(2, result.size());
+Assert.assertSame(entities.get(1), result.get(0));
+Assert.assertSame(entities.get(2), result.get(1));
+```
 ### 5.4 例4
 按范围返回集合的子集
+```java
+List<Entity> entities = new ArrayList<Entity>();
+entities.add(new Entity("wenshao"));
+entities.add(new Entity("ljw2083"));
+entities.add(new Entity("Yako"));
 
-        List<Entity> entities = new ArrayList<Entity>();
-        entities.add(new Entity("wenshao"));
-        entities.add(new Entity("ljw2083"));
-        entities.add(new Entity("Yako"));
-
-        List<Entity> result = (List<Entity>)JSONPath.eval(entities, "[0:2]"); // 返回下标从0到2的元素
-        Assert.assertEquals(3, result.size());
-        Assert.assertSame(entities.get(0), result.get(0));
-        Assert.assertSame(entities.get(1), result.get(1));
-        Assert.assertSame(entities.get(2), result.get(1));
-
+List<Entity> result = (List<Entity>)JSONPath.eval(entities, "[0:2]"); // 返回下标从0到2的元素
+Assert.assertEquals(3, result.size());
+Assert.assertSame(entities.get(0), result.get(0));
+Assert.assertSame(entities.get(1), result.get(1));
+Assert.assertSame(entities.get(2), result.get(1));
+```
 ### 5.5 例5
 通过条件过滤，返回集合的子集
+```java
+List<Entity> entities = new ArrayList<Entity>();
+entities.add(new Entity(1001, "ljw2083"));
+entities.add(new Entity(1002, "wenshao"));
+entities.add(new Entity(1003, "yakolee"));
+entities.add(new Entity(1004, null));
 
-        List<Entity> entities = new ArrayList<Entity>();
-        entities.add(new Entity(1001, "ljw2083"));
-        entities.add(new Entity(1002, "wenshao"));
-        entities.add(new Entity(1003, "yakolee"));
-        entities.add(new Entity(1004, null));
-
-        List<Object> result = (List<Object>) JSONPath.eval(entities, "[id in (1001)]");
-        Assert.assertEquals(1, result.size());
-        Assert.assertSame(entities.get(0), result.get(0));
-
+List<Object> result = (List<Object>) JSONPath.eval(entities, "[id in (1001)]");
+Assert.assertEquals(1, result.size());
+Assert.assertSame(entities.get(0), result.get(0));
+```
 ### 5.6 例6
 根据属性值过滤条件判断是否返回对象，修改对象，数组属性添加元素
+```java
+Entity entity = new Entity(1001, "ljw2083");
+Assert.assertSame(entity , JSONPath.eval(entity, "[id = 1001]"));
+Assert.assertNull(JSONPath.eval(entity, "[id = 1002]"));
 
-        Entity entity = new Entity(1001, "ljw2083");
-        Assert.assertSame(entity , JSONPath.eval(entity, "[id = 1001]"));
-        Assert.assertNull(JSONPath.eval(entity, "[id = 1002]"));
-        
-        JSONPath.set(entity, "id", 123456); //将id字段修改为123456
-        Assert.assertEquals(123456, entity.getId().intValue());
+JSONPath.set(entity, "id", 123456); //将id字段修改为123456
+Assert.assertEquals(123456, entity.getId().intValue());
 
-        JSONPath.set(entity, "value", new int[0]); //将value字段赋值为长度为0的数组
-        JSONPath.arrayAdd(entity, "value", 1, 2, 3); //将value字段的数组添加元素1,2,3
-
+JSONPath.set(entity, "value", new int[0]); //将value字段赋值为长度为0的数组
+JSONPath.arrayAdd(entity, "value", 1, 2, 3); //将value字段的数组添加元素1,2,3
+```
