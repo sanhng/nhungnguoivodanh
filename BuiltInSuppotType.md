@@ -21,6 +21,7 @@ boolean[]            | Y                | Y               |
 # Basic Types
 type                           | standard_version | android_version |
 -------------------------------|------------------|-----------------|--------------
+java.lang.Number               | Y                | Y               |
 java.lang.Byte                 | Y                | Y               |
 java.lang.Short                | Y                | Y               |
 java.lang.Integer              | Y                | Y               |
@@ -33,6 +34,22 @@ java.lang.Class                | Y                | Y               | encode/dec
 java.math.BigInteger           | Y                | Y               |
 java.math.BigDecimal           | Y                | Y               |
 java.lang.Object[]             | Y                | Y               |
+java.util.UUID                 | Y                | Y               |
+java.net.URI                   | Y                | Y               |
+java.net.URL                   | Y                | Y               |
+java.net.SocketAddress         | Y                | Y               |
+java.net.InetAddress           | Y                | Y               |
+java.net.Inet4Address          | Y                | Y               |
+java.net.Inet6Address          | Y                | Y               |
+java.lang.Throwable            | Y                | Y               |
+java.lang.StackTraceElement    | Y                | Y               |
+java.util.TimeZone             | Y                | Y               |
+java.util.Currency             | Y                | Y               |
+java.util.Locale               | Y                | Y               |
+java.io.File                   | Y                | Y               | encode/decode to stirng using getPath
+java.nio.file.Path             | Y                | N               |
+java.util.regex.Pattern        | Y                | Y               |
+java.nio.charset.Charset       | Y                | Y               |
 
 # Map Types
 type                                      | standard_version | android_version |
