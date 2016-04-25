@@ -30,7 +30,7 @@ java.lang.Float                | Y                | Y               |
 java.lang.Double               | Y                | Y               |
 java.lang.String               | Y                | Y               |
 java.lang.Enum                 | Y                | Y               | 
-java.lang.Class                | Y                | Y               | encode/decode to stirng using ClassName |
+java.lang.Class                | Y                | Y               | 
 java.math.BigInteger           | Y                | Y               |
 java.math.BigDecimal           | Y                | Y               |
 java.lang.Object[]             | Y                | Y               |
@@ -46,10 +46,13 @@ java.lang.StackTraceElement    | Y                | Y               |
 java.util.TimeZone             | Y                | Y               |
 java.util.Currency             | Y                | Y               |
 java.util.Locale               | Y                | Y               |
-java.io.File                   | Y                | Y               | encode/decode to stirng using getPath |
+java.io.File                   | Y                | Y               | 
 java.nio.file.Path             | Y                | N               |
 java.util.regex.Pattern        | Y                | Y               |
 java.nio.charset.Charset       | Y                | Y               |
+java.text.SimpleDateFormat     | Y                | Y               |
+java.util.Date                 | Y                | Y               |
+java.util.Calendar             | Y                | Y               |
 
 # Map Types
 type                                      | standard_version | android_version |
@@ -109,6 +112,15 @@ java.awt.Font            | Y                | N               |
 java.awt.Rectangle       | Y                | N               | 
 java.awt.Color           | Y                | N               | 
 
+# SQL Types
+type                     | standard_version | android_version |
+-------------------------|------------------|-----------------|--------------
+java.sql.Date            | Y                | N               | 
+java.sql.Time            | Y                | N               | 
+java.sql.Timestamp       | Y                | N               | 
+java.sql.Clob            | Y                | N               | 
+oracle.sql.DATE          | Y                | N               | 
+oracle.sql.TIMESTAMP     | Y                | N               | 
 
 # Java 8 Time & Optional Types
 type                       | standard_version | android_version |
