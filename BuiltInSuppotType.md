@@ -35,26 +35,36 @@ java.math.BigDecimal           | Y                | Y               |
 java.lang.Object[]             | Y                | Y               |
 
 # Map Types
-type                           | standard_version | android_version |
--------------------------------|------------------|-----------------|--------------
-java.util.Map                  | Y                | Y               |
-java.util.HashMap              | Y                | Y               |
-java.util.HashTable            | Y                | Y               |
-java.util.LinkedHashMap        | Y                | Y               |
-java.util.TreeMap              | Y                | Y               |
-java.util.ConcurrentHashMap    | Y                | Y               |
+type                                      | standard_version | android_version |
+------------------------------------------|------------------|-----------------|--------------
+java.util.Map                             | Y                | Y               |
+java.util.HashMap                         | Y                | Y               |
+java.util.HashTable                       | Y                | Y               |
+java.util.LinkedHashMap                   | Y                | Y               |
+java.util.TreeMap                         | Y                | Y               |
+java.util.concurrent.ConcurrentHashMap    | Y                | Y               |
+java.util.concurrent.ConcurrentSkipListMap| Y                | Y               |
+java.util.Collections.EmptyMap            | Y                | Y               |
 
 # Collection Types
-type                           | standard_version | android_version |
--------------------------------|------------------|-----------------|--------------
-java.util.Collection           | Y                | Y               |
-java.util.List                 | Y                | Y               |
-java.util.Iterator             | Y                | Y               |
-java.util.Iterable             | Y                | Y               |
-java.util.ArrayList            | Y                | Y               |
-java.util.Vector               | Y                | Y               |
-java.util.Set                  | Y                | Y               |
-java.util.HashSet              | Y                | Y               |
-java.util.LinkedHashSet        | Y                | Y               |
-java.util.Collections.EmptySet | Y                | Y               |
-java.util.Collections.EmptyList| Y                | Y               |
+type                                       | standard_version | android_version |
+-------------------------------------------|------------------|-----------------|--------------
+java.util.Iterator                         | Y                | Y               |
+java.util.Iterable                         | Y                | Y               |
+java.util.Collection                       | Y                | Y               |
+java.util.Queue                            | Y                | Y               |
+java.util.List                             | Y                | Y               |
+java.util.ArrayList                        | Y                | Y               |
+java.util.LinkedList                       | Y                | Y               |
+java.util.Vector                           | Y                | Y               |
+java.util.Set                              | Y                | Y               |
+java.util.HashSet                          | Y                | Y               |
+java.util.LinkedHashSet                    | Y                | Y               |
+java.util.Collections.EmptySet             | Y                | Y               |
+java.util.Collections.EmptyList            | Y                | Y               |
+java.util.concurrent.ConcurrentLinkedDeque | Y                | Y               |
+java.util.concurrent.ConcurrentLinkedQueue | Y                | Y               |
+java.util.concurrent.ConcurrentSkipListSet | Y                | Y               |
+java.util.concurrent.ConcurrentSkipListSet | Y                | Y               |
+java.util.concurrent.CopyOnWriteArrayList  | Y                | Y               |
+java.util.concurrent.CopyOnWriteArraySet   | Y                | Y               |
