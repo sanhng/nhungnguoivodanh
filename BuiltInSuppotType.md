@@ -29,14 +29,24 @@ java.lang.Float                | Y                | Y               |
 java.lang.Double               | Y                | Y               |
 java.lang.String               | Y                | Y               |
 java.lang.Enum                 | Y                | Y               | 
+java.lang.Class                | Y                | Y               | encode/decode to stirng using ClassName
 java.math.BigInteger           | Y                | Y               |
 java.math.BigDecimal           | Y                | Y               |
+java.lang.Object[]             | Y                | Y               |
+
+# Map Types
+type                           | standard_version | android_version |
+-------------------------------|------------------|-----------------|--------------
 java.util.Map                  | Y                | Y               |
 java.util.HashMap              | Y                | Y               |
 java.util.HashTable            | Y                | Y               |
 java.util.LinkedHashMap        | Y                | Y               |
 java.util.TreeMap              | Y                | Y               |
 java.util.ConcurrentHashMap    | Y                | Y               |
+
+# Collection Types
+type                           | standard_version | android_version |
+-------------------------------|------------------|-----------------|--------------
 java.util.Collection           | Y                | Y               |
 java.util.List                 | Y                | Y               |
 java.util.Iterator             | Y                | Y               |
@@ -48,7 +58,3 @@ java.util.HashSet              | Y                | Y               |
 java.util.LinkedHashSet        | Y                | Y               |
 java.util.Collections.EmptySet | Y                | Y               |
 java.util.Collections.EmptyList| Y                | Y               |
-java.lang.Object[]             | Y                | Y               |
-
-# Basic Type
-java.lang.Class      | Y                | Y
