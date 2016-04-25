@@ -100,3 +100,32 @@ java.lang.ref.Reference                        | Y                | N           
 java.lang.ref.FinalReference                   | Y                | N               | 
 java.lang.ref.SoftReference                    | Y                | N               | 
 java.lang.ref.WeakReference                    | Y                | N               | 
+
+# AWT Types
+type                     | standard_version | android_version |
+-------------------------|------------------|-----------------|--------------
+java.awt.Point           | Y                | N               | 
+java.awt.Font            | Y                | N               | 
+java.awt.Rectangle       | Y                | N               | 
+java.awt.Color           | Y                | N               | 
+
+
+# Java 8 Time & Optional Types
+type                       | standard_version | android_version |
+---------------------------|------------------|-----------------|--------------
+java.time.LocalDateTime    | Y                | N               | 
+java.time.LocalDate        | Y                | N               | 
+java.time.LocalTime        | Y                | N               | 
+java.time.ZonedDateTime    | Y                | N               | 
+java.time.OffsetDateTime   | Y                | N               | 
+java.time.OffsetTime       | Y                | N               | 
+java.time.ZoneOffset       | Y                | N               | 
+java.time.ZoneRegion       | Y                | N               | 
+java.time.ZoneId           | Y                | N               | 
+java.time.Period           | Y                | N               | 
+java.time.Duration         | Y                | N               | 
+java.time.Instant          | Y                | N               | 
+java.util.Optional         | Y                | N               | 
+java.util.OptionalDouble   | Y                | N               | 
+java.util.OptionalInt      | Y                | N               | 
+java.util.OptionalLong     | Y                | N               | 
