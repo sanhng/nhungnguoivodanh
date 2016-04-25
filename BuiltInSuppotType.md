@@ -58,6 +58,7 @@ java.util.ArrayList                        | Y                | Y               
 java.util.LinkedList                       | Y                | Y               |
 java.util.Vector                           | Y                | Y               |
 java.util.Set                              | Y                | Y               |
+java.util.EnumSet                          | Y                | Y               |
 java.util.HashSet                          | Y                | Y               |
 java.util.LinkedHashSet                    | Y                | Y               |
 java.util.Collections.EmptySet             | Y                | Y               |
