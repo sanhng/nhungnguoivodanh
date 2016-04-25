@@ -68,3 +68,17 @@ java.util.concurrent.ConcurrentSkipListSet | Y                | Y               
 java.util.concurrent.ConcurrentSkipListSet | Y                | Y               |
 java.util.concurrent.CopyOnWriteArrayList  | Y                | Y               |
 java.util.concurrent.CopyOnWriteArraySet   | Y                | Y               |
+
+# Extend Types
+type                                           | standard_version | android_version |
+-----------------------------------------------|------------------|-----------------|--------------
+java.util.concurrent.atomic.AtomicBoolean      | Y                | N               | 
+java.util.concurrent.atomic.AtomicInteger      | Y                | N               | 
+java.util.concurrent.atomic.AtomicIntegerArray | Y                | N               | 
+java.util.concurrent.atomic.AtomicLong         | Y                | N               | 
+java.util.concurrent.atomic.AtomicLongArray    | Y                | N               | 
+java.util.concurrent.atomic.AtomicReference    | Y                | N               | 
+java.lang.ref.Reference                        | Y                | N               | 
+java.lang.ref.FinalReference                   | Y                | N               | 
+java.lang.ref.SoftReference                    | Y                | N               | 
+java.lang.ref.WeakReference                    | Y                | N               | 
