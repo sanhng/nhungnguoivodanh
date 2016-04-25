@@ -1,3 +1,14 @@
+Fastjson built-in support a lot of types. includes :
+* Primitive Types and Array
+* Basic Types
+* Map Types
+* Collection Types
+* Atomic & Reference Types
+* AWT Types 
+* SQL/Oracle Types
+* Java 8 Time & Optional Types
+* JavaBean & Proxy
+
 # Primitive Types and Array
 type                 | standard_version | android_version | 
 ---------------------|------------------|-----------------|---------
@@ -90,7 +101,7 @@ java.util.concurrent.ConcurrentSkipListSet | Y                | Y               
 java.util.concurrent.CopyOnWriteArrayList  | Y                | Y               |
 java.util.concurrent.CopyOnWriteArraySet   | Y                | Y               |
 
-# Extend Types
+# Atomic & Reference Types
 type                                           | standard_version | android_version |
 -----------------------------------------------|------------------|-----------------|--------------
 java.util.concurrent.atomic.AtomicBoolean      | Y                | N               | 
@@ -112,7 +123,7 @@ java.awt.Font            | Y                | N               |
 java.awt.Rectangle       | Y                | N               | 
 java.awt.Color           | Y                | N               | 
 
-# SQL Types
+# SQL/Oracle Types
 type                     | standard_version | android_version |
 -------------------------|------------------|-----------------|--------------
 java.sql.Date            | Y                | N               | 
