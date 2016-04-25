@@ -141,3 +141,11 @@ java.util.Optional         | Y                | N               |
 java.util.OptionalDouble   | Y                | N               | 
 java.util.OptionalInt      | Y                | N               | 
 java.util.OptionalLong     | Y                | N               | 
+
+# JavaBean & Proxy
+type                                               | standard_version | android_version |
+---------------------------------------------------|------------------|-----------------|--------------
+net.sf.cglib.proxy.Factory                         | Y                | N               | 
+org.springframework.cglib.proxy.Factory            | Y                | N               | 
+javassist.util.proxy.ProxyObject                   | Y                | N               | 
+org.apache.ibatis.javassist.util.proxy.ProxyObject | Y                | N               | 
