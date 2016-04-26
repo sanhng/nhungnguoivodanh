@@ -2,7 +2,7 @@ FastJson 提供了JAX-RS Provider的实现 [FastJsonProvider] (https://github.co
 
 可用于在构建Restful服务时使用FastJson进行数据的Serialize and Deserialize
 
-以[Apache CXF Restful](http://cxf.apache.org/docs/jax-rs.html)为例的Spring XML配置:
+以[Apache CXF Restful](http://cxf.apache.org/docs/jax-rs.html)为例的Spring XML配置如下
 
 ```xml
 <bean id="fastJsonProvider" class="com.alibaba.fastjson.support.jaxrs.FastJsonProvider">
