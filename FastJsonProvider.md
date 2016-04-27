@@ -5,19 +5,39 @@ FastJson 提供了JAX-RS Provider的实现 [FastJsonProvider] (https://github.co
 以[Apache CXF Restful](http://cxf.apache.org/docs/jax-rs.html)为例的Spring XML配置如下
 
 ```xml
-<bean id="fastJsonProvider" class="com.alibaba.fastjson.support.jaxrs.FastJsonProvider">
-	<!-- SerializerFeature[] -->
+<bean id="fastJsonConfig" class="com.alibaba.fastjson.support.config.FastJsonConfig">
+	<!-- Default charset -->
+	<property name="charset" value="UTF-8" />
+	<!-- Default dateFormat -->
+	<property name="dateFormat" value="yyyy-MM-dd HH:mm:ss" />
+	<!-- Feature -->
 	<property name="features">
 		<list>
 			<value>Your feature</value>
 		</list>
 	</property>
-	<!-- SerializeFilter[] -->
-	<property name="filters">
+	<!-- SerializerFeature -->
+	<property name="serializerFeatures">
 		<list>
-			<ref bean="Your filter" />
+			<value>Your serializer feature</value>
 		</list>
 	</property>
+	<!-- Global SerializeFilter -->
+	<property name="serializeFilters">
+		<list>
+			<value>Your serializer filter</value>
+		</list>
+	</property>
+	<!-- Class Level SerializeFilter -->
+	<property name="classSerializeFilters">
+		<map>
+			<entry key="Your filter class" value-ref="Your serializer filter"/>
+		</map>
+	</property>
+</bean>
+
+<bean id="fastJsonProvider" class="com.alibaba.fastjson.support.jaxrs.FastJsonProvider">
+	<property name="fastJsonConfig" ref="fastJsonConfig"/>
 </bean>
 
 <jaxrs:server id="restfulServer" address="/">
