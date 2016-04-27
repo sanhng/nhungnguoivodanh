@@ -4,6 +4,7 @@ FastJson 提供了JAX-RS Provider的实现 [FastJsonProvider] (https://github.co
 
 以[Apache CXF Restful](http://cxf.apache.org/docs/jax-rs.html)为例的Spring XML配置如下
 
+FastJsonConfig配置
 ```xml
 <bean id="fastJsonConfig" class="com.alibaba.fastjson.support.config.FastJsonConfig">
 	<!-- Default charset -->
@@ -35,7 +36,10 @@ FastJson 提供了JAX-RS Provider的实现 [FastJsonProvider] (https://github.co
 		</map>
 	</property>
 </bean>
+```
 
+FastJsonProvider配置
+```xml
 <bean id="fastJsonProvider" class="com.alibaba.fastjson.support.jaxrs.FastJsonProvider">
 	<property name="fastJsonConfig" ref="fastJsonConfig"/>
 </bean>
