@@ -26,7 +26,7 @@ FastJsonConfig配置
     <!-- Global SerializeFilter -->
     <property name="serializeFilters">
         <list>
-            <value>Your serializer filter</value>
+            <ref bean="Your serializer filter"/>	
         </list>
     </property>
     <!-- Class Level SerializeFilter -->
