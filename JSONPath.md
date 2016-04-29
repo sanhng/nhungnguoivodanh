@@ -31,7 +31,6 @@ public class JSONPath {
 <table>
 <tr><td>JSONPATH</td><td>描述</td></tr>
 <tr><td>$</td><td>根对象，例如$.name</td></tr>
-<tr><td>@</td><td>当前对象，例如@.id</td></tr>
 <tr><td>[num]</td><td>数组访问，其中num是数字，可以是负数。例如$[0].leader.departments[-1].name</td></tr>
 <tr><td>[num0,num1,num2...]</td><td>数组多个元素访问，其中num是数字，可以是负数，返回数组中的多个元素。例如$[0,3,-2,5]</td></tr>
 <tr><td>[start:end]</td><td>数组范围访问，其中start和end是开始小表和结束下标，可以是负数，返回数组中的多个元素。例如$[0:5]</td></tr>
