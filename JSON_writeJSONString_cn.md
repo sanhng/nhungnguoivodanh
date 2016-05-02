@@ -31,5 +31,8 @@ model.value = 1001;
 
 OutputStream os = ...;
 JSON.writeJSONString(os, model);
-Model model2 = JSON.parseObject(is, Charset.from("UTF-8"), Model.class);
+JSON.writeJSONString(os, Charset.from("GB18030"), model);
+
+Writer writer = ...;
+JSON.writeJSONString(os, model);
 ```
