@@ -44,8 +44,12 @@ class Image {
 {"images":[{"height":768,"size":"LARGE","title":"Javaone Keynote","uri":"http://javaone.com/keynote_large.jpg","width":1024},{"height":240,"size":"SMALL","title":"Javaone Keynote","uri":"http://javaone.com/keynote_small.jpg","width":320}],"media":{"bitrate":262144,"duration":18000000,"format":"video/mpg4","height":480,"persons":["Bill Gates","Steve Jobs"],"player":"JAVA","size":58982400,"title":"Javaone Keynote","uri":"http://javaone.com/keynote.mpg","width":640}}
 ```
 
-# 阿里云新加坡主机上测试结果
+fastjson中，如果启用BeanToArray模式，对应的json为：
+```
+[[[768,1,"Javaone Keynote","http://javaone.com/keynote_large.jpg",1024],[240,0,"Javaone Keynote","http://javaone.com/keynote_small.jpg",320]],[262144,null,18000000,"video/mpg4",480,["Bill Gates","Steve Jobs"],0,58982400,"Javaone Keynote","http://javaone.com/keynote.mpg",640]]
+```
 
+# 阿里云新加坡主机上测试结果
 ```
                                    create     ser   deser   total   size  +dfl
 json/fastjson_array/databind          123    1289    1567    2856    281   163
