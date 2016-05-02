@@ -79,6 +79,12 @@ protobuf                              244    2297    1296    3593    239   149
 
 ### Raspberry Pi 3
 ```
+java version "1.8.0_65"
+Java(TM) SE Runtime Environment (build 1.8.0_65-b17)
+Java HotSpot(TM) Client VM (build 25.65-b01, mixed mode)
+```
+
+```
                                    create     ser   deser   total   size  +dfl
 json/fastjson_array/databind          961   18162   19106   37268    281   163
 json/fastjson/databind                976   31240   29890   61129    486   262
