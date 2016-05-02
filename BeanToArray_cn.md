@@ -43,3 +43,16 @@ company.departments.add(new Department(1002, "Financial"));
 String text = JSON.toJSONString(commpany); // {"code":10,"departments":[[1001,"Sales"],[1002,"Financial"]]}
 ```
 在这个例子中，如果Company的属性departments元素很多，局部采用BeanToArray就可以获得很好的性能，而整体又能够获得较好的可读性。
+
+# 性能
+使用BeanToArray模式，可以获得媲美protobuf的性能。
+```
+                                   create     ser   deser   total   size  +dfl
+protobuf                              244    2297    1296    3593    239   149
+json/fastjson_array/databind          123    1289    1567    2856    281   163
+msgpack/databind                      122    1525    2180    3705    233   146
+json/fastjson/databind                120    2019    2610    4629    486   262
+json/jackson+afterburner/databind     118    2142    3147    5289    485   261
+json/jackson/databind                 124    2914    4411    7326    485   261
+```
+这里的json/fastjson_array/databind就是fastjson启用BeanToArray模式，total性能比protobuf好。具体看这里 https://github.com/alibaba/fastjson/wiki/Benchmark_1_2_11
