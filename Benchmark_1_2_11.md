@@ -68,3 +68,14 @@ json/jackson/databind                 124    2914    4411    7326    485   261
 
 
 ```
+
+# Raspberry Pi 3
+```
+                                   create     ser   deser   total   size  +dfl
+json/fastjson_array/databind          961   18162   19106   37268    281   163
+json/fastjson/databind                976   31240   29890   61129    486   262
+json/jackson+afterburner/databind     975   24539   34337   58876    485   261
+json/jackson/databind                 979   28238   49380   77618    485   261
+msgpack/databind                     1027   18768   26617   45385    233   146
+protobuf                             2626   26095   12538   38633    239   149
+```
