@@ -49,6 +49,12 @@ fastjson中，如果启用BeanToArray模式，对应的json为：
 [[[768,1,"Javaone Keynote","http://javaone.com/keynote_large.jpg",1024],[240,0,"Javaone Keynote","http://javaone.com/keynote_small.jpg",320]],[262144,null,18000000,"video/mpg4",480,["Bill Gates","Steve Jobs"],0,58982400,"Javaone Keynote","http://javaone.com/keynote.mpg",640]]
 ```
 
+# 参与测试各个库的版本
+
+fastjson-1.2.11
+jackson-2.7.0
+protobuf-java-2.3.0.jar
+
 # 阿里云新加坡主机上测试结果
 ```
                                    create     ser   deser   total   size  +dfl
