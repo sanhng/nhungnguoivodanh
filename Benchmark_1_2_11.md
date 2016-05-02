@@ -65,7 +65,7 @@ protobuf-java-2.3.0.jar
 ```
 
 # 测试结果
-### 阿里云新加坡主机，普通配置，1核1024M内存
+### 阿里云新加坡主机，普通配置，1 CPU 1024M Memory
 ```
                                    create     ser   deser   total   size  +dfl
 json/fastjson_array/databind          123    1289    1567    2856    281   163
