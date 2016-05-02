@@ -40,8 +40,18 @@ class Image {
 
 ### 测试数据
 测试的场景是[media.1.cks](https://github.com/wenshao/jvm-serializers/blob/fastjson-1.2.11/tpc/data/media.1.cks)，对应的json如下
-```
+```json
 {"images":[{"height":768,"size":"LARGE","title":"Javaone Keynote","uri":"http://javaone.com/keynote_large.jpg","width":1024},{"height":240,"size":"SMALL","title":"Javaone Keynote","uri":"http://javaone.com/keynote_small.jpg","width":320}],"media":{"bitrate":262144,"duration":18000000,"format":"video/mpg4","height":480,"persons":["Bill Gates","Steve Jobs"],"player":"JAVA","size":58982400,"title":"Javaone Keynote","uri":"http://javaone.com/keynote.mpg","width":640}}
 ```
 
-# 测试结果
+# 阿里云新加坡主机上测试结果
+
+```
+                                   create     ser   deser   total   size  +dfl
+json/fastjson_array/databind          123    1289    1567    2856    281   163
+json/fastjson/databind                120    2019    2610    4629    486   262
+json/jackson+afterburner/databind     118    2142    3147    5289    485   261
+json/jackson/databind                 124    2914    4411    7326    485   261
+msgpack/databind                      122    1525    2180    3705    233   146
+protobuf                              244    2297    1296    3593    239   149
+```
