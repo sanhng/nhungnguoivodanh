@@ -40,7 +40,8 @@ company.code = 100;
 company.departments.add(new Department(1001, "Sales"));
 company.departments.add(new Department(1002, "Financial"));
 
-String text = JSON.toJSONString(commpany); // {"code":10,"departments":[[1001,"Sales"],[1002,"Financial"]]}
+// {"code":10,"departments":[[1001,"Sales"],[1002,"Financial"]]}
+String text = JSON.toJSONString(commpany); 
 ```
 在这个例子中，如果Company的属性departments元素很多，局部采用BeanToArray就可以获得很好的性能，而整体又能够获得较好的可读性。
 
