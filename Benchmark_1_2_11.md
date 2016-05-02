@@ -67,6 +67,11 @@ protobuf-java-2.3.0.jar
 # 测试结果
 ### 阿里云新加坡主机，普通配置，1 CPU 1024M Memory
 ```
+java version "1.8.0_77"
+Java(TM) SE Runtime Environment (build 1.8.0_77-b03)
+Java HotSpot(TM) 64-Bit Server VM (build 25.77-b03, mixed mode)
+```
+```
                                    create     ser   deser   total   size  +dfl
 json/fastjson_array/databind          123    1289    1567    2856    281   163
 json/fastjson/databind                120    2019    2610    4629    486   262
