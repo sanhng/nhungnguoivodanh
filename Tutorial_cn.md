@@ -1,5 +1,12 @@
 # 简介
-[Fastjson](https://github.com/alibaba/fastjson)是[阿里巴巴开源项目](https://github.com/alibaba/)中的一个JSON库，它能将JavaBean序列化为JSON格式字符串，并且能把JSON字符串反序列化为JavaBean。Fastjson支持泛型，支持Enum，支持各种日期格式，(包括ISO8601日期格式、.NET日期格式、sql时间类型、Oracle时间类型），支持循环引用，支持JSONPath，功能丰富而且API简单易用。当然，如其名字所说的那样，它是Java语言中性能最好的JSON库。
+[Fastjson](https://github.com/alibaba/fastjson)是[阿里巴巴开源项目](https://github.com/alibaba/)中的一个JSON库，它能将JavaBean序列化为JSON格式字符串。
+
+# 为什么要用Fastjson
+* Fastjson提供简洁易用的API。JSON.toJSONString以及JSON.parseObject两个方法就直接能满足大部分需求。
+* 丰富的功能。支持泛型；Enum；支持各种日期格式，包括ISO8601、.NET日期格式、sql日期类型、Oracle日期类型；支持循环应用；支持JSONPath。
+* 最好的性能。Fastjson提供在Java SE上以及Android Dalvik上最好的性能。
+* 开源，Fastjson采用商业友好的Apache License 2.0。
+* 使用广泛，Fastjson不仅在阿里巴巴内部使用，也被业界广泛使用，在2012/2013年被开源中国评选的最受欢迎的TOP 10项目之一。
 
 # 如何获得Fastjson
 首先你可以在fastjson项目的[Release列表](https://github.com/alibaba/fastjson/releases)中获得最新发布的版本信息[![GitHub release](https://img.shields.io/github/release/alibaba/fastjson.svg)](https://github.com/alibaba/fastjson/releases)。
