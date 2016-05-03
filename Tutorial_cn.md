@@ -11,7 +11,7 @@
 
 # 如何获得Fastjson
 首先你可以在fastjson项目的[Release列表](https://github.com/alibaba/fastjson/releases)中获得最新发布的版本信息[![GitHub release](https://img.shields.io/github/release/alibaba/fastjson.svg)](https://github.com/alibaba/fastjson/releases)。
-你可以从[maven中央仓库](http://repo1.maven.org/maven2/com/alibaba/fastjson/)直接下载最新版本[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.alibaba/fastjson/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.alibaba/fastjson/)。
+你可以从[maven中央仓库](http://repo1.maven.org/maven2/com/alibaba/fastjson/)直接下载最新版本[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.alibaba/fastjson/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.alibaba/fastjson/)，比如http://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.11/ 。
 
 ### Maven配置
 ```xml
