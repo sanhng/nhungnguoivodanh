@@ -3,7 +3,7 @@
 
 # 为什么要用Fastjson
 * Fastjson提供简洁易用的API。JSON.toJSONString以及JSON.parseObject两个方法就直接能满足大部分需求。
-* 丰富的功能。支持泛型；Enum；支持各种日期格式，包括ISO8601、.NET日期格式、sql日期类型、Oracle日期类型；支持循环应用；支持JSONPath。
+* 丰富的功能。支持泛型；支持Enum；支持各种日期格式，包括ISO8601、.NET日期格式、sql日期类型、Oracle日期类型；支持循环应用；支持JSONPath。支持多种方式自定义序列化。
 * 最好的性能。Fastjson提供在Java SE上以及Android Dalvik上最好的性能。
 * 开源。Fastjson采用商业友好的Apache License 2.0。
 * 使用广泛。Fastjson不仅在阿里巴巴内部使用，也被业界广泛使用，在2012/2013年被开源中国评选的最受欢迎的TOP 10项目之一。
