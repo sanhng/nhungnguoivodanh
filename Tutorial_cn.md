@@ -5,8 +5,9 @@
 * Fastjson提供简洁易用的API。JSON.toJSONString以及JSON.parseObject两个方法就直接能满足大部分需求。
 * 丰富的功能。支持泛型；Enum；支持各种日期格式，包括ISO8601、.NET日期格式、sql日期类型、Oracle日期类型；支持循环应用；支持JSONPath。
 * 最好的性能。Fastjson提供在Java SE上以及Android Dalvik上最好的性能。
-* 开源，Fastjson采用商业友好的Apache License 2.0。
-* 使用广泛，Fastjson不仅在阿里巴巴内部使用，也被业界广泛使用，在2012/2013年被开源中国评选的最受欢迎的TOP 10项目之一。
+* 开源。Fastjson采用商业友好的Apache License 2.0。
+* 使用广泛。Fastjson不仅在阿里巴巴内部使用，也被业界广泛使用，在2012/2013年被开源中国评选的最受欢迎的TOP 10项目之一。
+* 对Android特别优化支持。Fastjson提供针对Android特别优化的版本，jar更小（小于200k），在android性能远超原生json库以及其他库。
 
 # 如何获得Fastjson
 首先你可以在fastjson项目的[Release列表](https://github.com/alibaba/fastjson/releases)中获得最新发布的版本信息[![GitHub release](https://img.shields.io/github/release/alibaba/fastjson.svg)](https://github.com/alibaba/fastjson/releases)。
