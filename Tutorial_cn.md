@@ -3,16 +3,17 @@
 
 # 如何获得Fastjson
 首先你可以在fastjson项目的[Release列表](https://github.com/alibaba/fastjson/releases)中获得最新发布的版本信息[![GitHub release](https://img.shields.io/github/release/alibaba/fastjson.svg)](https://github.com/alibaba/fastjson/releases)。
-Fastjson发布到maven中央仓库的，你可以从[maven中央仓库](http://repo1.maven.org/maven2/com/alibaba/fastjson/)直接下载最新版本[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.alibaba/fastjson/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.alibaba/fastjson/)。
+你可以从[maven中央仓库](http://repo1.maven.org/maven2/com/alibaba/fastjson/)直接下载最新版本[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.alibaba/fastjson/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.alibaba/fastjson/)。
 
 ### Maven配置
 ```xml
 <dependency>
 	<groupId>com.alibaba</groupId>
 	<artifactId>fastjson</artifactId>
-	<version>1.2.11</version>
+	<version>x.x.x</version>
 </dependency>
 ```
+其中x.x.x是你所需要配置的版本，比如1.2.11。
 
 ### Android用户
-Fastjson提供针对Android特别优化的版本，android版本也发布在[maven中央仓库](http://repo1.maven.org/maven2/com/alibaba/fastjson/)中。
+Fastjson提供针对Android特别优化的版本，android版本也发布在[maven中央仓库](http://repo1.maven.org/maven2/com/alibaba/fastjson/)中。比如fastjson-1.1.51.android下载地址是http://repo1.maven.org/maven2/com/alibaba/fastjson/1.1.51.android/ 
