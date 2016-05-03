@@ -11,10 +11,14 @@ Model model = new Model();
 model.id = 1001;
 model.name = "gaotie";
 
-String text_normal = JSON.toJSONString(model); // {"id":1001,"name":"gaotie"}
-String text_beanToArray = JSON.toJSONString(model, SerializerFeature.BeanToArray); // [1001,"gaotie"]
+// {"id":1001,"name":"gaotie"}
+String text_normal = JSON.toJSONString(model); 
 
-JSON.parseObject(text_beanToArray, Feature.SupportArrayToBean); // support beanToArray & normal mode
+// [1001,"gaotie"]
+String text_beanToArray = JSON.toJSONString(model, SerializerFeature.BeanToArray); 
+
+// support beanToArray & normal mode
+JSON.parseObject(text_beanToArray, Feature.SupportArrayToBean); 
 ```
 上面的例子中，BeanToArray模式下，少了Key的输出，节省了空间，json字符串较小，性能也会更好。
 
