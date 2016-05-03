@@ -24,4 +24,11 @@
 其中x.x.x是你所需要配置的版本，比如1.2.11。
 
 ### Android用户
-Fastjson提供针对Android特别优化的版本，android版本也发布在[maven中央仓库](http://repo1.maven.org/maven2/com/alibaba/fastjson/)中。比如fastjson-1.1.51.android下载地址是http://repo1.maven.org/maven2/com/alibaba/fastjson/1.1.51.android/ 
+Fastjson提供针对Android特别优化的版本，android版本也发布在[maven中央仓库](http://repo1.maven.org/maven2/com/alibaba/fastjson/)中。比如fastjson-1.1.51.android下载地址是http://repo1.maven.org/maven2/com/alibaba/fastjson/1.1.51.android/ 也可以使用Maven配置，例如：
+```xml
+<dependency>
+	<groupId>com.alibaba</groupId>
+	<artifactId>fastjson</artifactId>
+	<version>x.x.x.android</version>
+</dependency>
+```
