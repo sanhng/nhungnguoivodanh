@@ -11,7 +11,7 @@ fastjson相对其他JSON库的特点是快，从2011年fastjson发布1.1.x版本
 fastjson在阿里巴巴大规模使用，在数万台服务器上部署，fastjson在业界被广泛接受。在2012年被开源中国评选为最受欢迎的国产开源软件之一。
 
 ### 2.3 测试完备
-fastjson有非常多的testcase，在1.1.42版本中，testcase超过2300个。每次发布都会进行回归测试，保证质量稳定。
+fastjson有非常多的testcase，在1.2.11版本中，testcase超过3321个。每次发布都会进行回归测试，保证质量稳定。
 
 ### 2.4 使用简单
 fastjson的API十分简洁。
@@ -41,6 +41,5 @@ fastjson的API十分简洁。
 fastjson会不定期发布针对android版本优化的版本，android优化版本是去掉不必要的代码，减少体积，功能和标准版本基本一样。
 已发布的android版本包括：
 
-    http://repo1.maven.org/maven2/com/alibaba/fastjson/1.1.33.android/
-    http://repo1.maven.org/maven2/com/alibaba/fastjson/1.1.34.android/
+    http://repo1.maven.org/maven2/com/alibaba/fastjson/1.1.51.android/
 
