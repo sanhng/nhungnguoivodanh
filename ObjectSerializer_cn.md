@@ -24,8 +24,9 @@ public class SerializeConfig {
 ```
 
 # Sample
+### 实现ObjectSerializer
 ```java
-public class CharacterCodec implements ObjectSerializer {
+public class CharacterSerializer implements ObjectSerializer {
     public void write(JSONSerializer serializer, 
                       Object object, 
                       Object fieldName, 
@@ -47,4 +48,9 @@ public class CharacterCodec implements ObjectSerializer {
         }
     }
 }
+```
+
+### 注册
+```java
+SerializeConfig.getGlobalInstance().put(Character.class, new CharacterSerializer());
 ```
