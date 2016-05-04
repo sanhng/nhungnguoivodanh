@@ -1,0 +1,1 @@
+fastjson提供了自定义序列化的接口，当你通过配置无法满足自定义序列化需求时，你可以使用ObjectSerializer接口。
