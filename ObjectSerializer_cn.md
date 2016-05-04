@@ -22,3 +22,29 @@ public class SerializeConfig {
 	public boolean put(Type key, ObjectSerializer value);
 }
 ```
+
+# Sample
+```java
+public class CharacterCodec implements ObjectSerializer {
+    public void write(JSONSerializer serializer, 
+                      Object object, 
+                      Object fieldName, 
+                      Type fieldType, 
+                      int features) throws IOException {
+        SerializeWriter out = serializer.out;
+    
+        Character value = (Character) object;
+        if (value == null) {
+            out.writeString("");
+            return;
+        }
+    
+        char c = value.charValue();
+        if (c == 0) {
+            out.writeString("\u0000");
+        } else {
+            out.writeString(value.toString());
+        }
+    }
+}
+```
