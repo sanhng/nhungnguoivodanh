@@ -15,7 +15,7 @@ public interface ObjectSerializer {
 ```
 
 ### 注册API
-```
+```java
 package com.alibaba.fastjson.serializer;
 
 public class SerializeConfig {
