@@ -58,11 +58,11 @@ public abstract class JSON {
 com.alibaba.fastjson.serializer.JSONSerializer.JSONSerializer(JSONSerializerMap)
 ```
 ### 8. 一些废弃的类不支持
-
-    com.alibaba.fastjson.parser.JavaBeanMapping 使用com.alibaba.fastjson.parser.ParserConfig代替
-    com.alibaba.fastjson.serializer.JSONSerializerMap  使用com.alibaba.fastjson.serializer.SerializeConfig代替
-    com.alibaba.fastjson.parser.DefaultExtJSONParser 使用com.alibaba.fastjson.parser.DefaultJSONParser代替
-
+```java
+com.alibaba.fastjson.parser.JavaBeanMapping 使用com.alibaba.fastjson.parser.ParserConfig代替
+com.alibaba.fastjson.serializer.JSONSerializerMap  使用com.alibaba.fastjson.serializer.SerializeConfig代替
+com.alibaba.fastjson.parser.DefaultExtJSONParser 使用com.alibaba.fastjson.parser.DefaultJSONParser代替
+```
 ### 9. 一些废弃方法不支持
 ```java
 class com.alibaba.fastjson.JSONWriter {
