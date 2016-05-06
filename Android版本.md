@@ -39,24 +39,24 @@ AtomicXXX不应该作为POJO的属性，不常用，所以在Android版本中去
 ### 6. 不支持Reference字段类型序列化和反序列化，比如WeakReference/SoftReference/AtomicReference，这些类型不常用用作POJO的属性，所以去掉了。
 
 ### 7. 以下方法不常用，不支持
+```java
+public abstract class JSON {
+    public static parseObject(byte[] input, int off, int len, CharsetDecoder charsetDecoder, Type clazz,
+                                      Feature... features) { ... }
 
-    public abstract class JSON {
-        public static parseObject(byte[] input, int off, int len, CharsetDecoder charsetDecoder, Type clazz,
-                                          Feature... features) { ... }
-    
-        public static Object parse(byte[] input, int off, int len, CharsetDecoder charsetDecoder, 
-                                          int features) {}
+    public static Object parse(byte[] input, int off, int len, CharsetDecoder charsetDecoder, 
+                                      int features) {}
 
-        public static Object parse(byte[] input, int off, int len, CharsetDecoder charsetDecoder, 
-                                          Feature...features) {}
-    
-        public static Object parse(byte[] input, int off, int len, CharsetDecoder charsetDecoder, 
-                                          int features) {}
-    }
+    public static Object parse(byte[] input, int off, int len, CharsetDecoder charsetDecoder, 
+                                      Feature...features) {}
 
-    // JSONSerializerMap已废弃，不支持
-    com.alibaba.fastjson.serializer.JSONSerializer.JSONSerializer(JSONSerializerMap)
+    public static Object parse(byte[] input, int off, int len, CharsetDecoder charsetDecoder, 
+                                      int features) {}
+}
 
+// JSONSerializerMap已废弃，不支持
+com.alibaba.fastjson.serializer.JSONSerializer.JSONSerializer(JSONSerializerMap)
+```
 ### 8. 一些废弃的类不支持
 
     com.alibaba.fastjson.parser.JavaBeanMapping 使用com.alibaba.fastjson.parser.ParserConfig代替
@@ -65,17 +65,17 @@ AtomicXXX不应该作为POJO的属性，不常用，所以在Android版本中去
 
 ### 9. 一些废弃方法不支持
 ```java
-    class com.alibaba.fastjson.JSONWriter {
-        @Deprecated
-        public void writeStartObject();
-        
-        @Deprecated
-        public void writeEndObject();
+class com.alibaba.fastjson.JSONWriter {
+    @Deprecated
+    public void writeStartObject();
     
-        @Deprecated
-        public void writeStartArray();
-        
-        @Deprecated
-        public void writeEndArray();
-    }
+    @Deprecated
+    public void writeEndObject();
+
+    @Deprecated
+    public void writeStartArray();
+    
+    @Deprecated
+    public void writeEndArray();
+}
 ```
