@@ -64,7 +64,7 @@ AtomicXXX不应该作为POJO的属性，不常用，所以在Android版本中去
     com.alibaba.fastjson.parser.DefaultExtJSONParser 使用com.alibaba.fastjson.parser.DefaultJSONParser代替
 
 ### 9. 一些废弃方法不支持
-    
+```java
     class com.alibaba.fastjson.JSONWriter {
         @Deprecated
         public void writeStartObject();
@@ -78,3 +78,4 @@ AtomicXXX不应该作为POJO的属性，不常用，所以在Android版本中去
         @Deprecated
         public void writeEndArray();
     }
+```
