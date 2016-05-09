@@ -75,3 +75,5 @@ public static class VO {
     }
 }
 ```
+
+如果你需要在类级别配置Filter，可以看[这里](https://github.com/alibaba/fastjson/wiki/Class_Level_SerializeFilter)
