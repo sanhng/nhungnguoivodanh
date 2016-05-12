@@ -1,6 +1,6 @@
 在fastjson-1.2.11版本中，@JSONType支持seeAlso配置，类似于JAXB中的XmlSeeAlso。用法如下：
 
-### JavaBean配置
+### JavaBean Config
 ```java
 @JSONType(seeAlso={Dog.class, Cat.class})
 public static class Animal {
@@ -17,7 +17,7 @@ public static class Cat extends Animal {
 }
 ```
 
-#### 使用
+#### Usage
 ```java
 Dog dog = new Dog();
 dog.dogName = "dog1001";
