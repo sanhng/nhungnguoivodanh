@@ -23,3 +23,11 @@ Jackson  | Apaceh 2.0 | https://github.com/FasterXML/jackson-core
 	<version>2.7.3</version>
 </dependency>
 ```
+
+```gson
+<dependency>
+	<groupId>com.google.code.gson</groupId>
+	<artifactId>gson</artifactId>
+	<version>2.6.2</version>
+</dependency>
+```
