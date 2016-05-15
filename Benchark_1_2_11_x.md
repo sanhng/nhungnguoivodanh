@@ -1,3 +1,5 @@
+java -Xmx256m -jar target/microbenchmarks.jar -wi 4 -i 5 -f 9 ".*DZoneWrite.*write10AsString"
+
 ```
 Benchmark                             Mode  Cnt       Score       Error  Units
 DZoneWriteFastjson.write10AsString   thrpt   45  476436.182 ± 10123.057  ops/s
@@ -11,6 +13,8 @@ DZoneWriteJohnzon.write10AsString    thrpt   45   30630.930 ±   233.012  ops/s
 DZoneWriteJsonIO.write10AsString     thrpt   45   16018.749 ±  3711.678  ops/s
 DZoneWriteGSON.write10AsString       thrpt   45   83956.443 ±  1456.487  ops/s
 ```
+
+java -Xmx256m -jar target/microbenchmarks.jar ".*DZoneReadPojo.*read10FromString.*" -wi 4 -i 5 -f 9
 
 ```
 Benchmark                                 Mode  Cnt       Score      Error  Units
