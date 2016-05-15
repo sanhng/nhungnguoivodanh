@@ -1,5 +1,7 @@
 ## License & Project URL
-API       | Fastjson   | GSON       | Jackson
-----------|------------|------------|------------
-License   | Apaceh 2.0 | Apaceh 2.0 | Apaceh 2.0 
-URL       | https://github.com/alibaba/fastjson | https://github.com/google/gson | https://github.com/FasterXML/jackson-core
+
+         | License    | URL
+---------|------------|------------------------------------------
+Fastjson | Apaceh 2.0 | https://github.com/alibaba/fastjson 
+Gson     | Apaceh 2.0 | https://github.com/google/gson 
+Jackson  | Apaceh 2.0 | https://github.com/FasterXML/jackson-core
