@@ -26,13 +26,18 @@ public abstract class JSON {
 }
 ```
 
-### 反序列化API
+### JSON字符串反序列化API
 ```java
 package com.alibaba.fastjson;
 
 public abstract class JSON {
     // 将JSON字符串反序列化为JavaBean
-    public static <T> T parseObject(String text, 
+    public static <T> T parseObject(String jsonStr, 
+                                    Class<T> clazz, 
+                                    Feature... features);
+
+    // 将JSON字符串反序列化为JavaBean
+    public static <T> T parseObject(byte[] jsonBytes,  // UTF-8格式的JSON字符串
                                     Class<T> clazz, 
                                     Feature... features);
 
@@ -44,3 +49,4 @@ public abstract class JSON {
     // 将JSON字符串反序列为JSONObject
     public static JSONObject parseObject(String text);
 }
+```
