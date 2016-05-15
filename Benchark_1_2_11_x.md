@@ -14,9 +14,11 @@ DZoneWriteJsonIO.write10AsString     thrpt   45   16018.749 ±  3711.678  ops/s
 DZoneWriteGSON.write10AsString       thrpt   45   83956.443 ±  1456.487  ops/s
 ```
 
-java -Xmx256m -jar target/microbenchmarks.jar ".*DZoneReadPojo.*read10FromString.*" -wi 4 -i 5 -f 9
+### Reading 1000 item (POJO) list from String
 
 ```
+java -Xmx256m -jar target/microbenchmarks.jar ".*DZoneReadPojo.*read10FromString.*" -wi 4 -i 5 -f 9
+
 Benchmark                                 Mode  Cnt       Score      Error  Units
 DZoneReadPojoDslJson.read10FromString    thrpt   45  199728.153 ± 1231.002  ops/s
 DZoneReadPojoFastjson.read10FromString   thrpt   45  151060.526 ± 2700.248  ops/s
