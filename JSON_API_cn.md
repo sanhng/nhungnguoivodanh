@@ -50,3 +50,60 @@ public abstract class JSON {
     public static JSONObject parseObject(String text);
 }
 ```
+
+# Demo
+### parse Tree
+```java
+import com.alibaba.fastjson.*;
+
+JSONObject jsonObj = JSON.parseObject(jsonStr);
+```
+
+### parse POJO
+```java
+import com.alibaba.fastjson.JSON;
+
+Model model = JSON.parseObject(jsonStr, Model.class);
+```
+
+### parse POJO Generic
+```java
+import com.alibaba.fastjson.JSON;
+
+Type type = new TypeReference<List<Model>>() {}.getType(); 
+List<Model> list = JSON.parseObject(jsonStr, type);
+```
+
+### convert POJO to json string
+```java
+import com.alibaba.fastjson.JSON;
+
+Model model = ...; 
+String jsonStr = JSON.toJSONString(model);
+```
+
+### convert POJO to json bytes
+```java
+import com.alibaba.fastjson.JSON;
+
+Model model = ...; 
+byte[] jsonBytes = JSON.toJSONBytes(model);
+```
+
+### write POJO as json string to OutputStream
+```java
+import com.alibaba.fastjson.JSON;
+
+Model model = ...; 
+OutputStream os;
+JSON.writeJSONString(os, model);
+```
+
+### write POJO as json string to Writer
+```java
+import com.alibaba.fastjson.JSON;
+
+Model model = ...; 
+Writer writer = ...;
+JSON.writeJSONString(writer, model);
+```
