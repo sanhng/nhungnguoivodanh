@@ -11,3 +11,16 @@ DZoneWriteJohnzon.write10AsString    thrpt   45   30630.930 ±   233.012  ops/s
 DZoneWriteJsonIO.write10AsString     thrpt   45   16018.749 ±  3711.678  ops/s
 DZoneWriteGSON.write10AsString       thrpt   45   83956.443 ±  1456.487  ops/s
 ```
+
+```
+Benchmark                                 Mode  Cnt       Score      Error  Units
+DZoneReadPojoDslJson.read10FromString    thrpt   45  199728.153 ± 1231.002  ops/s
+DZoneReadPojoFastjson.read10FromString   thrpt   45  151060.526 ± 2700.248  ops/s
+DZoneReadPojoJacksonAB.read10FromString  thrpt   45  150816.951 ± 1607.385  ops/s
+DZoneReadPojoJacksonJr.read10FromString  thrpt   45  145262.943 ± 2509.262  ops/s
+DZoneReadPojoJackson.read10FromString    thrpt   45  140813.727 ± 3671.932  ops/s
+DZoneReadPojoGSON.read10FromString       thrpt   45  104762.208 ± 1285.506  ops/s
+DZoneReadPojoBoon.read10FromString       thrpt   45   72738.583 ± 1112.040  ops/s
+DZoneReadPojoMoshi.read10FromString      thrpt   45   61181.062 ± 1524.961  ops/s
+DZoneReadPojoJohnzon.read10FromString    thrpt   45   57053.948 ± 2576.479  ops/s
+```
