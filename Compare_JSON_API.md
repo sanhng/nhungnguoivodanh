@@ -24,7 +24,8 @@ Jackson  | Apaceh 2.0 | https://github.com/FasterXML/jackson-core
 </dependency>
 ```
 
-```gson
+### gson
+```xml
 <dependency>
 	<groupId>com.google.code.gson</groupId>
 	<artifactId>gson</artifactId>
