@@ -32,6 +32,24 @@ DZoneWriteGSON.write1kAsString       thrpt   95   836.269 ±  9.100  ops/s
 DZoneWriteJsonIO.write1kAsString     thrpt   95   463.317 ± 39.236  ops/s
 ```
 
+# UsingStream
+```
+java -Xmx256m -jar target/microbenchmarks.jar ".*DZoneWrite.*write1k.*UsingStream.*" -wi 4 -i 5 -f 19
+Error: Unable to access jarfile target/microbenchmarks.jar
+
+Benchmark                                Mode  Cnt     Score    Error  Units
+DZoneWriteDslJson.write1kUsingStream    thrpt   95  8135.118 ± 73.580  ops/s
+DZoneWriteJacksonAB.write1kUsingStream  thrpt   95  4383.472 ± 23.149  ops/s
+DZoneWriteJackson.write1kUsingStream    thrpt   95  3094.382 ± 51.213  ops/s
+DZoneWriteJacksonJr.write1kUsingStream  thrpt   95  2952.672 ± 34.436  ops/s
+DZoneWriteFastjson.write1kUsingStream   thrpt   95  2282.111 ± 25.419  ops/s
+DZoneWriteBoon.write1kUsingStream       thrpt   95  1395.558 ± 16.833  ops/s
+DZoneWriteJohnzon.write1kUsingStream    thrpt   95  1256.551 ± 17.389  ops/s
+DZoneWriteMoshi.write1kUsingStream      thrpt   95   992.358 ± 17.174  ops/s
+DZoneWriteJsonIO.write1kUsingStream     thrpt   95   572.759 ± 59.370  ops/s
+DZoneWriteGSON.write1kUsingStream       thrpt   95   417.193 ±  3.743  ops/s
+```
+
 ### Reading 1000 item (POJO) list from String
 
 ```
