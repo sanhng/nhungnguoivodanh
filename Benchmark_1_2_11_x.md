@@ -32,7 +32,7 @@ DZoneWriteGSON.write1kAsString       thrpt   95   836.269 ±  9.100  ops/s
 DZoneWriteJsonIO.write1kAsString     thrpt   95   463.317 ± 39.236  ops/s
 ```
 
-# UsingStream
+# write1kUsingStream
 ```
 java -Xmx256m -jar target/microbenchmarks.jar ".*DZoneWrite.*write1k.*UsingStream.*" -wi 4 -i 5 -f 19
 Error: Unable to access jarfile target/microbenchmarks.jar
