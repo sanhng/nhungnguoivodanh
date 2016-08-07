@@ -22,3 +22,8 @@ parserConfig.propertyNamingStrategy = PropertyNamingStrategy.SnakeCase;
 Model model2 = JSON.parseObject(text, Model.class, parserConfig);
 Assert.assertEquals(model.personId, model2.personId);
 ```
+
+# 修改全局缺省的命名策略
+```java
+SerializeConfig.getGlobalInstance().propertyNamingStrategy = PropertyNamingStrategy.PascalCase;
+```
