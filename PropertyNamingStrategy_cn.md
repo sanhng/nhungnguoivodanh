@@ -25,5 +25,6 @@ Assert.assertEquals(model.personId, model2.personId);
 
 # 修改全局缺省的命名策略
 ```java
-SerializeConfig.getGlobalInstance().propertyNamingStrategy = PropertyNamingStrategy.PascalCase;
+SerializeConfig.getGlobalInstance()
+               .propertyNamingStrategy = PropertyNamingStrategy.PascalCase;
 ```
