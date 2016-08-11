@@ -77,6 +77,32 @@ FieldInfo可以配置在getter/setter方法或者字段上。例如：
         private int f2;
     }
 
+# 使用serializeUsing制定属性的序列化类
+在fastjson 1.2.16版本之后，JSONField支持新的定制化配置serializeUsing，可以单独对某一个类的某个属性定制序列化，比如：
+```java
+public static class Model {
+    @JSONField(serializeUsing = ModelValueSerializer.class)
+    public int value;
+}
+
+public static class ModelValueSerializer implements ObjectSerializer {
+    @Override
+    public void write(JSONSerializer serializer, Object object, Object fieldName, Type fieldType,
+                      int features) throws IOException {
+        Integer value = (Integer) object;
+        String text = value + "元";
+        serializer.write(text);
+    }
+}
+```
+
+测试代码
+```
+Model model = new Model();
+model.value = 100;
+String json = JSON.toJSONString(model);
+Assert.assertEquals("{\"value\":\"100元\"}", json);
+```
 
 
 
