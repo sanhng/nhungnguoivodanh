@@ -77,7 +77,7 @@ FieldInfo可以配置在getter/setter方法或者字段上。例如：
         private int f2;
     }
 
-# 使用serializeUsing制定属性的序列化类
+# 6. 使用serializeUsing制定属性的序列化类
 在fastjson 1.2.16版本之后，JSONField支持新的定制化配置serializeUsing，可以单独对某一个类的某个属性定制序列化，比如：
 ```java
 public static class Model {
