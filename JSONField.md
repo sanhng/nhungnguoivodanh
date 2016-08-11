@@ -97,7 +97,7 @@ public static class ModelValueSerializer implements ObjectSerializer {
 ```
 
 测试代码
-```
+```java
 Model model = new Model();
 model.value = 100;
 String json = JSON.toJSONString(model);
