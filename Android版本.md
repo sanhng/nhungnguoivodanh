@@ -1,4 +1,5 @@
-Fastjson提供Android版本，和标准版本相比，Android版本去掉一些Android虚拟机dalvik不支持的功能，使得jar更小，同时针对dalvik做了很多性能优化，包括减少方法调用等。
+Fastjson提供Android版本，和标准版本相比，Android版本去掉一些Android虚拟机dalvik不支持的功能，使得jar更小，同时针对dalvik做了很多性能优化，包括减少方法调用等。parse为JSONObject/JSONArray比原生org.json速度快，序列化反序列化JavaBean性能比jackson/gson性能更好。
+
 
 # 下载
 通过 Maven:
