@@ -1,4 +1,4 @@
-**Spring has not recommend, see [FastJsonHttpMessageConverter](https://github.com/alibaba/fastjson/wiki/FastJsonHttpMessageConverter).**
+**Spring has not recommend, see [FastJsonHttpMessageConverter](https://github.com/alibaba/fastjson/wiki/FastJsonHttpMessageConverter_EN).**
 
 [FastJsonJsonView](https://github.com/alibaba/fastjson/blob/master/src/main/java/com/alibaba/fastjson/support/spring/FastJsonJsonView.java) is a Spring MVC AbstractView implementor.
 
