@@ -1,4 +1,4 @@
-**此方式已不被Spring推荐 建议采用[FastJsonHttpMessageConverter](https://github.com/alibaba/fastjson/wiki/FastJsonHttpMessageConverter)**
+**此方式已不被Spring推荐 建议采用[FastJsonHttpMessageConverter](https://github.com/alibaba/fastjson/wiki/FastJsonHttpMessageConverter_CN)**
 
 FastJson 提供了Spring MVC AbstractView的实现 [FastJsonJsonView](https://github.com/alibaba/fastjson/blob/master/src/main/java/com/alibaba/fastjson/support/spring/FastJsonJsonView.java)
 
