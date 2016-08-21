@@ -90,24 +90,24 @@ auto recognize date format as below when deserialize:
 * .NET JSON format
 * new Date(198293238)
 
-## 9. 如何定制序列化？
-你可以使用SimplePrePropertyFilter过滤字段，详细看这里：https://github.com/alibaba/fastjson/wiki/%E4%BD%BF%E7%94%A8SimplePropertyPreFilter%E8%BF%87%E6%BB%A4%E5%B1%9E%E6%80%A7
+## 9. how to customize the serialize？
+ use SimplePrePropertyFilter to filter the property，more info here：https://github.com/alibaba/fastjson/wiki/%E4%BD%BF%E7%94%A8SimplePropertyPreFilter%E8%BF%87%E6%BB%A4%E5%B1%9E%E6%80%A7
 
-关于定制序列化，详细的介绍看这里：
+here is the detailed introduction about customizing serialize：
 https://github.com/alibaba/fastjson/wiki/%E5%AE%9A%E5%88%B6%E5%BA%8F%E5%88%97%E5%8C%96
 
-## 10. 当对象存在引用时，序列化后的结果浏览器不支持，怎么办？
-使用SerializerFeature.DisableCircularReferenceDetect特性关闭引用检测和生成。例如：
+## 10. when the object has some refrence property, what if not supported by the browser?
+use SerializerFeature.DisableCircularReferenceDetect to close the refrence check and generate:
 ```java
 String  jsonString = JSON.toJSONString(obj, SerializerFeature.DisableCircularReferenceDetect);
 ```
-## 11. IE 6不支持JSON带中文字符串，要怎么处理？
-fastjson提供了BrowserCompatible这个配置，打开之后，所有的中文都会序列化为\uXXXX这种格式，字节数会多一些，但是能兼容IE 6。
+## 11. IE 6 not support JSON with Chinese character，how to deal with it？
+fastjson has BrowserCompatible configuration，after opened，all Chinese will be serialized to the format with \uXXXX.
 ```java
 String  jsonString = JSON.toJSONString(obj, SerializerFeature.BrowserCompatible);
 ```
-## 12. fastjson 如何处理超大对象和超大JSON文本
-fastjson提供了Stream API，详细看这里 https://github.com/alibaba/fastjson/wiki/Stream-api
+## 12. fastjson how to deal with extreme super object and JSON String.
+fastjson offers Stream API: https://github.com/alibaba/fastjson/wiki/Stream-api
 
-## 13. 使用@JSONField定制序列化
-fastjson提供了使用Annotation定制序列化和反序列化的功能。https://github.com/alibaba/fastjson/wiki/JSONField
+## 13. @JSONField customize the serialize
+fastjson offers Annotation to customize the serialize and deserialize: https://github.com/alibaba/fastjson/wiki/JSONField
