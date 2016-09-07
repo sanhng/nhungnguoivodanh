@@ -38,7 +38,7 @@ replace `VERSION_CODE` with real version name such as `1.2.17` released in [Here
 [1]: https://search.maven.org/remote_content?g=com.alibaba&a=fastjson&v=LATEST
 [2]: http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.alibaba%22%20AND%20a%3A%22fastjson%22
 [3]: http://repo1.maven.org/maven2/com/alibaba/fastjson/
-[4]: https://bintray.com/bintray/jcenter/com.alibaba%3Afastjson#files/com/alibaba/fastjson
+[4]: https://bintray.com/bintray/jcenter/com.alibaba%3Afastjson#files
 
 # Getting started
 Samples : https://github.com/alibaba/fastjson/wiki/Samples-DataBind
