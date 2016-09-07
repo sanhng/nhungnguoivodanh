@@ -17,10 +17,11 @@ Fastjson提供Android版本，和标准版本相比，Android版本去掉一些A
 compile 'com.alibaba:fastjson:VERSION_CODE'
 ```
 
-用 [这里][1] 或者 [这里][2] 的真实发行版本号, 替换 `VERSION_CODE` , 例如 `1.1.54.android`
+用 [这里][1] 或者 [这里][2] 或者 [这里][3] 的真实发行版本号, 替换 `VERSION_CODE` , 例如 `1.1.54.android`
 
 [1]: http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.alibaba%22%20AND%20a%3A%22fastjson%22
 [2]: http://repo1.maven.org/maven2/com/alibaba/fastjson/
+[3]: https://bintray.com/bintray/jcenter/com.alibaba%3Afastjson#files/com/alibaba/fastjson
 
 # Android版本中去掉的功能
 ### 1. ASM
