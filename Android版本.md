@@ -21,7 +21,7 @@ compile 'com.alibaba:fastjson:VERSION_CODE'
 
 [1]: http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22com.alibaba%22%20AND%20a%3A%22fastjson%22
 [2]: http://repo1.maven.org/maven2/com/alibaba/fastjson/
-[3]: https://bintray.com/bintray/jcenter/com.alibaba%3Afastjson#files/com/alibaba/fastjson
+[3]: https://bintray.com/bintray/jcenter/com.alibaba%3Afastjson#files
 
 # Android版本中去掉的功能
 ### 1. ASM
