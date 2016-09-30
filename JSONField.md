@@ -1,5 +1,7 @@
 # 1. JSONField 介绍
 
+注意：1、若属性是私有的，必须有set*方法。否则无法反序列化。
+
     package com.alibaba.fastjson.annotation;
     
     public @interface JSONField {
