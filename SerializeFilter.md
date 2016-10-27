@@ -61,7 +61,7 @@ String jsonStr = JSON.toJSONString(obj, new PascalNameFilter());
           Object process(Object object, String propertyName, Object propertyValue);
       }
 
-# BeforeFilter 在序列化之前执行某些操作,例如添加内容
+# BeforeFilter 在序列化对象的所有属性之前执行某些操作,例如调用 writeKeyValue 添加内容
 
       public abstract class BeforeFilter implements SerializeFilter {
           protected final void writeKeyValue(String key, Object value) { ... }
@@ -69,7 +69,7 @@ String jsonStr = JSON.toJSONString(obj, new PascalNameFilter());
           public abstract void writeBefore(Object object);
       }
 
-# AfterFilter 在序列化之后执行某些操作,例如添加内容
+# AfterFilter 在序列化对象的所有属性之后执行某些操作,例如调用 writeKeyValue 添加内容
 
       public abstract class AfterFilter implements SerializeFilter {
           protected final void writeKeyValue(String key, Object value) { ... }
