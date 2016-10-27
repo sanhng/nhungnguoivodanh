@@ -30,7 +30,7 @@ class Company {
      public List<Department> departments = new ArrayList<Department>();
 }
 
-@JSONType(serialzeFeatures=SerializerFeature.BeanToArray, parseFeatures=Feature.SupportArrayToBean))
+@JSONType(serialzeFeatures=SerializerFeature.BeanToArray, parseFeatures=Feature.SupportArrayToBean)
 class Department {
      public int id;
      public Stirng name;
@@ -48,6 +48,18 @@ company.departments.add(new Department(1002, "Financial"));
 String text = JSON.toJSONString(commpany); 
 ```
 在这个例子中，如果Company的属性departments元素很多，局部采用BeanToArray就可以获得很好的性能，而整体又能够获得较好的可读性。
+
+## Sample 3
+上一个例子也可以这样写：
+```java
+class Company {
+     public int code;
+
+     @JSONField(serialzeFeatures=SerializerFeature.BeanToArray, parseFeatures=Feature.SupportArrayToBean)
+     public List<Department> departments = new ArrayList<Department>();
+}
+
+```
 
 # 性能
 使用BeanToArray模式，可以获得媲美protobuf的性能。
