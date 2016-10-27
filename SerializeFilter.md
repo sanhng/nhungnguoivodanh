@@ -69,7 +69,7 @@ String jsonStr = JSON.toJSONString(obj, new PascalNameFilter());
           public abstract void writeBefore(Object object);
       }
 
-# AfterFilter 序列化时在最前添加内容
+# AfterFilter 序列化时在最后添加内容
 
       public abstract class AfterFilter implements SerializeFilter {
           protected final void writeKeyValue(String key, Object value) { ... }
