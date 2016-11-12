@@ -1,7 +1,7 @@
 JSON使用越来越多，选择一个合适的json库对于框架/应用的长远发展还是比较重要的。
 
 # 性能
-fastjson如其名，号称拥有最好的性能，从2012年开始，在pc上从未被超越。在最新的版本中，fastjson针对android退出特别优化的版本，在android上的性能也是最好的。
+fastjson如其名，号称拥有最好的性能，从2012年开始，在pc上从未被超越。在最新的版本中，fastjson针对android推出特别优化的版本，在android上的性能也是最好的。
 
 # Jar大小
                                          | size
