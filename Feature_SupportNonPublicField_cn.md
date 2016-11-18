@@ -6,6 +6,8 @@ public class Model {
     private int id;
 }
 
-Model model = JSON.parseObject("{\"id\":123}", Model.class, Feature.SupportNonPublicField);
+Model model = JSON.parseObject("{\"id\":123}"
+                                , Model.class
+                                , Feature.SupportNonPublicField);
 assertEquals(123, model.id);
 ```
