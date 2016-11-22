@@ -34,6 +34,6 @@ public static <K, V> Map<K, V> parseToMap(String json,
 // 可以这样使用
 String json = "{1:{name:\"ddd\"},2:{name:\"zzz\"}}";
 Map<Integer, Model> map = parseToMap(json, Integer.class, Model.class);
-Assert.assertEquals("ddd", map.get(1).name);
-Assert.assertEquals("zzz", map.get(2).name);
+assertEquals("ddd", map.get(1).name);
+assertEquals("zzz", map.get(2).name);
 ```
