@@ -169,3 +169,23 @@ Assert.assertEquals(123456, entity.getId().intValue());
 JSONPath.set(entity, "value", new int[0]); //将value字段赋值为长度为0的数组
 JSONPath.arrayAdd(entity, "value", 1, 2, 3); //将value字段的数组添加元素1,2,3
 ```
+
+### 5.7 例7
+```java
+Map root = Collections.singletonMap("company", //
+                                    Collections.singletonMap("departs", //
+                                                             Arrays.asList( //
+                                                                            Collections.singletonMap("id",
+                                                                                                     1001), //
+                                                                            Collections.singletonMap("id",
+                                                                                                     1002), //
+                                                                            Collections.singletonMap("id", 1003) //
+                                                             ) //
+                                    ));
+
+List<Object> ids = (List<Object>) JSONPath.eval(root, "$..id");
+assertEquals(3, ids.size());
+assertEquals(1001, ids.get(0));
+assertEquals(1002, ids.get(1));
+assertEquals(1003, ids.get(2));
+```
