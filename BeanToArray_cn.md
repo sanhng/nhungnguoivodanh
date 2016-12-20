@@ -4,7 +4,7 @@
 ```java
 class Mode {
    public int id;
-   public int name;
+   public String name;
 }
 
 Model model = new Model();
