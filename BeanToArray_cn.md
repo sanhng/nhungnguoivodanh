@@ -2,7 +2,7 @@
 
 ### Sample 1
 ```java
-class Mode {
+class Model {
    public int id;
    public String name;
 }
