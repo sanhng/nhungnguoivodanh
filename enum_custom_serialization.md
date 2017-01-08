@@ -59,6 +59,7 @@ public static enum OrderType {
 
 # 方法3
 直接修改SerializeConfig配置Enum当做JavaBean序列化，需要1.2.24之后的版本，这个方法的好处是不需要修改Enum类的代码
+
 ```java
 SerializeConfig serializeConfig = SerializeConfig.globalInstance;
 serializeConfig.put(OrderType.class, serializeConfig.createJavaBeanSerializer(OrderType.class));
