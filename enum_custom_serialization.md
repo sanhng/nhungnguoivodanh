@@ -1,3 +1,5 @@
+fastjson支持在某些业务场景下，将Enum类型作为JavaBean序列化输出。
+# 方法1
 ```java
 public static class Model {
     public int id;
@@ -35,4 +37,29 @@ model.id = 1001;
 model.orderType = OrderType.PayOrder;
 String text = JSON.toJSONString(model);
 Assert.assertEquals("{\"id\":1001,\"orderType\":{\"remark\":\"支付订单\",\"value\":1}}", text);
+```
+
+# 方法2
+使用@JSONType配置Enum当做JavaBean序列化，需要1.2.24之后的版本
+```java
+@JSONType(serializeEnumAsJavaBean = true)
+public static enum OrderType {
+    PayOrder(1, "支付订单"), //
+    SettleBill(2, "结算单");
+
+    public final int value;
+    public final String remark;
+
+    private OrderType(int value, String remark) {
+        this.value = value;
+        this.remark = remark;
+    }
+}
+```
+
+# 方法3
+直接修改SerializeConfig配置Enum当做JavaBean序列化，需要1.2.24之后的版本
+```java
+SerializeConfig serializeConfig = SerializeConfig.globalInstance;
+serializeConfig.put(OrderType.class, serializeConfig.createJavaBeanSerializer(OrderType.class));
 ```
