@@ -62,5 +62,5 @@ public static enum OrderType {
 
 ```java
 SerializeConfig serializeConfig = SerializeConfig.globalInstance;
-serializeConfig.put(OrderType.class, serializeConfig.createJavaBeanSerializer(OrderType.class));
+serializeConfig.configEnumAsJavaBean(OrderType.class);
 ```
