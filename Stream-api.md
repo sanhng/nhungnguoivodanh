@@ -1,7 +1,7 @@
 当需要处理超大JSON文本时，需要Stream API，在fastjson-1.1.32版本中开始提供Stream API。
 
 # 序列化
-## 超大JSON数组序列化  \n
+## 超大JSON数组序列化
 如果你的JSON格式是一个巨大的JSON数组，有很多元素，则先调用startArray，然后挨个写入对象，然后调用endArray。
       
       JSONWriter writer = new JSONWriter(new FileWriter("/tmp/huge.json"));
