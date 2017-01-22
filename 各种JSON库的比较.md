@@ -7,4 +7,9 @@
 <tr><td>json-lib</td><td> 27555 </td><td> 87292 </td><td>json-lib-2.4-jdk15.jar(159k)</td></tr>
 </table>
 
+        | fastjson      |fastjson.android | gson      | jackson-core
+--------|---------------|-----------------|-----------|----------------
+最新版本 | 1.2.24         |1.1.56.android   | 2.8.0    | 
+更新时间 | 2017-01-19     |2017-01-15      | 2016-10-27|        
+大小     | 427k          |209k             | 261k     |
 性能数据有第三方独立提供：https://github.com/eishay/jvm-serializers/wiki/Staging-Results
