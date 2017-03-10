@@ -5,13 +5,15 @@
 添加白名单有三种方式，如下:<br/>
 ### 1. 在代码中配置
 ```java
-ParserConfig.getGlobalInstance().addAccept("com.taobao.pac.client.sdk.dataobject."); 如果有多个包名前缀，分多次addAccept<br/>
+ParserConfig.getGlobalInstance().addAccept("com.taobao.pac.client.sdk.dataobject."); 
 ```
+如果有多个包名前缀，分多次addAccept
 
 ### 2. 加上JVM启动参数
 ```script
-    -Dfastjson.parser.autoTypeAccept=com.taobao.pac.client.sdk.dataobject.,com.cainiao. // 如果有多个包名前缀，用逗号隔开
+    -Dfastjson.parser.autoTypeAccept=com.taobao.pac.client.sdk.dataobject.,com.cainiao. 
 ```
+如果有多个包名前缀，用逗号隔开
 
 ### 3. 通过fastjson.properties文件配置。
 在1.2.25/1.2.26版本支持通过类路径的fastjson.properties文件来配置，配置方式如下：
