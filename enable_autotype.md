@@ -9,13 +9,15 @@ ParserConfig.getGlobalInstance().addAccept("com.taobao.pac.client.sdk.dataobject
 ```
 
 ### 2. 加上JVM启动参数
+```script
+    -Dfastjson.parser.autoTypeAccept=com.taobao.pac.client.sdk.dataobject.,com.cainiao. // 如果有多个包名前缀，用逗号隔开
 ```
--Dfastjson.parser.autoTypeAccept=com.taobao.pac.client.sdk.dataobject.,com.cainiao. // 如果有多个包名前缀，用逗号隔开```
 
 ### 3. 通过fastjson.properties文件配置。
 在1.2.25/1.2.26版本支持通过类路径的fastjson.properties文件来配置，配置方式如下：
+```
 fastjson.parser.autoTypeAccept=com.taobao.pac.client.sdk.dataobject.,com.cainiao. // 如果有多个包名前缀，用逗号隔开
-
+```
 
 ## 打开autotype功能
 ### 1、JVM启动参数 
