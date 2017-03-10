@@ -1,3 +1,4 @@
+# 已知影响兼容的变更
 1. JSONLexer在1.1.32~1.1.34版本中是class，其他版本是interface
 2. JSON#handleResovleTask方法不兼容问题，在
 	1.1.15返回值是void
