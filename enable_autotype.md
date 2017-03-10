@@ -26,6 +26,7 @@ fastjson.parser.autoTypeAccept=com.taobao.pac.client.sdk.dataobject.,com.cainiao
 ```
 ### 2、代码中设置
 ```java
-ParserConfig.getGlobalInstance().setAutoTypeSupport(true); 如果有使用非全局ParserConfig则用另外调用setAutoTypeSupport(true)；
+ParserConfig.getGlobalInstance().setAutoTypeSupport(true); 
 ```
+如果有使用非全局ParserConfig则用另外调用setAutoTypeSupport(true)；
 
