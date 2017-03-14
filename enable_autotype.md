@@ -2,7 +2,7 @@
 在1.2.25之后的版本，以及所有的.sec01后缀版本中，autotype功能是受限的，和之前的版本不同，如果在升级的过程中遇到问题，可以通过以下方法配置。
 
 ## 一、添加autotype白名单
-添加白名单有三种方式，如下:<br/>
+添加白名单有三种方式，三选一，如下:<br/>
 ### 1. 在代码中配置
 ```java
 ParserConfig.getGlobalInstance().addAccept("com.taobao.pac.client.sdk.dataobject."); 
@@ -22,6 +22,7 @@ fastjson.parser.autoTypeAccept=com.taobao.pac.client.sdk.dataobject.,com.cainiao
 ```
 
 ## 二、打开autotype功能
+两种方法打开autotype，二选一，如下：
 ### 1、JVM启动参数 
 ```
 -Dfastjson.parser.autoTypeSupport=true
