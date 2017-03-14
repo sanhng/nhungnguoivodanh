@@ -1,7 +1,7 @@
 #打开AutoType功能
 在1.2.25之后的版本，以及所有的.sec01后缀版本中，autotype功能是受限的，和之前的版本不同，如果在升级的过程中遇到问题，可以通过以下方法配置。
 
-## 添加autotype白名单
+## 一、添加autotype白名单
 添加白名单有三种方式，如下:<br/>
 ### 1. 在代码中配置
 ```java
@@ -21,7 +21,7 @@ ParserConfig.getGlobalInstance().addAccept("com.taobao.pac.client.sdk.dataobject
 fastjson.parser.autoTypeAccept=com.taobao.pac.client.sdk.dataobject.,com.cainiao. // 如果有多个包名前缀，用逗号隔开
 ```
 
-## 打开autotype功能
+## 二、打开autotype功能
 ### 1、JVM启动参数 
 ```
 -Dfastjson.parser.autoTypeSupport=true
