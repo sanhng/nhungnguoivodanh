@@ -18,7 +18,7 @@ http://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.28/
 
 ## 常见问题
 ### 1. 升级遇到不兼容问题怎么办？
-1.2.28已经修复了绝大多数兼容问题，但是总会有一些特殊的用法导致不兼容，如果你遇到不兼容问题，通过 https://github.com/alibaba/fastjson/wiki/incompatible_change_list 查看不兼容问题，链接的后面提供了遇到不兼容问题之后的解决版本办法。
+1.2.28已经修复了绝大多数兼容问题，但是总会有一些特殊的用法导致不兼容，如果你遇到不兼容问题，通过 https://github.com/alibaba/fastjson/wiki/incompatible_change_list 查看不兼容问题，链接的后面提供了遇到不兼容问题之后的使用相应的sec01版本解决办法。
 
 ### 2. 升级之后报错autotype is not support
 安全升级包禁用了部分autotype的功能，也就是"@type"这种指定类型的功能会被限制在一定范围内使用。如果你使用场景中包括了这个功能，https://github.com/alibaba/fastjson/wiki/enable_autotype 这里有一个介绍如何添加白名单或者打开autotype功能。
