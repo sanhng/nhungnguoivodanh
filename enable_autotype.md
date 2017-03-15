@@ -22,7 +22,7 @@ fastjson.parser.autoTypeAccept=com.taobao.pac.client.sdk.dataobject.,com.cainiao
 ```
 
 ## 二、打开autotype功能
-两种方法打开autotype，二选一，如下：
+如果通过配置白名单解决不了问题，可以选择继续打开autotype功能，fastjson在新版本中内置了多重防护，但是还是可能会存在一定风险。两种方法打开autotype，二选一，如下：
 ### 1、JVM启动参数 
 ```
 -Dfastjson.parser.autoTypeSupport=true
