@@ -43,5 +43,8 @@ http://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.29/
 为了保证更多用户的安全，目前不适合扩散漏洞利用的细节
 
 ### 7. 是否有在WAF上检测的办法
-检测post内容中是否包含"@type"
-
+检测post内容中是否包含如下字符
+```
+"@type"
+```
+注意，为了减少误报，包括双引号
