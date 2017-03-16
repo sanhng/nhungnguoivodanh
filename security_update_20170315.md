@@ -12,6 +12,8 @@
 </dependency>
 ```
 
+注意，版本号1.2.3~1.2.9版本都比1.2.28小，都是需要升级的。
+
 ### 2. 直接下载
 1.2.28版本下载地址
 http://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.28/
