@@ -39,5 +39,9 @@ http://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.29/
 * 微信号 wenshaojin
 * 微博 http://weibo.com/wengaotie
 
+### 6. 有没有漏洞利用详情可以提供
+为了保证更多用户的安全，目前不适合扩散漏洞利用的细节
 
+### 7. 是否有在WAF上检测的办法
+检测post内容中是否包含"@type"
 
