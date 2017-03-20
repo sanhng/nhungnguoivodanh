@@ -54,7 +54,13 @@ http://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.29/
 ### 8. 检测当前使用版本的是否有问题
 在lib目录下执行如下脚本命令，可以判断版本是否有问题
 ```
-sudo -u admin lsof -X | grep fastjson | grep jar
- | grep -v sec01 | grep -v 1.2.24 | grep -v 1.2.25 | grep -v 1.2.26 | grep -v 1.2.27
+ls | grep fastjson | grep jar
+ | grep -v sec01 | grep -v 1.2.25 | grep -v 1.2.26 | grep -v 1.2.27
  | grep -v 1.2.28 | grep -v 1.2.29
 ```
+或者
+```
+sudo -u admin lsof -X | grep -v 1.2.25 | grep -v 1.2.26 | grep -v 1.2.27
+ | grep -v 1.2.28 | grep -v 1.2.29
+```
+通过lsof检测，在tomcat某些场景是检测不出来的，最好在lib目录下用ls检测。
