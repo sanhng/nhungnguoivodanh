@@ -52,13 +52,21 @@ http://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.29/
 注意，为了减少误报，包括双引号
 
 ### 8. 检测当前使用版本的是否有问题
-在lib目录下执行如下脚本命令，可以判断版本是否有问题
+1. 通过maven dependency检测
+如果是maven工程，在代码根目录下执行如下命令，如果有返回，就是需要升级
+```
+mvn dependency:tree | grep "com.alibaba.fastjson:"
+ | grep -v sec01 | grep -v 1.2.25 | grep -v 1.2.26 | grep -v 1.2.27
+```
+
+2. 在lib目录下执行如下脚本命令，可以判断版本是否有问题
 ```
 ls | grep fastjson | grep jar
  | grep -v sec01 | grep -v 1.2.25 | grep -v 1.2.26 | grep -v 1.2.27
  | grep -v 1.2.28 | grep -v 1.2.29
 ```
-或者
+
+3. 看打开的文件中是否包含fastjson
 ```
 sudo -u admin lsof -X | grep -v 1.2.25 | grep -v 1.2.26 | grep -v 1.2.27
  | grep -v 1.2.28 | grep -v 1.2.29
