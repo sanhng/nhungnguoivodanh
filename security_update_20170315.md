@@ -65,10 +65,11 @@ ls | grep fastjson | grep jar
  | grep -v sec01 | grep -v 1.2.25 | grep -v 1.2.26 | grep -v 1.2.27
  | grep -v 1.2.28 | grep -v 1.2.29
 ```
+请注意，为了方便阅读，加上了换行符，请使用时把上面的三行合并成一行。
 
 3. 看打开的文件中是否包含fastjson
 ```
 sudo -u admin lsof -X | grep -v 1.2.25 | grep -v 1.2.26 | grep -v 1.2.27
  | grep -v 1.2.28 | grep -v 1.2.29
 ```
-通过lsof检测，在tomcat某些场景是检测不出来的，最好在lib目录下用ls检测。
+请注意，为了方便阅读，加上了换行符，请使用时把上面的两行合并成一行。另外通过lsof检测，在tomcat某些场景是检测不出来的，最好在lib目录下用ls检测（第2中方法）。
