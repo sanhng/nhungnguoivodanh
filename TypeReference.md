@@ -17,7 +17,7 @@ public class Response<T> {
 }
 public static <T> Response<T> parseToMap(String json, Class<T> type) {
      return JSON.parseObject(json, 
-                            new TypeReference<Response<T>(type) {});
+                            new TypeReference<Response<T>>(type) {});
 }
 ```
 
