@@ -1,4 +1,4 @@
-在1.2.31版本中，fastjson引入了JSONField.unwrapped配置，使得定制序列化和反序列化更加方便。
+在1.2.32版本中，fastjson引入了JSONField.unwrapped配置，使得定制序列化和反序列化更加方便。
 
 # Demo 1
 ```java
@@ -34,7 +34,7 @@ assertEquals(vo.localtion.latitude, vo2.localtion.latitude);
 assertEquals(vo.localtion.longitude, vo2.localtion.longitude);
 ```
 
-# Demo2
+# Demo 2
 ```java
 public static class VO {
     public int id;
@@ -57,7 +57,7 @@ assertEquals(37, vo2.properties.get("latitude"));
 assertEquals(127, vo2.properties.get("longitude"));
 ```
 
-# Demo3
+# Demo 3
 ```java
 public static class VO {
     public int id;
