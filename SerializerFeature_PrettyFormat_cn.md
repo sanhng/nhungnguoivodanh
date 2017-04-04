@@ -26,3 +26,15 @@ assertEquals("{\n" +
 	"name":"wenshao"
 }
 ```
+
+# 另外一种写法
+在JSON中提供了一个写法，早期没有SerializerFeature.PrettyFormat的写法，一直保留着。如下：
+```
+public static String toJSONString(Object object, boolean prettyFormat) {
+    if (!prettyFormat) {
+        return toJSONString(object);
+    }
+
+    return toJSONString(object, SerializerFeature.PrettyFormat);
+}
+```
