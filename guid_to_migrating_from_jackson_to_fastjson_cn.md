@@ -15,8 +15,10 @@ jackson也是一个很优秀的jackson库，但是如果你因为某些理由想
 
 ### 4. JsonPropertyOrder
 在fastjson的JSONType.orders提供了同样的功能。例如：
+```java
 @JSONType(orders={"name", "id"})
 public static class VO {
     public int    id;
     public String name;
 }
+```
