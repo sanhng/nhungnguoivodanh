@@ -32,3 +32,12 @@ public static class Model {
     public String value;
 }
 ```
+
+### 6. JsonSerialize
+在fastjson中，可以通过使用JSONField.serializeUsing和JSONType.serializer实现同样的功能。
+
+### 7. JsonCreator
+在fastjson中有对应的JSONCreator
+
+### 8. JsonSetter
+在fastjson中，可以用JSONField实现同样的功能。
