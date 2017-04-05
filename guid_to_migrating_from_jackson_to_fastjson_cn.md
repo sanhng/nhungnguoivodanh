@@ -9,3 +9,6 @@ jackson也是一个很优秀的jackson库，但是如果你因为某些理由想
 
 ### 2. JsonPOJOBuilder
 在Jackson中提供了对Builder模式支持的JsonPOJOBuilder，在fastjson中对应的是JSONPOJOBuilder。详细文档 https://github.com/alibaba/fastjson/wiki/BuilderSupport
+
+### 3. JsonAnyGetter & JsonAnySetter
+在fastjson 1.2.32版本中引入JSONField.unwrapped配置，支持类似JsonAnyGetter/JsonAnySetter的功能，详细文档 https://github.com/alibaba/fastjson/wiki/JSONField_unwrapped_cn
