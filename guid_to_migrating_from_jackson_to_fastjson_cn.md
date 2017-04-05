@@ -12,3 +12,11 @@ jackson也是一个很优秀的jackson库，但是如果你因为某些理由想
 
 ### 3. JsonAnyGetter & JsonAnySetter
 在fastjson 1.2.32版本中引入JSONField.unwrapped配置，支持类似JsonAnyGetter/JsonAnySetter的功能，详细文档 https://github.com/alibaba/fastjson/wiki/JSONField_unwrapped_cn
+
+### 4. JsonPropertyOrder
+在fastjson的JSONType.orders提供了同样的功能。例如：
+@JSONType(orders={"name", "id"})
+public static class VO {
+    public int    id;
+    public String name;
+}
