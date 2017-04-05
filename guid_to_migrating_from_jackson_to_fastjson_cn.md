@@ -1,1 +1,4 @@
 jackson也是一个很优秀的jackson库，但是如果你因为某些理由想迁移到fastjson，这个指南将会为你介绍如何从jackson迁移到fastjson。
+
+# Annotions
+在fastjson中，有三个Annotation，JSONType、JSONField、JSONCreator，功能强大，能够完成jackson大多数Annotation对应的功能。
