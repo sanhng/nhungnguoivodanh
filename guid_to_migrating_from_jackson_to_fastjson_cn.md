@@ -1,0 +1,1 @@
+jackson也是一个很优秀的jackson库，但是如果你因为某些理由想迁移到fastjson，这个指南将会为你介绍如何从jackson迁移到fastjson。
