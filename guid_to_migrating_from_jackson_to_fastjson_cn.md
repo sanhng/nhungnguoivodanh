@@ -22,3 +22,13 @@ public static class VO {
     public String name;
 }
 ```
+
+### 5. JsonRawValue
+在fastjson中，通过JSONField.jsonDirect配置能实现同样的功能。
+```java
+public static class Model {
+    public int id;
+    @JSONField(jsonDirect=true)
+    public String value;
+}
+```
