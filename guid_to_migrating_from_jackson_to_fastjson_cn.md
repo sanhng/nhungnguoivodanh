@@ -53,3 +53,6 @@ public static class Model {
 
 ### 12. JsonFormat
 在fastjson中，可以通过使用JSONField.format实现同样的功能
+
+### 13. Jackson Polymorphic Type Handling Annotations
+在fastjson中，可以通过JSONType.seeAlso实现类似的功能。详细文档 https://github.com/alibaba/fastjson/wiki/JSONType_seeAlso_cn
