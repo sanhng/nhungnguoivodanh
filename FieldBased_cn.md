@@ -1,5 +1,6 @@
-在1.2.31版本中，fastjson引入了对fieldBased序列化和反序列化的支持。
+在1.2.31版本中，fastjson引入了对fieldBased序列化和反序列化的支持。在SerializeConfig和ParserConfig上配置是否fieldBased。
 
+# Demo
 ```java
 private static final boolean fieldBased = true;
 private static SerializeConfig serializeConfig = new SerializeConfig(fieldBased);
