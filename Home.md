@@ -42,3 +42,6 @@ replace `VERSION_CODE` with real version name such as `1.2.21` released in [Here
 
 # Getting started
 Samples : https://github.com/alibaba/fastjson/wiki/Samples-DataBind
+
+# Google JSON Style Guide
+you can learn how to write JSON gracefully from here：https://github.com/darcyliu/google-styleguide/blob/master/JSONStyleGuide.md
