@@ -6,6 +6,16 @@ import com.alibaba.fastjson.TypeReference;
 List<VO> list = JSON.parseObject("...", new TypeReference<List<VO>>() {});
 ```
 
+如下写法有更好的性能
+```java
+import com.alibaba.fastjson.TypeReference;
+
+final static Type type = new TypeReference<List<VO>>() {}.getType();
+
+List<VO> list = JSON.parseObject("...", type);
+```
+
+
 在这里例子中，通过TypeReference能够解决List<T>中T的类型问题。
 
 在1.2.9 & 1.1.49.android版本中，TypeReference支持泛型参数，方便一些框架实现通用的反序列化类。用法如下：
