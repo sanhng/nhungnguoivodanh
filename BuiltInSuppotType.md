@@ -10,8 +10,8 @@ Fastjson built-in support a lot of types. includes :
 * JavaBean & Proxy
 
 # Primitive Types and Array
-type                 | standard_version | android_version | 
----------------------|------------------|-----------------|---------
+type                 | standard_version | android_version |                     |
+---------------------|------------------|-----------------|---------------------
 byte                 | Y                | Y               |
 short                | Y                | Y               |
 int                  | Y                | Y               |
@@ -30,8 +30,8 @@ char[]               | Y                | Y               |
 boolean[]            | Y                | Y               |
 
 # Basic Types
-type                           | standard_version | android_version |              |
--------------------------------|------------------|-----------------|--------------
+type                           | standard_version | android_version |
+-------------------------------|------------------|-----------------|
 java.lang.Number               | Y                | Y               |
 java.lang.Byte                 | Y                | Y               |
 java.lang.Short                | Y                | Y               |
@@ -67,7 +67,7 @@ java.util.Calendar             | Y                | Y               |
 
 # Map Types
 type                                      | standard_version | android_version |
-------------------------------------------|------------------|-----------------|--------------
+------------------------------------------|------------------|-----------------|
 java.util.Map                             | Y                | Y               |
 java.util.HashMap                         | Y                | Y               |
 java.util.HashTable                       | Y                | Y               |
@@ -79,7 +79,7 @@ java.util.Collections.EmptyMap            | Y                | Y               |
 
 # Collection Types
 type                                       | standard_version | android_version |
--------------------------------------------|------------------|-----------------|--------------
+-------------------------------------------|------------------|-----------------|
 java.util.Iterator                         | Y                | Y               |
 java.util.Iterable                         | Y                | Y               |
 java.util.Collection                       | Y                | Y               |
@@ -103,7 +103,7 @@ java.util.concurrent.CopyOnWriteArraySet   | Y                | Y               
 
 # Atomic & Reference Types
 type                                           | standard_version | android_version |
------------------------------------------------|------------------|-----------------|--------------
+-----------------------------------------------|------------------|-----------------|
 java.util.concurrent.atomic.AtomicBoolean      | Y                | N               | 
 java.util.concurrent.atomic.AtomicInteger      | Y                | N               | 
 java.util.concurrent.atomic.AtomicIntegerArray | Y                | N               | 
@@ -117,7 +117,7 @@ java.lang.ref.WeakReference                    | Y                | N           
 
 # AWT Types
 type                     | standard_version | android_version |
--------------------------|------------------|-----------------|--------------
+-------------------------|------------------|-----------------|
 java.awt.Point           | Y                | N               | 
 java.awt.Font            | Y                | N               | 
 java.awt.Rectangle       | Y                | N               | 
@@ -125,7 +125,7 @@ java.awt.Color           | Y                | N               |
 
 # SQL/Oracle Types
 type                     | standard_version | android_version |
--------------------------|------------------|-----------------|--------------
+-------------------------|------------------|-----------------|
 java.sql.Date            | Y                | N               | 
 java.sql.Time            | Y                | N               | 
 java.sql.Timestamp       | Y                | N               | 
@@ -135,7 +135,7 @@ oracle.sql.TIMESTAMP     | Y                | N               |
 
 # Java 8 Time & Optional Types
 type                       | standard_version | android_version |
----------------------------|------------------|-----------------|--------------
+---------------------------|------------------|-----------------|
 java.time.LocalDateTime    | Y                | N               | 
 java.time.LocalDate        | Y                | N               | 
 java.time.LocalTime        | Y                | N               | 
@@ -155,7 +155,7 @@ java.util.OptionalLong     | Y                | N               |
 
 # JavaBean & Proxy
 type                                               | standard_version | android_version |
----------------------------------------------------|------------------|-----------------|--------------
+---------------------------------------------------|------------------|-----------------|
 net.sf.cglib.proxy.Factory                         | Y                | N               | 
 org.springframework.cglib.proxy.Factory            | Y                | N               | 
 javassist.util.proxy.ProxyObject                   | Y                | N               | 
