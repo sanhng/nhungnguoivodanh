@@ -1,4 +1,4 @@
-这是一个新增的自定义反序列化接口。
+PropertyProcessable是1.2.35版本开始支持的自定义反序列化接口。
 ```java
 interface PropertyProcessable {
     // 返回property的类型，如果返回空，则由parser自行推断。
