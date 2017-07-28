@@ -19,7 +19,7 @@ String json = JSON.toJSONString(obj); // encode obj to json
 Model model2 = JSON.parseObject(json, Model.class); // parse json string to java bean
 
 // parse json to list with generic type.
-TypeReference<List<Model>>> typeRef = new TypeReference<List<Model>>>() {};
+TypeReference<List<Model>> typeRef = new TypeReference<List<Model>>() {};
 List<Model> modelList = JSON.parseObject(json, typeRef); 
 
 ```
