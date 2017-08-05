@@ -89,7 +89,7 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
     <property name="keySerializer">
         <bean class="com.alibaba.fastjson.support.spring.GenericFastJsonRedisSerializer"/>
     </property>
-    <!-- 单独设置 keySerializer -->
+    <!-- 单独设置 valueSerializer -->
     <property name="valueSerializer">
         <bean class="com.alibaba.fastjson.support.spring.GenericFastJsonRedisSerializer"/>
     </property>
