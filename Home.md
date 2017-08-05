@@ -45,3 +45,6 @@ Samples : https://github.com/alibaba/fastjson/wiki/Samples-DataBind
 
 # Google JSON Style Guide
 you can learn how to write JSON gracefully from here：https://google.github.io/styleguide/jsoncstyleguide.xml
+
+# Integrate Fastjson in Spring
+https://github.com/alibaba/fastjson/wiki/%E5%9C%A8-Spring-%E4%B8%AD%E9%9B%86%E6%88%90-Fastjson
