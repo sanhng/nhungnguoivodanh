@@ -77,7 +77,7 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
     <property name="testOnBorrow" value="${redis.pool.testOnBorrow}"/>
      <!-- 更多连接池配置...-->
 </bean>
-<!-- RedisTemplate 连接池配置 -->
+<!-- RedisTemplate 配置 -->
 <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">
     <!-- 设置 Redis 连接工厂-->
     <property name="connectionFactory" ref="jedisConnectionFactory"/>
