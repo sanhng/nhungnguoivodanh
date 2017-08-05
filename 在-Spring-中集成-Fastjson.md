@@ -1,5 +1,5 @@
 ## 在 Spring MVC 中集成 Fastjson
-如果你使用 Spring MVC 来构建 Web 应用并对性能有较高的要求的话，那么你可以使用 Fastjson 提供的```FastJsonHttpMessageConverter``` 来替换 Spring MVC 默认的 ```HttpMessageConverter```  提高 `@RestController @ResponseBody @RequestBody` 注解的 JSON序列化速度，配置非常简单，下面是配置方式。
+如果你使用 Spring MVC 来构建 Web 应用并对性能有较高的要求的话，可以使用 Fastjson 提供的```FastJsonHttpMessageConverter``` 来替换 Spring MVC 默认的 ```HttpMessageConverter```  以提高 `@RestController @ResponseBody @RequestBody` 注解的 JSON序列化速度。配置非常简单，下面是配置方式。
 #### XML式
 如果是使用 XML 的方式配置 Spring MVC 的话，只需在 Spring MVC 的 XML 配置文件中加入下面配置即可。
 ```xml
