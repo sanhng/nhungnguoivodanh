@@ -1,4 +1,4 @@
-fastjson支持Koltin，包括DataClase、IntRange、LongRange等等。
+fastjson支持Koltin，包括DataClass、IntRange、LongRange等等，不需要额外配置，直接内置支持。
 
 ## Since Version
 ```
