@@ -60,7 +60,7 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 ```
 下面是完整的 Spring 集成 Redis 配置供参考。
 ```xml
-<!-- Redis 连接池配置(可选，不配置的话使用默认配置) -->
+<!-- Redis 连接池配置(可选) -->
 <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
     <property name="maxTotal" value="${redis.pool.maxActive}"/>
     <property name="maxIdle" value="${redis.pool.maxIdle}"/>
@@ -70,6 +70,7 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 </bean>
 <!-- Redis 连接工厂配置 -->
 <bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
+    <!--连接池配置，不配置的话使用默认的连接池配置，如不想使用连接池可设置 usePool = false -->   
     <property name="poolConfig" ref="jedisPoolConfig" />  
     <property name="hostName" value="${host}"/>
     <property name="port" value="${port}"/>
