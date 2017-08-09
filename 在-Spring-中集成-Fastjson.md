@@ -60,14 +60,6 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 ```
 下面是完整的 Spring 集成 Redis 配置供参考。
 ```xml
-<!-- Redis 连接池配置 -->
-<bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
-    <property name="maxTotal" value="${redis.pool.maxActive}"/>
-    <property name="maxIdle" value="${redis.pool.maxIdle}"/>
-    <property name="maxWaitMillis" value="${redis.pool.maxWait}"/>
-    <property name="testOnBorrow" value="${redis.pool.testOnBorrow}"/>
-     <!-- 更多连接池配置...-->
-</bean>
 <!-- Redis 连接工厂配置 -->
 <bean id="jedisConnectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory">
     <property name="poolConfig" ref="jedisPoolConfig" />  
@@ -76,6 +68,14 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
     <property name="password" value="${password}"/>
     <property name="database" value="${database}"/>
     <!-- 更多连接工厂配置...-->
+</bean>
+<!-- Redis 连接池配置(可选) -->
+<bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+    <property name="maxTotal" value="${redis.pool.maxActive}"/>
+    <property name="maxIdle" value="${redis.pool.maxIdle}"/>
+    <property name="maxWaitMillis" value="${redis.pool.maxWait}"/>
+    <property name="testOnBorrow" value="${redis.pool.testOnBorrow}"/>
+     <!-- 更多连接池配置...-->
 </bean>
 <!-- RedisTemplate 配置 -->
 <bean id="redisTemplate" class="org.springframework.data.redis.core.RedisTemplate">
