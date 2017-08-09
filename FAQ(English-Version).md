@@ -58,7 +58,7 @@ https://groups.google.com/forum/#!topic/java-serialization-benchmarking/8eS1KOqu
 
 
 ## 5. fastjson v.s. gson?
-fastjson is 6 times faster than gson, here is the testing result: https://github.com/eishay/jvm-serializers/wiki/Staging-Results 。gson的g可能是“龟”拼音的缩写，龟速的json库。
+fastjson is 6 times faster than gson, here is the testing result: https://github.com/eishay/jvm-serializers/wiki/Staging-Results 。
 
 ## 6. can fastjson be used in android?
 fastjson has specific version for android, whose unusually function is removed. the size of jar is smaller. git branch address: https://github.com/alibaba/fastjson/tree/android
