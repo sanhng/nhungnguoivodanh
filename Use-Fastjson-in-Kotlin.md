@@ -1,7 +1,7 @@
 # Use Fastjson in Kotlin
 In Kotlin, we use to make a data class to hold data, and then we can use Fastjson to serialize data-class object to json string or deserialize json string to data-class object now(Since Fastjson 1.2.37).There are three cases：
 
-> note: in Kotlin, DataClassName::class.javaObjectType, equals DataClassName.class in Java
+> note: in Kotlin, DataClassName::class, equals DataClassName.class in Java
 
 ## 1.Data Class without Any Annotation
 
