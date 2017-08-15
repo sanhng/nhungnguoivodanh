@@ -33,7 +33,7 @@ class Company {
 @JSONType(serialzeFeatures=SerializerFeature.BeanToArray, parseFeatures=Feature.SupportArrayToBean)
 class Department {
      public int id;
-     public Stirng name;
+     public String name;
      public Department() {}
      public Department(int id, String name) {this.id = id; this.name = name;}
 }
