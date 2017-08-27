@@ -3,3 +3,19 @@
 com.alibaba.fastjson.support.spring.FastjsonSockJsMessageCodec
 ```
 初始支持，遇到问题请大家反馈
+
+
+```java
+@Component
+@EnableWebSocket
+public class WebSocketConfig extends WebMvcConfigurerAdapter implements WebSocketConfigurer {
+
+	@Resource
+	WebSocketHandler handler;
+
+	public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
+		registry.addHandler(handler, "/sockjs").withSockJS().setMessageCodec(new FastjsonSockJsMessageCodec());
+	}
+
+}
+```
