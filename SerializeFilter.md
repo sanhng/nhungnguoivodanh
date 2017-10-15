@@ -55,7 +55,7 @@ Object obj = ...;
 String jsonStr = JSON.toJSONString(obj, new PascalNameFilter());
 ```
 
-# ValueFilter 序列化是修改Value
+# ValueFilter 序列化时修改Value
 
       public interface ValueFilter extends SerializeFilter {
           Object process(Object object, String propertyName, Object propertyValue);
