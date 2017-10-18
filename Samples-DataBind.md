@@ -61,9 +61,9 @@ Fastjson full support databind, it's simple to use.
 	        this.users = users;
 	    }
 
-            public void addUser(User user) {
-                users.add(user);
-            }
+	    public void addUser(User user) {
+	        users.add(user);
+	    }
 	}
 
 # User.java
