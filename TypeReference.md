@@ -1,3 +1,4 @@
+# 1. 基础使用
 在fastjson中提供了一个用于处理泛型反序列化的类TypeReference。
 
 ```java
@@ -18,9 +19,10 @@ List<VO> list = JSON.parseObject("...", type);
 
 在这里例子中，通过TypeReference能够解决List<T>中T的类型问题。
 
+# 2. 带参数使用
 在1.2.9 & 1.1.49.android版本中，TypeReference支持泛型参数，方便一些框架实现通用的反序列化类。用法如下：
 
-### 单参数例子
+## 2.1. 单参数例子
 ```java
 public class Response<T> {
      public T data;
@@ -31,7 +33,7 @@ public static <T> Response<T> parseToMap(String json, Class<T> type) {
 }
 ```
 
-### 双参数例子
+## 2.2. 双参数例子
 ```java
 public static <K, V> Map<K, V> parseToMap(String json, 
                                             Class<K> keyType, 
