@@ -28,8 +28,8 @@
 ### 2. 直接下载
 * 1.2.31版本下载地址
 http://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.31/
-* 1.2.39版本下载地址
-http://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.39/
+* 1.2.40版本下载地址
+http://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.40/
 
 ## 常见问题
 ### 1. 升级遇到不兼容问题怎么办？
