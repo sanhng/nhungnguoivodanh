@@ -15,7 +15,7 @@
     <version>1.2.31</version>
 </dependency>
 
-<-- 1.2.40是最新的版本 -->
+<!-- 1.2.40是最新的版本 -->
 <dependency>
     <groupId>com.alibaba</groupId>
     <artifactId>fastjson</artifactId>
