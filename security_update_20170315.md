@@ -14,10 +14,12 @@
     <artifactId>fastjson</artifactId>
     <version>1.2.31</version>
 </dependency>
+
+<-- 1.2.40是最新的版本 -->
 <dependency>
     <groupId>com.alibaba</groupId>
     <artifactId>fastjson</artifactId>
-    <version>1.2.39</version>
+    <version>1.2.40</version>
 </dependency>
 ```
 
