@@ -112,4 +112,12 @@ public void test_for_issue() throws Exception {
             this.userName = userName;
         }
     }
+
+   public class StringSerializer implements ObjectSerializer {
+
+      public void write(JSONSerializer serializer, Object object, Object fieldName, Type fieldType, int features) throws IOException {
+        serializer.write(String.valueOf(object));
+    }
+
+}
 ```
