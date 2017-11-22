@@ -32,7 +32,7 @@ SerializeConfig.getGlobalInstance()
 
 # 4. 基于JSONType配置PropertyNamingStrategy
 ```java
-public void test_for_issue() throws Exception {
+   public void test_for_issue() throws Exception {
         Model model = new Model();
         model.userId = 1001;
         model.userName = "test";
