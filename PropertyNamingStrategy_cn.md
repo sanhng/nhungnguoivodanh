@@ -64,7 +64,7 @@ public void test_for_issue() throws Exception {
     }
 
     @JSONType(naming = PropertyNamingStrategy.SnakeCase)
-    public static class Model {
+    public class Model {
         private int userId;
         @JSONField(name = "userName")
         private String userName;
@@ -87,7 +87,7 @@ public void test_for_issue() throws Exception {
     }
 
     @JSONType(naming = PropertyNamingStrategy.SnakeCase)
-    public static class ModelTwo {
+    public class ModelTwo {
         /**
          * 此字段准备序列化为字符串类型
          */
