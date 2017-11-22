@@ -46,7 +46,8 @@ public void test_for_issue() throws Exception {
     }
 
     /**
-     * 当某个字段有JSONField注解，JSONField中name属性不存在，并且类上有属性转换策略，json属性名也要用类上的属性名转换策略为为准
+     * 当某个字段有JSONField注解，JSONField中name属性不存在，并且类上有属性转换策略，
+     * json属性名也要用类上的属性名转换策略为为准
      * @throws Exception
      */
     public void test_when_JSONField_have_not_name_attr() throws Exception {
