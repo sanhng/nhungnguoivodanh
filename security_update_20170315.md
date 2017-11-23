@@ -15,7 +15,7 @@
     <version>1.2.31</version>
 </dependency>
 
-<!-- 1.2.40是最新的版本 -->
+<!-- 1.2.41是最新的版本 -->
 <dependency>
     <groupId>com.alibaba</groupId>
     <artifactId>fastjson</artifactId>
@@ -28,7 +28,7 @@
 ### 2. 直接下载
 * 1.2.31版本下载地址
 http://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.31/
-* 1.2.40版本下载地址
+* 1.2.41版本下载地址
 http://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.41/
 
 ## 常见问题
