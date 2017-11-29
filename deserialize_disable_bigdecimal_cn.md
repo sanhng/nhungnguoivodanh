@@ -7,7 +7,7 @@ JSON.DEFAULT_PARSER_FEATURE &= ~Feature.UseBigDecimal.getMask();
 
 # 2. 局部关闭
 ```
-int disableDecimalFeature = JSON.DEFAULT_PARSER_FEATURE &= ~Feature.UseBigDecimal.getMask();
+int disableDecimalFeature = JSON.DEFAULT_PARSER_FEATURE & ~Feature.UseBigDecimal.getMask();
 
 String json = "....";
 Class type = JSONObject.class;
