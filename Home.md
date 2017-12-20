@@ -52,5 +52,5 @@ https://github.com/alibaba/fastjson/wiki/Integrate-Fastjson-in-JAXRS
 # Use Fastjson in Kotlin
 https://github.com/alibaba/fastjson/wiki/Use-Fastjson-in-Kotlin
 
-# Best Practice for JSON/Fastjson（JSON/Fastjson最佳实践）
+# Best Practice for JSON/Fastjson
 https://github.com/alibaba/fastjson/wiki/Best-Practice-for-JSON-Fastjson%EF%BC%88JSON-Fastjson%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5%EF%BC%89
