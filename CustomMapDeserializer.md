@@ -1,4 +1,4 @@
-在某些场景下，需要对JSON中的Key忽略大小写处理。fastjson 1.2.45版本提供了支持。
+在某些场景下，需要对JSON中的Key忽略大小写处理。fastjson 1.2.44版本提供了支持。
 ```java
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.parser.Feature;
