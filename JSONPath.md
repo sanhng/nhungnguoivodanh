@@ -23,6 +23,9 @@ public class JSONPath {
 
      // 在数组或者集合中添加元素
      public static boolean array_add(Object rootObject, String path, Object... values);
+     
+     // 获取，Map非空元素的Key，对象非空属性的名称。数组、Collection等不支持类型返回null。
+     public static Set<?> keySet(Object rootObject, String path);
 }
 ```
 建议缓存JSONPath对象，这样能够提高求值的性能。
@@ -43,6 +46,7 @@ public class JSONPath {
 <tr><td>[key in ('v0', 'v1')]</td><td>IN过滤, 支持字符串和数值类型 <br>例如: <br/>$.departs[name in ('wenshao','Yako')] <br/>$.departs[id not in (101,102)]</td></tr>
 <tr><td>[key between 234 and 456]</td><td>BETWEEN过滤, 支持数值类型，支持not between <br>例如: <br/>$.departs[id between 101 and 201]<br/>$.departs[id not between 101 and 201]</td></tr>
 <tr><td>length() 或者 size()</td><td>数组长度。例如$.values.size() <br/>支持类型java.util.Map和java.util.Collection和数组</td></tr>
+<tr><td>keySet()</td><td>获取Map非空value的key或者对象的非空属性名称。例如$.val.keySet() <br/>支持类型：Map和普通对象<br/>不支持：Collection和数组（返回null）</td></tr>
 <tr><td>.</td><td>属性访问，例如$.name</td></tr>
 <tr><td>..</td><td>deepScan属性访问，例如$..name</td></tr>
 <tr><td>*</td><td>对象的所有属性，例如$.leader.*</td></tr>
@@ -188,4 +192,31 @@ assertEquals(3, ids.size());
 assertEquals(1001, ids.get(0));
 assertEquals(1002, ids.get(1));
 assertEquals(1003, ids.get(2));
+```
+
+### 5.8 例8 keySet
+
+使用keySet抽取对象的属性名，null值属性的名字并不包含在keySet结果中，使用时需要注意，详细可参考示例。
+
+```java
+Entity e = new Entity();
+e.setId(null);
+e.setName("hello");
+Map<String, Entity> map = Collections.singletonMap("e", e);
+Collection<String> result;
+
+// id is null, excluded by keySet
+result = (Collection<String>)JSONPath.eval(map, "$.e.keySet()");
+assertEquals(1, result.size());
+Assert.assertTrue(result.contains("name"));
+
+e.setId(1L);
+result = (Collection<String>)JSONPath.eval(map, "$.e.keySet()");
+Assert.assertEquals(2, result.size());
+Assert.assertTrue(result.contains("id")); // included
+Assert.assertTrue(result.contains("name"));
+
+// Same result
+Assert.assertEquals(result, JSONPath.keySet(map, "$.e"));
+Assert.assertEquals(result, new JSONPath("$.e").keySet(map));
 ```
