@@ -22,7 +22,7 @@ public class JSONPath {
      public static boolean set(Object rootObject, String path, Object value) {}
 
      // 在数组或者集合中添加元素
-     public static boolean array_add(Object rootObject, String path, Object... values);
+     public static boolean arrayAdd(Object rootObject, String path, Object... values);
      
      // 获取，Map的KeySet，对象非空属性的名称。数组、Collection等不支持类型返回null。
      public static Set<?> keySet(Object rootObject, String path);
