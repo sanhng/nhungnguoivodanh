@@ -1,1 +1,0 @@
-DisableCheckSpecialChar 已过时，需要使用，怎么破？
