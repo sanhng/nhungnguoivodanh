@@ -41,6 +41,7 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 }
 ```
 注：如果你使用的 Fastjson 版本小于```1.2.36```的话(强烈建议使用最新版本)，在与Spring MVC 4.X 版本集成时需使用 ```FastJsonHttpMessageConverter4```。
+
 注2：SpringBoot 2.0.1版本中加载`WebMvcConfigurer`的顺序发生了变动，故需使用`converters.add(0, converter);`指定`FastJsonHttpMessageConverter`的顺序，否则在该SpringBoot 2.0.1及之后的版本中将优先使用Jackson处理。
 > 参考：Spring Framework 官方文档 Message Converters 部分， [点我查看](http://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsingle/#mvc-config-message-converters)。
 
