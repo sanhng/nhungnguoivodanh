@@ -1,4 +1,14 @@
 1.2.51之后，fastjon提供了根据JSONPath快速解析JSON的API，避免原来需要先解析完再做JSONPath处理，能显著提升性能。
+
+# API
+```java
+package com.alibaba.fastjson;
+public class JSONPath {
+       public static Object extract(String json, String path);
+}
+```
+
+# DEMO
 ```
 final String json = "[\n" +
             "   {\n" +
