@@ -8,6 +8,9 @@ package com.alibaba.fastjson;
 public class JSONPath {          
      //  求值，静态方法
      public static Object eval(Object rootObject, String path);
+
+     //  求值，静态方法，按需计算，性能更好
+     public static Object extract(String json, String path);
      
      // 计算Size，Map非空元素个数，对象非空元素个数，Collection的Size，数组的长度。其他无法求值返回-1
      public static int size(Object rootObject, String path);
