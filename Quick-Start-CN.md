@@ -23,6 +23,11 @@ fastjson的API十分简洁。
 支持泛型，支持流处理超大文本，支持枚举，支持序列化和反序列化扩展。
 
 ## 3. 下载和使用
+eclipse JavaEE平台下载及使用：
+
+   3.1 下载jar包。[最新版jar包下载](https://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.53/fastjson-1.2.53.jar)；
+   3.2 导入jar包。将jar包复制到需要使用json的工程中；[详细步骤请参考这里](https://blog.csdn.net/baidu_37107022/article/details/70876993)
+
 你可以在maven中央仓库中直接下载：
 
     http://repo1.maven.org/maven2/com/alibaba/fastjson/
