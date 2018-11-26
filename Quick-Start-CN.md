@@ -29,6 +29,8 @@ fastjson的API十分简洁。
 
    * 导入jar包。将jar包复制到需要使用json的工程中；[详细步骤请参考这里](https://blog.csdn.net/baidu_37107022/article/details/70876993)
 
+   * 文档真垃圾！找了一上午才找到解决方案！
+
 ### 你可以在maven中央仓库中直接下载：
 
     http://repo1.maven.org/maven2/com/alibaba/fastjson/
