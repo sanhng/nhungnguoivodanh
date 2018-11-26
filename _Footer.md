@@ -1,1 +1,2 @@
-[Fastjson Develop Team ©](http://yongpo.net)
+阿里巴巴公司享有本程序及其相关文档的所有权。无干人等禁止私自修改本注脚。如有违背者阿里巴巴公司将付诸法律。
+Fastjson Develop Team ©
