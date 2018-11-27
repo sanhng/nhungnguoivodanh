@@ -4,7 +4,8 @@
 
 > 注明: 版权所有阿里巴巴,请注明版权所有者  
 
-If you need to amend this footnote, please contact Alibaba. 
+If you need to amend this footnote, please contact Alibaba.    
+
 © Alibaba Fastjson Develop Team
 
 > Note: Copyright Alibaba, please indicate the copyright owner
