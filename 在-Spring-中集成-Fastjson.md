@@ -43,6 +43,38 @@ public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
 注：如果你使用的 Fastjson 版本小于```1.2.36```的话(强烈建议使用最新版本)，在与Spring MVC 4.X 版本集成时需使用 ```FastJsonHttpMessageConverter4```。
 
 注2：SpringBoot 2.0.1版本中加载`WebMvcConfigurer`的顺序发生了变动，故需使用`converters.add(0, converter);`指定`FastJsonHttpMessageConverter`在converters内的顺序，否则在SpringBoot 2.0.1及之后的版本中将优先使用Jackson处理。详情：[WebMvcConfigurer is overridden by WebMvcAutoConfiguration #12389](https://github.com/spring-projects/spring-boot/issues/12389)
+
+### 对JSONP支持
+使用注解`@ResponseJSONP`修饰类或具体方法：
+```java
+@ResponseJSONP // 类级别
+@Controller
+@RequestMapping("jsonp-fastjsonview")
+public class FastJsonJSONPController {
+
+    @ResponseJSONP(callback = "callback") // 方法级别
+    @RequestMapping("test")
+    public Object test() {
+       ...
+    }
+}
+```
+配置`JSONPResponseBodyAdvice`类：
+#### XML式
+```xml
+<bean id="jsonpResponseBodyAdvice" class="com.alibaba.fastjson.support.spring.JSONPResponseBodyAdvice"/>
+```
+#### 编程式
+```java
+@Configuration
+public class WebMvcConfigurer extends WebMvcConfigurerAdapter {
+    @Bean
+    public JSONPResponseBodyAdvice jsonpResponseBodyAdvice() {
+        return new JSONPResponseBodyAdvice();
+    }
+    ...
+}
+```
 > 参考：Spring Framework 官方文档 Message Converters 部分， [点我查看](http://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsingle/#mvc-config-message-converters)。
 
 -------------
