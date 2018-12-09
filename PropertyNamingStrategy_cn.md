@@ -121,3 +121,6 @@ SerializeConfig.getGlobalInstance()
 
 }
 ```
+
+# 5. 关于Map的Key
+PropertyNamingStrategy不适用于Map中的Key，如果需要修改Map中的Key的大小写，可以使用NameFilter，比如PascalNameFilter
