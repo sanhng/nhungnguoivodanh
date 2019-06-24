@@ -11,7 +11,7 @@
 ## 更新方法
 
 <a name="0288f5bf"></a>
-## #1. Maven依赖配置更新
+### 1. Maven依赖配置更新
 
 通过maven配置更新，使用最新版本，如下：
 
@@ -48,22 +48,26 @@
 - Maven中央仓库 [http://repo.maven.apache.org/maven2/com/alibaba/fastjson/](http://repo.maven.apache.org/maven2/com/alibaba/fastjson/)
 
 <a name="89c7d396"></a>
-### 2. 升级之后报错autotype is not support
+
+### 2. 所有的sec01版本是否需要升级
+所有的sec01版本都是为了兼容的安全补丁版本，需要升级到sec04版本。
+
+### 3. 升级之后报错autotype is not support
 
 安全升级包禁用了部分autotype的功能，也就是"@type"这种指定类型的功能会被限制在一定范围内使用。如果你使用场景中包括了这个功能，[https://github.com/alibaba/fastjson/wiki/enable_autotype](https://github.com/alibaba/fastjson/wiki/enable_autotype) 这里有一个介绍如何添加白名单或者打开autotype功能。
 
 <a name="af0a88cf"></a>
-### 3. 通过配置打开autotype之后是否存在安全漏洞
+### 4. 通过配置打开autotype之后是否存在安全漏洞
 
 在1.2.51以及所有的.sec04版本中，有多重保护，但打开autotype之后仍会存在风险，不建议打开，而是使用一个较小范围的白名单。打开autoType建议升级到最新版本1.2.51以上
 
 <a name="3e2636c8"></a>
-### 4. Android环境使用是否需要升级
+### 5. Android环境使用是否需要升级
 
 目前未发现漏洞对Android系统产生影响，在Android环境中使用不用升级。但Android升级到最新版1.1.71.android版本能提升性能。
 
 <a name="a3b7cbe5"></a>
-### 5. 升级遇到问题希望提供支持怎么办？
+### 6. 升级遇到问题希望提供支持怎么办？
 
 作者愿意帮助大家一起解决问题，如果遇到文档中没说明到的问题，请通过如下方式联系作者：
 
