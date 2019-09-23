@@ -33,3 +33,24 @@ ParserConfig.getGlobalInstance().setAutoTypeSupport(true);
 ```
 如果有使用非全局ParserConfig则用另外调用setAutoTypeSupport(true)；
 
+## 三、配置autoType黑名单
+打开AutoType之后，是基于内置黑名单来实现安全的，但黑名单是穷举不完的，如果发现了新的风险类，可以通过以下配置来增加黑名单：
+
+### 1. 配置JVM启动参数
+```
+-Dfastjson.parser.deny=xx.xxx
+```
+* 这里的xx.xxx是包名前缀，如果有多个包名前缀，用逗号隔开
+
+### 2. 通过fastjson.properties来配置
+在1.2.25之后的版本支持通过类路径的fastjson.properties文件来配置，配置方式如下：
+```
+-Dfastjson.parser.deny=xx.xxx 
+```
+* 这里的xx.xxx是包名前缀，如果有多个包名前缀，用逗号隔开
+
+### 3. 代码中配置
+```java
+ParserConfig.getGlobalInstance().addDeny("xx.xxx");
+```
+* 这里的xx.xxx是包名前缀，如果有多个包名前缀，用逗号隔开
