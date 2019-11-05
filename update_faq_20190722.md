@@ -5,7 +5,7 @@
 - 2018年2月5日发布FASTJSON 1.2.46 [https://github.com/alibaba/fastjson/releases/tag/1.2.46](https://github.com/alibaba/fastjson/releases/tag/1.2.46)
 - 2018年10月1日发布FASTJSON 1.2.51 [https://github.com/alibaba/fastjson/releases/tag/1.2.51](https://github.com/alibaba/fastjson/releases/tag/1.2.51)
 
-在2018年10月1日发布的1.2.51版本中，修复了所有已知安全漏洞。在1.2.51之后陆续修复了一些兼容性问题和bug，最新版本是1.2.58 
+在2018年10月1日发布的1.2.51版本中，修复了所有已知安全漏洞。在1.2.51之后陆续修复了一些兼容性问题和bug，最新版本是1.2.62 
 https://github.com/alibaba/fastjson/releases/tag/1.2.58
 
 为了方便大家升级，提供了兼容的补丁版本sec04。最近咨询升级兼容的同学较多，将更新常见问题整理如下：
@@ -26,11 +26,11 @@ https://github.com/alibaba/fastjson/releases/tag/1.2.58
     <version>1.2.51</version>
 </dependency>
 
-<!-- 1.2.58是最新的版本 -->
+<!-- 1.2.62是最新的版本 -->
 <dependency>
     <groupId>com.alibaba</groupId>
     <artifactId>fastjson</artifactId>
-    <version>1.2.58</version>
+    <version>1.2.62</version>
 </dependency>
 ```
 
