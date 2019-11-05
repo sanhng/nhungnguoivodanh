@@ -6,7 +6,7 @@
 - 2018年10月1日发布FASTJSON 1.2.51 [https://github.com/alibaba/fastjson/releases/tag/1.2.51](https://github.com/alibaba/fastjson/releases/tag/1.2.51)
 
 在2018年10月1日发布的1.2.51版本中，修复了所有已知安全漏洞。在1.2.51之后陆续修复了一些兼容性问题和bug，最新版本是1.2.62 
-https://github.com/alibaba/fastjson/releases/tag/1.2.58
+https://github.com/alibaba/fastjson/releases/tag/1.2.62
 
 为了方便大家升级，提供了兼容的补丁版本sec04。最近咨询升级兼容的同学较多，将更新常见问题整理如下：
 
@@ -38,7 +38,7 @@ https://github.com/alibaba/fastjson/releases/tag/1.2.58
 ### 2. 直接下载
 
 - 1.2.51版本下载地址 [http://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.51/](http://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.51/)
-- 1.2.58版本下载地址 [http://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.58/](http://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.58/)
+- 1.2.62版本下载地址 [http://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.62/](http://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.62/)
 
 <a name="50d52dd9"></a>
 ## 常见问题
@@ -46,7 +46,7 @@ https://github.com/alibaba/fastjson/releases/tag/1.2.58
 <a name="4daeaf62"></a>
 ### 1. 升级遇到不兼容问题怎么办？
 
-1.2.58已经修复了绝大多数兼容问题，但是总会有一些特殊的用法导致不兼容，如果你遇到不兼容问题，通过 [https://github.com/alibaba/fastjson/wiki/incompatible_change_list](https://github.com/alibaba/fastjson/wiki/incompatible_change_list) 查看不兼容问题，链接的后面提供了遇到不兼容问题之后的使用相应的sec04版本解决办法。所有的sec04版本都可以在maven中央仓库中下载。
+1.2.62已经修复了绝大多数兼容问题，但是总会有一些特殊的用法导致不兼容，如果你遇到不兼容问题，通过 [https://github.com/alibaba/fastjson/wiki/incompatible_change_list](https://github.com/alibaba/fastjson/wiki/incompatible_change_list) 查看不兼容问题，链接的后面提供了遇到不兼容问题之后的使用相应的sec04版本解决办法。所有的sec04版本都可以在maven中央仓库中下载。
 
 - Maven中央仓库 [http://repo.maven.apache.org/maven2/com/alibaba/fastjson/](http://repo.maven.apache.org/maven2/com/alibaba/fastjson/)
 
