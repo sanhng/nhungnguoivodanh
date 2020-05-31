@@ -1,5 +1,5 @@
 ## 打开SafeMode功能
-在1.2.68之后的版本，在1.2.68版本中，fastjson增加了safeMode的支持。safeMode打开后，完全禁用autoType。
+在1.2.68之后的版本，在1.2.68版本中，fastjson增加了safeMode的支持。safeMode打开后，完全禁用autoType。所有的安全修复版本sec10也支持SafeMode配置。
 
 有三种方式配置SafeMode，如下:<br/>
 ### 1. 在代码中配置
