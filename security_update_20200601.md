@@ -12,7 +12,7 @@ fastjson采用黑白名单的方法来防御反序列化漏洞，导致当黑客
 # 升级方案
 升级到最新版本1.2.69或者更新的1.2.70版本。
 * 1.2.69 https://github.com/alibaba/fastjson/releases/tag/1.2.69
-* 1.2.79 https://github.com/alibaba/fastjson/releases/tag/1.2.70
+* 1.2.70 https://github.com/alibaba/fastjson/releases/tag/1.2.70
 
 如果遇到兼容问题，原地升级sec10版本。
 * 1.1.15~1.1.31 -> [1.1.31.sec10](https://repo1.maven.org/maven2/com/alibaba/fastjson/1.1.31.sec10)
