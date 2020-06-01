@@ -26,6 +26,8 @@ fastjson采用黑白名单的方法来防御反序列化漏洞，导致当黑客
 * 1.2.49~1.2.68 -> [1.2.69](https://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.69)或[1.2.70](https://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.70)
 中间有很多sec10小版本，建议直接升级到1.2.69或1.2.70，如果遇到兼容再考虑sec10版本
 
+如果还遇到其他兼容问题，这里有更多的sec10版本 https://repo1.maven.org/maven2/com/alibaba/fastjson/
+
 # fastjson加固
 fastjson在1.2.68及之后的版本中引入了safeMode，配置safeMode后，无论白名单和黑名单，都不支持autoType，可一定程度上缓解反序列化Gadgets类变种攻击（关闭autoType注意评估对业务的影响）开启方法参考：https://github.com/alibaba/fastjson/wiki/fastjson_safemode
 
