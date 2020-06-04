@@ -18,3 +18,18 @@ ParserConfig.getGlobalInstance().setSafeMode(true);
 ```
 fastjson.parser.safeMode=true
 ```
+
+### 4. safeMode场景如何做autoType
+在1.2.68之后的版本，提供了AutoTypeCheckHandler扩展，可以自定义类接管autoType, 通过ParserConfig#addAutoTypeCheckHandler方法注册。
+
+```
+// com.alibaba.fastjson.parser.ParserConfig.AutoTypeCheckHandler
+    /**
+     * @since 1.2.68
+     */
+    public interface AutoTypeCheckHandler {
+        Class<?> handler(String typeName, Class<?> expectClass, int features);
+    }
+
+    // com.alibaba.fastjson.parser.ParserConfig#addAutoTypeCheckHandler
+```
