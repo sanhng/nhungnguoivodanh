@@ -32,4 +32,5 @@ fastjson采用黑白名单的方法来防御反序列化漏洞，导致当黑客
 # 4. safeMode加固
 fastjson在1.2.68及之后的版本中引入了safeMode，配置safeMode后，无论白名单和黑名单，都不支持autoType，可一定程度上缓解反序列化Gadgets类变种攻击（关闭autoType注意评估对业务的影响）
 * 开启方法参考： https://github.com/alibaba/fastjson/wiki/fastjson_safemode
+* 1.2.69修复了此次发现的高危漏洞，开启safeMode是完全关闭autoType功能，避免类似问题再次发生，这可能会有兼容问题，大家打开时需要做充分测试
 
