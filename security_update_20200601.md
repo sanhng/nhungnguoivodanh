@@ -17,7 +17,7 @@ fastjson采用黑白名单的方法来防御反序列化漏洞，导致当黑客
 如果遇到兼容问题，原地升级sec10版本。
 * 1.1.15~1.1.31 -> [1.1.31.sec10](https://repo1.maven.org/maven2/com/alibaba/fastjson/1.1.31.sec10)
 * 1.1.32~1.1.33 -> [1.1.33.sec10](https://repo1.maven.org/maven2/com/alibaba/fastjson/1.1.33.sec10)
-* 1.1.34        -> [1.1.34.sec10](https://repo1.maven.org/maven2/com/alibaba/fastjson/1.1.34.sec10)
+* 1.1.34        -> [1.1.34.sec10](https://repo.maven.apache.org/maven2/com/alibaba/fastjson/1.1.34.sec10/)
 * 1.1.35~1.1.46 -> [1.1.46.sec10](https://repo1.maven.org/maven2/com/alibaba/fastjson/1.1.46.sec10)
 * 1.2.0~1.2.2   -> [1.2.2.sec10](https://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.2.sec10) 因为1.2.3之后的版本Map是没有排序输出的，如果不关注这个兼容问题，升级到1.2.70
 * 1.2.3~1.2.7   -> [1.2.7.sec10](https://repo1.maven.org/maven2/com/alibaba/fastjson/1.2.7.sec10) 因为1.2.7使用最多特别提供，也可以直接使用1.2.8.sec10
