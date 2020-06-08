@@ -6,6 +6,8 @@
 ```java
 ParserConfig.getGlobalInstance().setSafeMode(true); 
 ```
+* 注意，如果使用new ParserConfig的方式，需要注意单例处理，否则会导致低性能full gc。
+
 
 ### 2. 加上JVM启动参数
 ```script
