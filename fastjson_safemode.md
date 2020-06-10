@@ -35,3 +35,10 @@ fastjson.parser.safeMode=true
 
     // com.alibaba.fastjson.parser.ParserConfig#addAutoTypeCheckHandler
 ```
+
+### 5. 怎么判断是否用到了autoType
+看序列化的代码中是否用到了SerializerFeature.WriteClassName
+```java
+JSON.toJSONString(obj, SerializerFeature.WriteClassName); // 这种使用会产生@type
+```
+
