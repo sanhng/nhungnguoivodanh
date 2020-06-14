@@ -63,3 +63,112 @@ public static enum OrderType {
 ```java
 SerializeConfig.globalInstance.configEnumAsJavaBean(OrderType.class);
 ```
+
+# 方法4
+在fastjson 1.2.71版本之后，支持配置JSONField或者MixIn的方法做定制序列化和反序列化
+```java
+public void test_for_issue() throws Exception {
+    VO vo = new VO();
+    vo.type = Color.Black;
+
+    String str = JSON.toJSONString(vo);
+    assertEquals("{\"type\":1003}", str);
+
+    VO vo2 = JSON.parseObject(str, VO.class);
+
+}
+
+public static class VO {
+    public Color type;
+}
+
+public enum Color {
+    Red(1001),
+    White(1002),
+    Black(1003),
+    Blue(1004);
+
+    private final int code;
+
+    private Color(int code) {
+        this.code = code;
+    }
+
+    @JSONField
+    public int getCode() {
+        return code;
+    }
+
+    @JSONCreator
+    public static Color from(int code) {
+        for (Color v : values()) {
+            if (v.code == code) {
+                return v;
+            }
+        }
+
+        throw new IllegalArgumentException("code " + code);
+    }
+}
+```
+
+# 方法5
+在fastjson 1.2.71版本之后，支持配置JSONField或者MixIn的方法做定制序列化和反序列化
+```java
+public void test_for_issue() throws Exception {
+    JSON.addMixInAnnotations(Color.class, ColorMixedIn.class);
+
+    VO vo = new VO();
+    vo.type = Color.Black;
+
+    String str = JSON.toJSONString(vo);
+    assertEquals("{\"type\":1003}", str);
+
+    VO vo2 = JSON.parseObject(str, VO.class);
+}
+
+public static class VO {
+    public Color type;
+}
+
+public enum Color {
+    Red(1001),
+    White(1002),
+    Black(1003),
+    Blue(1004);
+
+    private final int code;
+
+    private Color(int code) {
+        this.code = code;
+    }
+
+    public int getCode() {
+        return code;
+    }
+
+    public static Color from(int code) {
+        for (Color v : values()) {
+            if (v.code == code) {
+                return v;
+            }
+        }
+
+        throw new IllegalArgumentException("code " + code);
+    }
+}
+
+public static class ColorMixedIn {
+    @JSONField
+    public int getCode() {
+        return 0;
+    }
+
+    @JSONCreator
+    public static Color from(int code) {
+        return null;
+    }
+}
+```
+
+
