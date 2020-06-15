@@ -32,7 +32,7 @@ or via Gradle:
 compile 'com.alibaba:fastjson:VERSION_CODE'
 ```
 
-replace `VERSION_CODE` with real version name such as `1.2.54` released in [Here][2] or [Here][3] or [Here][4].
+replace `VERSION_CODE` with real version name such as `1.2.71` released in [Here][2] or [Here][3] or [Here][4].
 
 [0]: https://github.com/alibaba/fastjson/wiki/Android%E7%89%88%E6%9C%AC
 [1]: https://search.maven.org/remote_content?g=com.alibaba&a=fastjson&v=LATEST
