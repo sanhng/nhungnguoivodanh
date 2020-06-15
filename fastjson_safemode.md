@@ -43,7 +43,7 @@ JSON.toJSONString(obj, SerializerFeature.WriteClassName); // 这种使用会产�
 ```
 
 ### 6. 使用JSONType.autoTypeCheckHandler
-在fastjson 1.2.71版本中，提供了通过JSONType配置autoTypeCheckHandler的方法
+在fastjson 1.2.71版本中，提供了通过JSONType配置autoTypeCheckHandler的方法，比如：
 ```java
 public class JSONTypeAutoTypeCheckHandlerTest extends TestCase {
     public void test_for_checkAutoType() throws Exception {
