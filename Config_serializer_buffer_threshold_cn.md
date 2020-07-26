@@ -10,7 +10,7 @@ fastjson序列化时，SerializeWriter会在ThreadLocal中持有一个buf，缺�
 ```
 -Dfastjson.serializer_buffer_threshold=256
 ```
-* 配置fastjson.proerpties文件
+* 配置fastjson. properties文件
 ```
 fastjson.serializer_buffer_threshold=256
 ```
